@@ -1,9 +1,29 @@
-<h4>Feedback component</h4>
-<hr>
 
-<div class="">{{translation.english}}</div>
-<div class="">{{translation.spanish}}</div>
-<div class="">{{translation.attempt}}</div>
+<div class="slide" [class.slide-in]="slide.enter" [class.slide-out]="slide.exit">
+  <div class="translatoin-box">
+    {{translation.english}}
+  </div>
+  <div *ngIf="correctAnswer">
+    <div class="right-box">
+      {{translation.spanish}}
+    </div>
+  </div>
+  <div *ngIf="!correctAnswer">
+      <div class="wrong-box">
+        <span *ngFor="#word of attemptValidatedArray">
+          <span class="right-word" *ngIf="word.valid">{{word.word}}</span>
+          <span class="wrong-word" *ngIf="!word.valid">{{word.word}}</span>
+        </span>
+      </div>
+    <div class="right-box">
+      {{translation.spanish}}
+    </div>
+  </div>
+  <div class="" *ngIf="!!scoreChange.bucket">Score went {{scoreChange.bucket}} a bucket</div>
+  <div class="" *ngIf="scoreChange.topLimit">Congrats you know this word. Well done!</div>
+  <div class="" *ngIf="!!scoreChange.step">Score went {{scoreChange.step}} a step</div>
+  <div class="" *ngIf="!!scoreChange.bottomLimit">Whoops! This word whent straigt to the bottom</div>
+  <a (click)="onClose()" class="button button-24 border-red" role="none" [focus]="slide.enter">close</a>
+</div>
 
-<div class="">Score went {{scoreChange.bucket}} a bucket and {{scoreChange.step}} a step</div>
-<hr>
+{{scoreChange | json}}

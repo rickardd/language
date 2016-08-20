@@ -1,6 +1,7 @@
-import {Component} from 'angular2/core'
+import {Component, Input} from 'angular2/core'
 
 import {StatsService} from './stats.service'
+import {ScoreChange} from '../shared/score'
 
 @Component({
   selector: "stats",

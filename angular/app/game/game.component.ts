@@ -1,18 +1,24 @@
 import {Component} from 'angular2/core'
+
 import {WordsComponent} from './words/word.component'
 import {StatsComponent} from './stats/stats.component'
 import {FeedbackComponent} from './feedback/feedback.component'
 import {Translation} from './shared/translation'
-import {ScoreChange} from './shared/bucket'
+import {ScoreChange, ScoreChangeTerm} from './shared/score'
+import {Slide} from './shared/slide'
 import {GameService} from './game.service'
 
 
 @Component({
   template: `
-    <h1>Game</h1>
     <words [translation]="translation" (wordSubmit)="onWordSubmit($event)"></words>
     <stats></stats>
-    <feedback [translation]="translation" [scoreChangeTerm]="scoreChangeTerm"></feedback>
+    <feedback
+          [translation]="translation"
+          [scoreChangeTerm]="scoreChangeTerm"
+          [slide]="slide"
+          (close)="onFeedbackClose()">
+    </feedback>
   `,
   directives: [
     WordsComponent,
@@ -26,8 +32,9 @@ import {GameService} from './game.service'
 
 export class GameComponent{
 
-  translation = new Translation();
-  scoreChangeTerm : string
+  translation = new Translation({});
+  scoreChangeTerm : ScoreChangeTerm
+  slide = new Slide( false, false)
 
   constructor( private _gameService: GameService ){
 
@@ -38,13 +45,22 @@ export class GameComponent{
           .subscribe( response => {
                       this.translation = response
                     })
+
   }
 
   onWordSubmit( $event ){
-    console.log( $event )
-    this.translation = $event.translation
-    this.scoreChangeTerm = $event.scoreChangeTerm
+    this.translation = new Translation( $event.translation )
+    // this.scoreChangeTerm = $event.scoreChangeTerm
+    // console.log( "**********", $event.scoreChangeTerm);
+    this.scoreChangeTerm = new ScoreChangeTerm( $event.scoreChangeTerm )
+    this.slide = new Slide(true, false)
   }
+
+  onFeedbackClose( $event ){
+    console.log("game close");
+  }
+
+
 
 
 }

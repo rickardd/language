@@ -1,5 +1,5 @@
 
 
-  <div *ngFor="#bucket of buckets">
-    <span>words in bucket ({{$index}})</span> <span>{{bucket}}</span>
+  <div *ngFor="#bucket of buckets; #i=index">
+    <span>words in bucket ({{i}})</span> <span>{{bucket}}</span>
   </div>

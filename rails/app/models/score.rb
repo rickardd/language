@@ -1,29 +1,20 @@
 class Score < ActiveRecord::Base
   belongs_to :translation
 
-  BUCKETS = [
-              {
-                bucket: 0,
-                steps: 1
-              },
-              {
-                bucket: 1,
-                steps: 2
-              },
-              {
-                bucket: 2,
-                steps: 3
-              },
-              {
-                bucket: 3,
-                steps: 4
-              }
-            ]
+  BUCKETS = Bucket.config
+
+  validates :bucket, :numericality => {
+                                        :greater_than_or_equal_to => 0,
+                                        :less_than_or_equal_to => Bucket.top_bucket
+                                      }
+  validates :step, :numericality => { :greater_than_or_equal_to => 0 }
+
+  # ToDo: Score: bucket, step seems to allow nil values. Shout be not null field
 
   def total
     counts = []
-    BUCKETS.each do |bucket|
-      counts.push( Score.where( bucket: bucket[:bucket] ).count )
+    BUCKETS.each_with_index do |bucket, index|
+      counts.push( Score.where( bucket: index ).count )
     end
     counts
   end
@@ -31,7 +22,9 @@ class Score < ActiveRecord::Base
   # returns: true if updated
   # returns: false if in the last bucket and can't move up
   def move_up
-    maximum_steps = BUCKETS[self.bucket][:steps]
+    self.touch
+    maximum_steps = BUCKETS[self.bucket]["steps"]
+
     if self.step < maximum_steps
       return step_up
     end
@@ -41,6 +34,7 @@ class Score < ActiveRecord::Base
   end
 
   def move_down
+    self.touch
     if self.step > 0
       return step_down
     end
@@ -64,7 +58,7 @@ class Score < ActiveRecord::Base
       next_bucket = self.bucket + 1
       if( !BUCKETS[next_bucket] )
         puts '-- return self--'
-        return "bucket_no_change"
+        return "bucket_top_limit"
       else
         puts '-- updating bucket --'
         self.update( bucket: next_bucket, step: 0 )
@@ -83,7 +77,7 @@ class Score < ActiveRecord::Base
       puts '-- Bucket Down --'
       if( self.bucket <= 0 )
         puts '-- return self--'
-        return "bucket_no_change"
+        return "bucket_bottom_limit"
       else
         puts '-- updating bucket --'
         previous_bucket = self.bucket - 1

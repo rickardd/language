@@ -2,7 +2,7 @@ import {Component, EventEmitter, Output, Input} from 'angular2/core'
 import {ControlGroup, FormBuilder} from 'angular2/common'
 
 // import {Word} from './word'
-import {Bucket, ScoreChange} from '../shared/bucket'
+import {Bucket, ScoreChange} from '../shared/score'
 import {Translation} from '../shared/translation'
 import {GameService} from '../game.service'
 
@@ -20,14 +20,13 @@ import {GameService} from '../game.service'
 // ToDo: remove plurar from class name
 export class WordsComponent{
 
-  @Input() translation = new Translation()
-
+  @Input() translation = new Translation({})
   @Output() wordSubmit = new EventEmitter();
 
   form : ControlGroup
   // word = new Word()
   // score = new Bucket()
-  scoreChange = new ScoreChange()
+  scoreChange = new ScoreChange("")
   stepStatus : string
   // translation = new Translation()
 
