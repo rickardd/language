@@ -9,7 +9,7 @@ class TranslationsController < ApplicationController
   def index
     # ToDo: The english word is needed to give the user feedback
     # But is it possible to decrypt it to prevent cheating
-    @translations = Translation.all
+    @translations = Translation.next
   end
 
   # GET /translations/1

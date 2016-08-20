@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # get 'scrores/update'
   get 'scores/total'
 
+  get 'users/login_user_1' => "users#login_user_1"
+
   # root 'app#index'
 
   resources :translations

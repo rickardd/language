@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160814191227) do
+ActiveRecord::Schema.define(version: 20160820154431) do
+
+  create_table "lists", force: :cascade do |t|
+    t.string   "name",       default: "private"
+    t.integer  "user_id"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "lists_translations", force: :cascade do |t|
+    t.integer "list_id",        null: false
+    t.integer "translation_id"
+    t.index ["list_id"], name: "index_lists_translations_on_list_id"
+    t.index ["translation_id"], name: "index_lists_translations_on_translation_id"
+  end
 
   create_table "scores", force: :cascade do |t|
     t.integer  "bucket",         default: 0
@@ -26,6 +40,13 @@ ActiveRecord::Schema.define(version: 20160814191227) do
     t.string   "english"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",           null: false
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

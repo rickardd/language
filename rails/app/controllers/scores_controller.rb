@@ -22,6 +22,54 @@ class ScoresController < ApplicationController
       # @translation.score.move_down
       # render json: { message: "Attemtp invalid", attempt: params[:attempt]}.to_json
     end
+
+
+
+    # 2. Return new translation.
+    #
+
+    # All words in private list with positive priority in prioritized order.
+    pscores_tids = prioritized_scores.map(&:translation_id)
+    # puts 'session ids'
+    # puts session[:scored_translation_ids]
+    # puts 'all positive ids'
+    # puts pscores_tids
+    # puts 'locked session ids'
+    locked_session_tids = session[:scored_translation_ids] - pscores_tids
+    # puts 'unlocked sessoin ids'
+    unlocked_session_tids = session[:scored_translation_ids] - locked_session_tids
+    # puts 'new ids'
+    new_tids_for_session = (pscores_tids - unlocked_session_tids)[0...locked_session_tids.count]
+
+
+
+    # puts 'new session'
+    # puts session[:scored_translation_ids]
+    # puts 'score to return'
+    # puts the_score = session[:scored_translation_ids].fetch( params["wordCount"].to_i, nil)
+    # puts new_tids_for_session
+
+
+    # unless the_score
+    # If no new translation id's added return last translation in session array
+    if score.bucket === 0
+      # retrives the values from first array that includes in the second array.
+      # the past in id is not included.
+      priority_sorted_sesson_ids = pscores_tids & session[:scored_translation_ids]
+      # to_do_1: return id with lowest priority from a sorted sesson variabel. So find a way to sort session[:scored_translation_ids]
+      @translations = Translation.where(id: priority_sorted_sesson_ids.first )
+      render 'lists/global'
+    elsif new_tids_for_session.count <= 0
+      @translations = Translation.where(id: session[:scored_translation_ids].last )
+      render 'lists/global'
+    else # else return the new translations for the new id's
+      # to_do_2 This line should not add up if word is in bucket 0
+      session[:scored_translation_ids] += new_tids_for_session
+      @translations = Translation.where(id: new_tids_for_session )
+      render 'lists/global'
+    end
+
+
   end
 
   def create
@@ -50,13 +98,24 @@ class ScoresController < ApplicationController
       # params.require(:score).permit(:english, :attempt)
     end
 
+    def prioritized_scores
+      current_user.prioritized_scores
+    end
 
-    # Allows cross origin requests.
-    # ToDo: remove once angular2 works on the same server as rails
-    # def set_header
-    #   request.headers['Access-Control-Allow-Origin'] = 'http://localhost:3001'
-    #   request.headers['Access-Control-Allow-Methods'] = 'POST, PUT, PATCH, DELETE, GET, OPTIONS'
-    #   request.headers['Access-Control-Request-Method'] = '*'
-    #   request.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-    # end
+    def scores_hash_as_translation_ids
+      current_user.scores_hash.map{|h| {translation_id: h[:score].translation_id, priority: h[:priority] } }
+    end
+
 end
+
+
+  def prioritized_scores
+    current_user.prioritized_scores
+  end
+
+  def scores_hash_as_translation_ids
+    current_user.scores_hash.map{|h| {translation_id: h[:score].translation_id, priority: h[:priority] } }
+  end
+
+
+
