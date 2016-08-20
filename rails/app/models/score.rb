@@ -81,7 +81,7 @@ class Score < ActiveRecord::Base
       else
         puts '-- updating bucket --'
         previous_bucket = self.bucket - 1
-        steps_in_previous_bucket = BUCKETS[previous_bucket][:steps]
+        steps_in_previous_bucket = BUCKETS[previous_bucket]["steps"]
         self.update( bucket: previous_bucket, step: steps_in_previous_bucket )
         return "bucket_down"
       end

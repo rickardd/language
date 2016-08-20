@@ -13,6 +13,8 @@ import {ScoreChange} from '../shared/score'
 
 export class StatsComponent{
 
+  @Input() wordSubmited : number; // just to trigger ngOnChanges()
+
   buckets : Object
 
   constructor( private _statsService : StatsService ){
@@ -20,12 +22,19 @@ export class StatsComponent{
   }
 
   ngOnInit(){
+    this.getNumverOfWordsInBucket();
+  }
 
+  ngOnChanges(){
+    console.log("-------------");
+    this.getNumverOfWordsInBucket();
+  }
+
+  getNumverOfWordsInBucket(){
     this._statsService.getTotal()
             .subscribe( resulut => {
               this.buckets = resulut
             })
-
   }
 
 }

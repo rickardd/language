@@ -12,7 +12,7 @@ import {GameService} from './game.service'
 @Component({
   template: `
     <words [translation]="translation" (wordSubmit)="onWordSubmit($event)"></words>
-    <stats></stats>
+    <stats [wordSubmited]="wordSubmited"></stats>
     <feedback
           [translation]="translation"
           [scoreChangeTerm]="scoreChangeTerm"
@@ -35,6 +35,7 @@ export class GameComponent{
   translation = new Translation({});
   scoreChangeTerm : ScoreChangeTerm
   slide = new Slide( false, false)
+  wordSubmited : number = 0
 
   constructor( private _gameService: GameService ){
 
@@ -49,6 +50,7 @@ export class GameComponent{
   }
 
   onWordSubmit( $event ){
+    this.wordSubmited += 1
     this.translation = new Translation( $event.translation )
     // this.scoreChangeTerm = $event.scoreChangeTerm
     // console.log( "**********", $event.scoreChangeTerm);
