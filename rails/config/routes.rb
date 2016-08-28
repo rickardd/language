@@ -3,13 +3,21 @@ Rails.application.routes.draw do
   # get 'scrores/update'
   get 'scores/total'
 
-  get 'users/login_user_1' => "users#login_user_1"
+  get 'users/login_user_1' => "sessions#login_user_1"
+  post 'users/login_user_1' => "sessions#login_user_1"
+  get 'users/logout_user_1' => "sessions#destroy_user_1"
+  get 'users/who_is_logged_in' => "sessions#show_user_1"
 
-  # root 'app#index'
+  resources :lists do
+    collection do
+      get 'global'
+      get 'private'
+    end
+  end
 
   resources :translations
 
- resources :score, only: [] do
+  resources :score, only: [] do
     collection do
       resources :translations, controller: :scores
     end

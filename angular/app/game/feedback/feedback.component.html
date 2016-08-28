@@ -19,11 +19,6 @@
       {{translation.spanish}}
     </div>
   </div>
-  <div class="" *ngIf="!!scoreChange.bucket">Score went {{scoreChange.bucket}} a bucket</div>
-  <div class="" *ngIf="scoreChange.topLimit">Congrats you know this word. Well done!</div>
-  <div class="" *ngIf="!!scoreChange.step">Score went {{scoreChange.step}} a step</div>
-  <div class="" *ngIf="!!scoreChange.bottomLimit">Whoops! This word whent straigt to the bottom</div>
   <a (click)="onClose()" class="button button-24 border-red" role="none" [focus]="slide.enter">close</a>
 </div>
 
-{{scoreChange | json}}

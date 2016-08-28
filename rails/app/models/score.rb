@@ -1,5 +1,7 @@
 class Score < ActiveRecord::Base
   belongs_to :translation
+  belongs_to :user
+
 
   BUCKETS = Bucket.config
 
@@ -19,16 +21,13 @@ class Score < ActiveRecord::Base
     counts
   end
 
-  # returns: true if updated
-  # returns: false if in the last bucket and can't move up
   def move_up
     self.touch
     maximum_steps = BUCKETS[self.bucket]["steps"]
 
     if self.step < maximum_steps
       return step_up
-    end
-    if self.step >= maximum_steps
+    else
       return bucket_up
     end
   end
@@ -37,8 +36,7 @@ class Score < ActiveRecord::Base
     self.touch
     if self.step > 0
       return step_down
-    end
-    if self.step <= 0
+    else
       return bucket_down
     end
   end
@@ -47,44 +45,31 @@ class Score < ActiveRecord::Base
   private
 
     def step_up
-      puts '-- Step Up --'
       next_step = self.step + 1
       self.update( step: next_step )
-      return "step_up"
+      self
     end
 
     def bucket_up
-      puts '-- Bucket Up --'
       next_bucket = self.bucket + 1
-      if( !BUCKETS[next_bucket] )
-        puts '-- return self--'
-        return "bucket_top_limit"
-      else
-        puts '-- updating bucket --'
-        self.update( bucket: next_bucket, step: 0 )
-        return "bucket_up"
-      end
+      return self if !BUCKETS[next_bucket]
+
+      self.update( bucket: next_bucket, step: 0 )
+      self
     end
 
     def step_down
-      puts '-- Step Down --'
       previous_step = self.step - 1
       self.update( step: previous_step )
-      return "step_down"
+      self
     end
 
     def bucket_down
-      puts '-- Bucket Down --'
-      if( self.bucket <= 0 )
-        puts '-- return self--'
-        return "bucket_bottom_limit"
-      else
-        puts '-- updating bucket --'
-        previous_bucket = self.bucket - 1
-        steps_in_previous_bucket = BUCKETS[previous_bucket]["steps"]
-        self.update( bucket: previous_bucket, step: steps_in_previous_bucket )
-        return "bucket_down"
-      end
+      return self if self.bucket <= 0
+      previous_bucket = self.bucket - 1
+      steps_in_previous_bucket = BUCKETS[previous_bucket]["steps"]
+      self.update( bucket: previous_bucket, step: steps_in_previous_bucket )
+      self
     end
 
 end

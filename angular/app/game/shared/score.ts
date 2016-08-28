@@ -14,41 +14,41 @@ export class Bucket{
 // }
 
 // export class ScoreChange implements IScoreChange {
-export class ScoreChange{
+// export class ScoreChange{
 
-  bucket : string = "" // e.g up
-  step : string = ""  // eg down
-  topLimit : boolean = false
-  bottomLimit : boolean = false
+//   bucket : string = "" // e.g up
+//   step : string = ""  // eg down
+//   topLimit : boolean = false
+//   bottomLimit : boolean = false
 
-  constructor(searchTerm : string ) {
-    // this.bucket = bucket ? bucket : "";
-    // this.step = step ? step : "";
-    // this.lastname = lastname ? lastname : '';
-    var self = this
-    switch (searchTerm) {
-       case "bucket_up":
-         self.bucket = "up"
-         break;
-      case "bucket_down":
-         self.bucket = "down"
-         break;
-      case "bucket_bottom_limit":
-         self.topLimit = true
-         break;
-      case "bucket_top_limit":
-         self.topLimit = true
-         break;
-      case "step_up":
-         self.step = "up"
-         break;
-      case "step_down":
-         self.step = "down"
-         break;
-     }
-  }
+//   constructor(searchTerm : string ) {
+//     // this.bucket = bucket ? bucket : "";
+//     // this.step = step ? step : "";
+//     // this.lastname = lastname ? lastname : '';
+//     var self = this
+//     switch (searchTerm) {
+//        case "bucket_up":
+//          self.bucket = "up"
+//          break;
+//       case "bucket_down":
+//          self.bucket = "down"
+//          break;
+//       case "bucket_bottom_limit":
+//          self.topLimit = true
+//          break;
+//       case "bucket_top_limit":
+//          self.topLimit = true
+//          break;
+//       case "step_up":
+//          self.step = "up"
+//          break;
+//       case "step_down":
+//          self.step = "down"
+//          break;
+//      }
+//   }
 
-}
+// }
 
 // export class ScoreChange{
 //   private bucket : string // e.g up
@@ -85,15 +85,5 @@ export class ScoreChange{
 //          this.step = "down"
 //          break;
 //      }
-//      console.log("class", hello, this);
 //   }
 // }
-
-export class ScoreChangeTerm{
-  term : string = ""
-  constructor( term : string ){
-    this.term = term
-    console.log("ScoreChangeTerm", this.term);
-  }
-}
-

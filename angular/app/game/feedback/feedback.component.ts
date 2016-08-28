@@ -1,9 +1,8 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core'
 
 import {FeedbackService} from './feedback.service'
-import {ScoreChange, ScoreChangeTerm} from '../shared/score'
 import {Slide} from '../shared/slide'
-import {Translation} from '../shared/translation'
+import {Translation} from '../../shared/translation'
 
 @Component({
   selector: "feedback",
@@ -17,34 +16,22 @@ import {Translation} from '../shared/translation'
 export class FeedbackComponent{
 
   @Input() translation : Translation;
-  @Input() scoreChangeTerm : ScoreChangeTerm = new ScoreChangeTerm("");
   @Input() slide : Slide;
   @Output() close = new EventEmitter();
 
   correctAnswer : boolean = false
   attemptValidatedArray : any[]
 
-  scoreChange : ScoreChange
-
   constructor( private _feedbackService : FeedbackService ){
 
   }
 
   ngOnInit(){
-    console.log("----init----");
-    console.log(this.slide);
+
   }
 
-
-
   ngOnChanges(){
-    console.log("--------ON CHANGE--------")
-    console.log("in",this.slide.enter,"out",this.slide.exit);
     this.correctAnswer = this.translation.attempt === this.translation.spanish
-    // this.scoreChange = this.getScoreChange()
-    // console.log( "rickiiiii", this.scoreChangeTerm.term = "" );
-    this.scoreChange = new ScoreChange( "bucket_up" )
-    // this.scoreChange = new ScoreChange( this.scoreChangeTerm.term )
     this.attemptValidatedArray = this.getWordValidatedArray()
   }
 
@@ -56,39 +43,6 @@ export class FeedbackComponent{
   onClose( $event ){
     this.exitSlide( $event )
   }
-
-  // getScoreChange(){
-
-  //   var change = new ScoreChange()
-
-  //    switch (this.scoreChangeTerm) {
-  //      case "bucket_up":
-  //        change.bucket = "up"
-  //        break;
-  //     case "bucket_down":
-  //        change.bucket = "down"
-  //        break;
-  //     case "bucket_bottom_limit":
-  //        change.topLimit = true
-  //        break;
-  //     case "bucket_top_limit":
-  //        change.topLimit = true
-  //        break;
-  //     case "step_up":
-  //        change.step = "up"
-  //        break;
-  //     case "step_down":
-  //        change.step = "down"
-  //        break;
-  //    }
-  //    return change
-  // }
-
-  // getScoreChange(){
-  //   console.log("------New Score class--------");
-  //   return new ScoreChange( this.scoreChangeTerm )
-  // }
-
 
   getWordValidatedArray(){
     // ToDo: Do a nested loop.

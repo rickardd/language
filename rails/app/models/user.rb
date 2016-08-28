@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   has_many :lists
-  # has_many :scores
+  has_many :scores
   # has_many :xps
 
   # def private_list

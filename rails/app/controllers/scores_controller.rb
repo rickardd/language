@@ -1,5 +1,7 @@
 class ScoresController < ApplicationController
 
+  # before_filter :authorize
+
   # before_action :set_header
 
   def show
@@ -7,26 +9,54 @@ class ScoresController < ApplicationController
   end
 
   def update
-      @translation = Translation.find( params[:id] )
+    # @translation = Translation.find( params[:id] )
 
     # sets the request body as a json which can be accesible with [:symbols]
     params_body = JSON.parse(request.raw_post).with_indifferent_access
-    attempt = params_body["attempt"]
+    # attempt = params_body["attempt"]
 
-    if attempt == @translation.spanish
-      @score = @translation.score.move_up
-      render json: @score.to_json
-    else
-      @score = @translation.score.move_down
-      render json: @score.to_json
-      # @translation.score.move_down
-      # render json: { message: "Attemtp invalid", attempt: params[:attempt]}.to_json
+    # if attempt == @translation.spanish
+    #   @score = @translation.score.move_up
+    #   render json: @score.to_json
+    # else
+    #   @score = @translation.score.move_down
+    #   render json: @score.to_json
+    #   # @translation.score.move_down
+    #   # render json: { message: "Attemtp invalid", attempt: params[:attempt]}.to_json
+    # end
+
+
+    # 1. Update score and saves to database
+    if params_body["id"] != "-1"
+      puts '--1'
+      translation = Translation.find(params_body["id"])
+      puts '--2'
+
+      score = Score.find_or_create_by(user: current_user, translation: translation)
+      puts '--3'
+
+      # removes special characters before validation.
+      trimmed_attempt = params_body["attempt"].downcase.strip.tr('?!:;.,', '')
+      puts '--4'
+      trimmed_db_word = translation.spanish.downcase.strip.tr('?!:;.,', '')
+      puts '--5'
+
+      if trimmed_attempt == trimmed_db_word
+        score.move_up
+      else
+        score.move_down
+      end
+      # update xp
+      # Xp.create_new_xp_for_user( current_user ).update
     end
 
-
+    # Temporary lines
+    temporary_next_id = params_body["id"] == 1 ? 2 : 1
+    # render json: Translation.find( temporary_next_id ).to_json
+    render json: translation.to_json
+    return
 
     # 2. Return new translation.
-    #
 
     # All words in private list with positive priority in prioritized order.
     pscores_tids = prioritized_scores.map(&:translation_id)

@@ -1,15 +1,65 @@
 class TranslationsController < ApplicationController
+  # before_filter :authorize
+
   before_action :set_translation, only: [:show, :edit, :update, :destroy]
 
-  # before_filter :set_header, only: [:show]
+  skip_before_action :verify_authenticity_token
 
+
+  # before_filter :set_header, only: [:show]
 
   # GET /translations
   # GET /translations.json
   def index
+
+    # Tempoorary random function
+      render json: current_user.lists.find_by( name: :private ).translations.shuffle.first.to_json
+      return
+    # End temporary...
+
     # ToDo: The english word is needed to give the user feedback
     # But is it possible to decrypt it to prevent cheating
-    @translations = Translation.next
+    # @translations = Translation.next
+    # break if session[:translation_id].nil?
+    if( !cookies[:translation_id].nil? && cookies[:translation_id] > "-1" )
+      puts "--toggle"
+      next_translation_id = cookies[:translation_id] == "1" ? "2" : "1"
+
+      # @translations = Translation.find( next_translation_id )
+      translation = current_user.lists.find_by( name: "private").translations.find( next_translation_id )
+
+    else
+      puts "--shuffle"
+      translation = current_user.lists.find_by( name: "private").translations.shuffle[1..2][0]
+    end
+    cookies[:translation_id] = translation.id
+    # system "clear"
+    # puts '*****************'
+    # puts 'next session id'
+    # puts next_translation_id
+    # puts "translation: "
+    # puts translation.id
+    # puts "session: "
+    # puts session[:translation_id]
+    # puts '*****************'
+
+    system "clear"
+    puts "--------**************---------------"
+    puts "--------**************---------------"
+    puts "--------******s********---------------"
+    puts session[:test]
+    puts "--------******c********---------------"
+    puts cookies[:test_cookie]
+    puts "--------**************---------------"
+    puts "--------**************---------------"
+    puts "--------**************---------------"
+    puts "--------**************---------------"
+    puts "--------**************---------------"
+
+    session[:test] = "SESSION SESSION SESSION SESSION"
+    cookies[:test_cookie] = "SESSION SESSION SESSION SESSION"
+
+    render json: translation.to_json
   end
 
   # GET /translations/1
@@ -46,15 +96,14 @@ class TranslationsController < ApplicationController
   # PATCH/PUT /translations/1
   # PATCH/PUT /translations/1.json
   def update
-    respond_to do |format|
-      if @translation.update(translation_params)
-        format.html { redirect_to @translation, notice: 'Translation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @translation }
-      else
-        format.html { render :edit }
-        format.json { render json: @translation.errors, status: :unprocessable_entity }
-      end
-    end
+    # translation = Translation.find(params[:id])
+    # if current_user.private_list.translations.include?(translation)
+    #   render json: "{ \"private_match\": true, \"action\": \"already_exist\", \"id\": \"#{params[:id]}\"}"
+    # else
+    #   current_user.private_list.translations << Translation.find(params[:id])
+    #   current_user.scores.create( translation_id: params[:id])
+    #   render json: "{ \"private_match\": true, \"action\": \"added\", \"id\": \"#{params[:id]}\"}"
+    # end
   end
 
   # DELETE /translations/1

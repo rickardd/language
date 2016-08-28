@@ -1,5 +1,5 @@
 
-// ToDo: Remove and replace woth translation.ts
+// ToDo: Remove and replace with translation.ts
 export class Word{
   id: number;
   spanish: string;

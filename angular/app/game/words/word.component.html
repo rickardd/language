@@ -1,16 +1,15 @@
 
-
-  <div class="container">
-    <div class="source-word">
-      English {{translation.english}}
-    </div>
-    <div class="translation-word">
-      Spanish {{translation.spanish}}
-    </div>
-
-    <form [ngFormModel]="form" (ngSubmit)="onSubmit()">
-      <input type="text" ngControl="attempt">
-      <input type="submit" value="Check">
-    </form>
+<div class="container">
+  <div class="source-word">
+    English {{translation.english}}
   </div>
+  <div class="translation-word">
+    Spanish {{translation.spanish}}
+  </div>
+
+  <form [ngFormModel]="form" (ngSubmit)="onSubmit()">
+    <input type="text" ngControl="attempt">
+    <input type="submit" value="Check">
+  </form>
+</div>
 
