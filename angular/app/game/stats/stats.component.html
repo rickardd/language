@@ -1,4 +1,10 @@
-
-<div *ngFor="#bucket of buckets; #i=index">
-  <span>words in bucket ({{i}})</span> <span>{{bucket}}</span>
-</div>
+<article class="stats">
+  <ul class="list clearfix">
+    <li class="item" *ngFor="#bucket of buckets; #i=index">
+      <div class="bar">
+        <div class="fill" style="height: 50%"></div>
+      </div>
+      <div class="label">{{bucket}}</div>
+    </li>
+  </ul>
+</article>

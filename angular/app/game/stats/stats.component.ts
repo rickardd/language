@@ -5,6 +5,7 @@ import {StatsService} from './stats.service'
 @Component({
   selector: "stats",
   templateUrl: "app/game/stats/stats.component.html",
+  styleUrls: ["app/game/stats/stats.component.css"],
   providers: [
     StatsService
   ]
