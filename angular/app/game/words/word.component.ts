@@ -13,7 +13,6 @@ import {GameService} from '../game.service'
   providers: [
     GameService
   ]
-
 })
 
 // ToDo: remove plurar from class name
@@ -29,11 +28,11 @@ export class WordsComponent{
 
   }
 
-  ngOnInit(){
+  ngOnInit() : void{
     this.form = this._fb.group({attempt: [''] })
   }
 
-  onSubmit(){
+  onSubmit() : void{
     this.translation.attempt = this.form.value.attempt
     this.wordSubmit.emit( { translation: this.translation } )
     this.updateScore()
