@@ -9,7 +9,7 @@ import {GameService} from '../game.service'
 @Component({
   selector: "words",
   templateUrl: "app/game/words/word.component.html",
-  styleUrls: ["app/game/words/word.component.css"],
+  styleUrls: ["app/game/words/word.component.scss"],
   providers: [
     GameService
   ]

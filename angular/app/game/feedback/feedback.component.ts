@@ -7,7 +7,7 @@ import {Translation} from '../../shared/translation'
 @Component({
   selector: "feedback",
   templateUrl: "app/game/feedback/feedback.component.html",
-  styleUrls: ["app/game/feedback/test.css"],
+  styleUrls: ["app/game/feedback/feedback.component.css"],
   providers: [
     FeedbackService
   ]

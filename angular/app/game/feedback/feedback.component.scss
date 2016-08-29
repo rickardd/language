@@ -1,3 +1,11 @@
+$white-0: #fff;
+$green-0: rgba(0, 128, 0, 0.26);
+$grey-1: #eee;
+
+$text-dark: #555;
+$text-red: red;
+$text-green: green;
+
 .slide{
   position: fixed;
   top: 30px;
@@ -109,3 +117,4 @@
 .slide-close:focus{
   border: 1px solid red;
 }
+
