@@ -38,8 +38,9 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          // 'app/game/words/word.component.scss': 'app/game/words/word.component.css',
-          'app/game/feedback/feedback.component.css': 'app/game/feedback/feedback.component.scss'
+          'app/game/feedback/feedback.component.css': 'app/game/feedback/feedback.component.scss',
+          'app/game/stats/stats.component.css': 'app/game/stats/stats.component.scss',
+          'app/game/words/word.component.css': 'app/game/words/word.component.scss'
         }
       }
     },
