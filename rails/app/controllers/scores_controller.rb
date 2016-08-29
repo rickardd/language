@@ -118,8 +118,16 @@ class ScoresController < ApplicationController
   end
 
   def total
-    # Todo: bind to user and not to translation
-    render json: Translation.first.score.total.to_json
+    array = []
+    Bucket.config.each_index do |i|
+      scores = current_user.scores
+      score = scores.where(bucket: i)
+      array.push({
+        translations: score.count,
+        percentage: ( (score.count.to_f / scores.count.to_f) * 1000 ).round / 1000.0 * 100
+      })
+    end
+    render json: array.to_json
   end
 
 

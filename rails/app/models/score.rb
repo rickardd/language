@@ -2,7 +2,7 @@ class Score < ActiveRecord::Base
   belongs_to :translation
   belongs_to :user
 
-
+  # Move to public place
   BUCKETS = Bucket.config
 
   validates :bucket, :numericality => {
@@ -13,13 +13,7 @@ class Score < ActiveRecord::Base
 
   # ToDo: Score: bucket, step seems to allow nil values. Shout be not null field
 
-  def total
-    counts = []
-    BUCKETS.each_with_index do |bucket, index|
-      counts.push( Score.where( bucket: index ).count )
-    end
-    counts
-  end
+
 
   def move_up
     self.touch
