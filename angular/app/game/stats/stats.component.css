@@ -4,6 +4,7 @@
 .list{
   list-style: none;
   width: calc(100px + ( 5 * 12px ));
+  padding: 0;
 }
 .item{
   float: left;
@@ -11,6 +12,9 @@
   height: 100px;
   position: relative;
   margin-left: 4px;
+}
+.item:first-child{
+  margin-left: 0;
 }
 .bar{
   border: 1px solid white;
