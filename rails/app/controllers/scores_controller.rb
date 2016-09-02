@@ -118,16 +118,23 @@ class ScoresController < ApplicationController
   end
 
   def total
+    scores = current_user.scores
     array = []
-    Bucket.config.each_index do |i|
-      scores = current_user.scores
-      score = scores.where(bucket: i)
-      array.push({
-        translations: score.count,
-        percentage: ( (score.count.to_f / scores.count.to_f) * 1000 ).round / 1000.0 * 100
-      })
-    end
+
+    # if scores.any?
+      Bucket.config.each_index do |i|
+        score = scores.where(bucket: i)
+        translations = 0
+        percentage = 0
+        if score.count != nil && score.count != 0
+          translations = score.count
+          percentage = ( (score.count.to_f / scores.count.to_f) * 1000 ).round / 1000.0 * 100
+        end
+        array.push({ translations: translations, percentage: percentage  })
+      end
+    # end
     render json: array.to_json
+
   end
 
 

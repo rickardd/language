@@ -20,6 +20,7 @@ export class WordsComponent{
 
   @Input() translation = new Translation()
   @Output() wordSubmit = new EventEmitter();
+  @Output() scoreUpdate = new EventEmitter();
 
   form : ControlGroup
   stepStatus : string
@@ -42,7 +43,10 @@ export class WordsComponent{
   updateScore() : void {
     let trans = this.translation
     this._gameService.updateScore( this.translation )
-                  .subscribe( response => {})
+                  .subscribe( response => {
+                    console.log(response);
+                    this.scoreUpdate.emit( response )
+                  })
   }
 
   getWord() : void {

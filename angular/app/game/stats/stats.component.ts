@@ -17,7 +17,7 @@ import {StatsService} from './stats.service'
 
 export class StatsComponent{
 
-  @Input() wordSubmited : number; // just to trigger ngOnChanges()
+  @Input() scoreUpdate : any; // just to trigger ngOnChanges()
 
   buckets : Object
 
@@ -34,6 +34,7 @@ export class StatsComponent{
   }
 
   getNumverOfWordsInBucket(){
+    console.log("change stats", this.scoreUpdate);
     this._statsService.getTotal()
             .subscribe( resulut => {
               this.buckets = resulut
