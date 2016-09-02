@@ -34,11 +34,9 @@ export class StatsComponent{
   }
 
   getNumverOfWordsInBucket(){
-    console.log("change stats", this.scoreUpdate);
     this._statsService.getTotal()
             .subscribe( resulut => {
               this.buckets = resulut
-              console.log(resulut);
             })
   }
 

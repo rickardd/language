@@ -33,6 +33,9 @@ export class FeedbackComponent{
   ngOnChanges(){
     this.correctAnswer = this.translation.attempt === this.translation.spanish
     this.attemptValidatedArray = this.getWordValidatedArray()
+
+    // document.querySelector("feedback").querySelector("button").setAttribute("focus", "true");
+    // console.log(document.querySelector("feedback").querySelector("button"));
   }
 
   exitSlide( $event ){
@@ -40,8 +43,12 @@ export class FeedbackComponent{
     this.close.emit( $event );
   }
 
-  onClose( $event ){
-    this.exitSlide( $event )
+  onClose(  ){
+    // this.exitSlide( $event )
+    console.log(event, event.target);
+    if( event.type == "click" || event.key == "Enter"){
+      this.exitSlide( event )
+    }
   }
 
   getWordValidatedArray(){

@@ -51,8 +51,6 @@ export class GameComponent{
     this.slide = new Slide(true, false)
   }
   onScoreUpdate( $event ){
-    console.log("game", $event);
-
     this.scoreUpdate = new Translation( $event )
   }
 

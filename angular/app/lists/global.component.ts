@@ -36,7 +36,6 @@ export class GlobalListComponent{
 
     this._listService.addTranslationToList( id )
             .subscribe( response => {
-              console.log( response , "added")
             })
   }
 }

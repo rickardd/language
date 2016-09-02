@@ -19,6 +19,6 @@
       {{translation.spanish}}
     </div>
   </div>
-  <a (click)="onClose()" class="button button-24 border-red" role="none" [focus]="slide.enter">close</a>
+  <button (click)="onClose()" (keypress)="onClose()" class="button button-24 border-red" role="none" [focus]="slide.enter">close</button>
 </div>
 
