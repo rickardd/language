@@ -1,0 +1,73 @@
+.table{
+  color: white;
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 24px;
+  display: block;
+  clear: both;
+  background: #fff;
+  border-radius: 50%;
+  border: 4px solid #005a70;
+}
+
+.email{
+  text-align: center;
+  font-size: 24px;
+  clear: both;
+}
+
+.seperator{
+  border-bottom: 1px solid #005a70;
+  margin: 24px 0;
+}
+
+
+.stat-section{
+  display: block;
+  margin: 0 auto;
+  background: rgba(255, 0, 0, 0.8);
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-box{
+  float: left;
+  min-width: 300px;
+  margin: 0 24px;
+  background: rgba( 255, 255, 255, .2);
+  padding: 24px;
+
+  .label{
+    font-size: 24px;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .data{
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,13 +1,17 @@
 import {Component, Input} from 'angular2/core'
 
+import {BarsComponent} from '../../wigets/bars/bars.component'
 import {StatsService} from './stats.service'
 
 @Component({
   selector: "stats",
   templateUrl: "app/game/stats/stats.component.html",
-  styleUrls: ["app/game/stats/stats.component.scss"],
+  styleUrls: ["app/game/stats/stats.component.css"],
+  directives:[
+    BarsComponent
+  ],
   providers: [
-    StatsService
+    StatsService,
   ]
 })
 
@@ -33,6 +37,7 @@ export class StatsComponent{
     this._statsService.getTotal()
             .subscribe( resulut => {
               this.buckets = resulut
+              console.log(resulut);
             })
   }
 

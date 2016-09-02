@@ -1,1 +1,60 @@
-<h1>Profile</h1>
+
+<img class="avatar" width="100" height="100" alt="" src="http://placekitten.com/200/200">
+
+<div class="email">user@somthing.com</div>
+
+<a [routerLink]="['Game']" class="button button-large center">Play</a>
+
+<section class="stat-section clearfix">
+  <div class="stat-box">
+    <div class="label">You Know</div>
+    <div class="data">133</div>
+  </div>
+  <div class="stat-box">
+    <div class="label">You are playing</div>
+    <div class="data">67</div>
+  </div>
+  <div class="stat-box">
+    <bars-wiget [buckets]="buckets" [size]="'big'" ></bars-wiget>
+  </div>
+</section>
+
+<div class="seperator"></div>
+
+<a href="" class="button right">Add friend</a>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td>avatar</td>
+      <td>Are playing</td>
+      <td>Knows</td>
+      <td>Buckets</td>
+      <td>Strength</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>img</td>
+      <td>57</td>
+      <td>44</td>
+      <td>
+        <bars-wiget [buckets]="buckets" [size]="'small'" ></bars-wiget>
+      </td>
+      <td>57%</td>
+    </tr>
+    <tr>
+      <td>img</td>
+      <td>57</td>
+      <td>63</td>
+      <td>
+        <bars-wiget [buckets]="buckets" [size]="'small'" ></bars-wiget>
+      </td>
+      <td>57%</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+

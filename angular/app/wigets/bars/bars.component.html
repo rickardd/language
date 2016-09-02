@@ -1,0 +1,26 @@
+
+<article class="stats small" *ngIf="size == 'small'">
+  <ul class="list clearfix">
+    <li class="item clearfix" *ngFor="#bucket of buckets; #i=index">
+      <div class="bar">
+        <div class="fill" style="height: {{bucket.percentage}}%"></div>
+      </div>
+    </li>
+  </ul>
+</article>
+
+
+
+
+<article class="stats big" *ngIf="size != 'small'">
+  <ul class="list clearfix">
+    <li class="item" *ngFor="#bucket of buckets; #i=index">
+      <div class="bar">
+        <div class="fill" style="height: {{bucket.percentage}}%"></div>
+      </div>
+      <div class="label">{{bucket.translations}}</div>
+    </li>
+  </ul>
+</article>
+
+
