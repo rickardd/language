@@ -12,8 +12,13 @@ Rails.application.routes.draw do
     collection do
       get 'global'
       get 'private'
+      post 'private/translation/:translation_id' => 'lists#add_translation'
+      delete 'private/translation/:translation_id' => 'lists#remove_translation'
     end
   end
+
+
+
 
   resources :translations
 

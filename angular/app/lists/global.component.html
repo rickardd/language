@@ -1,7 +1,19 @@
 <h1>Global list</h1>
-<div *ngFor="#translation of list.collection">
-  <div>
-    <span style="display: inline-block; min-width: 250px;">{{translation.english}}</span> |
-    <span style="display: inline-block; min-width: 250px;">{{translation.spanish}}</span>
-  </div>
-</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td>Action</td>
+      <td>Spanish</td>
+      <td>English</td>
+    </tr>
+  </thead>
+  <tbody *ngFor="#translation of list.collection">
+
+    <tr>
+      <td><button (click)="onAddTranslation( $event )" id="{{translation.id}}" class="button">Add</button></td>
+      <td>{{translation.english}}</td>
+      <td>{{translation.spanish}}</td>
+    </tr>
+  </tbody>
+</table>

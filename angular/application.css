@@ -20,6 +20,11 @@
   padding: 12px;
 }
 
+.button-disabled{
+  background-color: #aaa;
+  color: #fff;
+}
+
 .text-center{
   text-align: center;
 }

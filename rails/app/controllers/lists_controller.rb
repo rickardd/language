@@ -9,8 +9,32 @@ class ListsController < ApplicationController
   end
 
   def private
-    @translations = current_user.lists.first.translations.limit( params[:limit] ).offset( params[:count_from] )
+    @translations = current_user.lists.find_by(name: :private).translations.limit( params[:limit] ).offset( params[:count_from] )
     # render 'lists/global'
     render json: @translations
   end
+
+  def add_translation
+    translation = Translation.find( params[:translation_id] )
+
+
+
+    if current_user.lists.find_by(name: :private).translations << translation
+      render json: translation.to_json
+    else
+      throw "translation #{params[:translation_id]} coulnd't be found"
+    end
+  end
+
+
+  def remove_translation
+    list_translation = current_user.lists.find_by(name: :private).translations
+
+    if list_translation.delete( params[:translation_id] )
+      render json: "{message: 'translation #{params[:translation_id]} is removed'"
+    else
+      throw "translation #{params[:translation_id]} for user couldn't be found"
+    end
+  end
+
 end

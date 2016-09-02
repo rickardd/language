@@ -25,4 +25,18 @@ export class GlobalListComponent{
               this.list = new List( response )
             })
   }
+
+  onAddTranslation( $event ){
+    let elm : any = $event.target
+    let id : number = parseInt( elm.id, 10 )
+
+
+    elm.className = elm.className += " button-disabled"
+    elm.innerHTML = "Added"
+
+    this._listService.addTranslationToList( id )
+            .subscribe( response => {
+              console.log( response , "added")
+            })
+  }
 }
