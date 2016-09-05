@@ -119,11 +119,14 @@ class TranslationsController < ApplicationController
   # DELETE /translations/1
   # DELETE /translations/1.json
   def destroy
-    @translation.destroy
-    respond_to do |format|
-      format.html { redirect_to translations_url, notice: 'Translation was successfully destroyed.' }
-      format.json { head :no_content }
+
+    if @translation.destroy
+      translation = Translation.all.where( user_id: current_user.id )
+      render json: translation.to_json
+    else
+      throw "coulnd't destroy translation #{params[:id]}"
     end
+
   end
 
   private
