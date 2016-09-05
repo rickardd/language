@@ -80,17 +80,27 @@ class TranslationsController < ApplicationController
   # POST /translations
   # POST /translations.json
   def create
-    @translation = Translation.new(translation_params)
 
-    respond_to do |format|
-      if @translation.save
-        format.html { redirect_to @translation, notice: 'Translation was successfully created.' }
-        format.json { render :show, status: :created, location: @translation }
+    # sets the request body as a json which can be accesible with [:symbols]
+    params_body = JSON.parse(request.raw_post).with_indifferent_access
+    translation = Translation.new(params_body)
+    translation.user_id = current_user.id
+
+      if translation.save
+        render json: translation.to_json
       else
-        format.html { render :new }
-        format.json { render json: @translation.errors, status: :unprocessable_entity }
+        throw "coulnd't save translation"
       end
-    end
+
+    # respond_to do |format|
+    #   if @translation.save
+    #     format.html { redirect_to @translation, notice: 'Translation was successfully created.' }
+    #     format.json { render :show, status: :created, location: @translation }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @translation.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /translations/1

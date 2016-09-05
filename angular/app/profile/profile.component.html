@@ -8,11 +8,15 @@
 <section class="stat-section clearfix">
   <div class="stat-box">
     <div class="label">You Know</div>
-    <div class="data">133</div>
+    <div class="data">{{userStats.knowing}}</div>
   </div>
   <div class="stat-box">
     <div class="label">You are playing</div>
-    <div class="data">67</div>
+    <div class="data">{{userStats.playing}}</div>
+  </div>
+  <div class="stat-box">
+    <div class="label">Waiting to be played</div>
+    <div class="data">{{userStats.waiting}}</div>
   </div>
   <div class="stat-box">
     <bars-wiget [buckets]="buckets" [size]="'big'" ></bars-wiget>

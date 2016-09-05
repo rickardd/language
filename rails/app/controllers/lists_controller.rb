@@ -14,6 +14,14 @@ class ListsController < ApplicationController
     render json: @translations
   end
 
+  def custom
+    # @translations = current_user.lists.find_by(name: :custom).translations.limit( params[:limit] ).offset( params[:count_from] )
+    # render 'lists/global'
+    #
+    translations = Translation.all.where( user_id: current_user.id )
+    render json: translations
+  end
+
   def add_translation
     translation = Translation.find( params[:translation_id] )
 

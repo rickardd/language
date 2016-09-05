@@ -6,6 +6,7 @@ import {LoggedInGuard} from './login/logged-in.guard';
 import {GameComponent} from './game/game.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {ProfileComponent} from './profile/profile.component';
+import {CustomListComponent} from './lists/custom.component';
 import {PrivateListComponent} from './lists/private.component';
 import {GlobalListComponent} from './lists/global.component';
 
@@ -13,6 +14,7 @@ import {GlobalListComponent} from './lists/global.component';
                { path: "/game", name: "Game", component: GameComponent},
                // { path: "/profile", name: "Profile", component: ProfileComponent, CanActivate: [LoggedInGuard]},
                { path: "/profile", name: "Profile", component: ProfileComponent },
+               { path: "/lists/custom", name: "CustomList", component: CustomListComponent},
                { path: "/lists/private", name: "PrivateList", component: PrivateListComponent},
                { path: "/lists/global", name: "GlobalList", component: GlobalListComponent},
                { path: '*others', name: 'Other', redirectTo: ['Profile']}
@@ -30,6 +32,7 @@ import {GlobalListComponent} from './lists/global.component';
       NavigationComponent,
       ProfileComponent,
       GameComponent,
+      CustomListComponent,
       PrivateListComponent,
       GlobalListComponent,
       // LoginComponent

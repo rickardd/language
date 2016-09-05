@@ -137,6 +137,14 @@ class ScoresController < ApplicationController
 
   end
 
+  def stats
+    scores = current_user.scores
+    knowing = scores.where( bucket: Bucket.top_bucket ).count
+    playing = scores.count - knowing
+    waiting = current_user.lists.find_by( name: :private).translations.count - scores.count
+    render json: { knowing: knowing, playing: playing, waiting: waiting }.to_json
+  end
+
 
   private
     def score_params

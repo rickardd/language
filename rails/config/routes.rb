@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   # get 'scrores/update'
   get 'scores/total'
+  get 'scores/stats/:user_id' => 'scores#stats'
 
   get 'users/login_user_1' => "sessions#login_user_1"
   post 'users/login_user_1' => "sessions#login_user_1"
@@ -12,13 +13,11 @@ Rails.application.routes.draw do
     collection do
       get 'global'
       get 'private'
+      get 'custom'
       post 'private/translation/:translation_id' => 'lists#add_translation'
       delete 'private/translation/:translation_id' => 'lists#remove_translation'
     end
   end
-
-
-
 
   resources :translations
 

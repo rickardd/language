@@ -1,0 +1,27 @@
+<h1>Custom list</h1>
+
+<form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
+  <input type="text" ngControl="english" >
+  <input type="text" ngControl="spanish" >
+  <input type="submit">
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td>Action</td>
+      <td>Spanish</td>
+      <td>English</td>
+    </tr>
+  </thead>
+  <tbody *ngFor="#translation of list.collection">
+
+    <tr>
+      <td>
+        <!-- <button (click)="onRemoveTranslation( $event )" id="{{translation.id}}" class="button">Delete</button> -->
+      </td>
+      <td>{{translation.english}}</td>
+      <td>{{translation.spanish}}</td>
+    </tr>
+  </tbody>
+</table>

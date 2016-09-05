@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821171414) do
+ActiveRecord::Schema.define(version: 20160905132124) do
 
   create_table "lists", force: :cascade do |t|
     t.string   "name",       default: "private"
@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 20160821171414) do
   create_table "translations", force: :cascade do |t|
     t.string   "spanish"
     t.string   "english"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "user_id",    default: -1
+    t.string   "category"
   end
 
   create_table "users", force: :cascade do |t|

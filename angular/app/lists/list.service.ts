@@ -2,6 +2,8 @@ import {Injectable} from 'angular2/core'
 import {Http} from 'angular2/http'
 import "rxjs/add/operator/map"
 
+import {Translation} from '../shared/translation'
+
 @Injectable()
 
 export class ListService{
@@ -12,6 +14,11 @@ export class ListService{
 
   }
   // put this in an object like _listService.private.getAll()
+
+  getCustomList(){
+    return this._http.get( this._urlRoot + "/lists/custom")
+                 .map( response => response.json())
+  }
   getPrivateList(){
     return this._http.get( this._urlRoot + "/lists/private")
                  .map( response => response.json())
@@ -30,6 +37,11 @@ export class ListService{
                 .map( response => {
 
                 })
+  }
+  // todo: Add the translation type
+  addTranslation( translation /*translation : Translation*/ ){
+    return this._http.post( this._urlRoot + "/translations/", JSON.stringify( translation ) )
+                .map( response => response.json() )
   }
 
 }
