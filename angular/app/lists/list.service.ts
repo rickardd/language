@@ -43,5 +43,9 @@ export class ListService{
     return this._http.post( this._urlRoot + "/translations/", JSON.stringify( translation ) )
                 .map( response => response.json() )
   }
+  removeTranslation( translation_id : number ){
+    return this._http.delete( this._urlRoot + "/translations/" + translation_id )
+                .map( response => response.json() )
+  }
 
 }

@@ -30,7 +30,6 @@ export class GlobalListComponent{
     let elm : any = $event.target
     let id : number = parseInt( elm.id, 10 )
 
-
     elm.className = elm.className += " button-disabled"
     elm.innerHTML = "Added"
 

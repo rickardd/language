@@ -38,6 +38,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
+          'application.css': 'application.scss',
           'app/wigets/bars/bars.component.css': 'app/wigets/bars/bars.component.scss',
           'app/game/feedback/feedback.component.css': 'app/game/feedback/feedback.component.scss',
           'app/game/stats/stats.component.css': 'app/game/stats/stats.component.scss',

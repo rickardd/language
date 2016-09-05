@@ -1,9 +1,13 @@
-.body{
+.body {
   background-color: #74cad4;
-  padding: 10px;
-}
+  padding: 10px; }
 
-.button{
+.table {
+  color: white; }
+  .table .phrase {
+    background-color: red; }
+
+.button {
   padding: 8px;
   background-color: #005a70;
   color: white;
@@ -12,31 +16,27 @@
   border: none;
   font-size: 16px;
   margin-bottom: 8px;
-  display: inline-block;
-}
+  display: inline-block; }
 
-.button-large{
+.button-large {
   font-size: 24px;
-  padding: 12px;
-}
+  padding: 12px; }
 
-.button-disabled{
+.button-disabled {
   background-color: #aaa;
-  color: #fff;
-}
+  color: #fff; }
 
-.text-center{
-  text-align: center;
-}
-.center{
+.text-center {
+  text-align: center; }
+
+.center {
   margin-left: auto;
-  margin-right: auto;
-}
+  margin-right: auto; }
 
-.left{
-  float: left;
-}
+.left {
+  float: left; }
 
-.right{
-  float: right;
-}
+.right {
+  float: right; }
+
+/*# sourceMappingURL=application.css.map */

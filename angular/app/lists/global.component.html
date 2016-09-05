@@ -8,9 +8,9 @@
       <td>English</td>
     </tr>
   </thead>
-  <tbody *ngFor="#translation of list.collection">
+  <tbody>
 
-    <tr>
+    <tr *ngFor="#translation of list.collection">
       <td><button (click)="onAddTranslation( $event )" id="{{translation.id}}" class="button">Add</button></td>
       <td>{{translation.english}}</td>
       <td>{{translation.spanish}}</td>

@@ -39,7 +39,27 @@ export class CustomListComponent{
             .subscribe( response => {
               console.log( response , "Translatoin added")
               // ToDo: Unnessesary request. Try to push the new translation to list instead
+              // See onDeleteTranslation()
               this.getList()
+            })
+  }
+
+  onAddToPrivate( $event ){
+    let elm : any = $event.target
+    let id : number = parseInt( elm.id, 10 )
+
+    elm.className = elm.className += " button-disabled"
+    elm.innerHTML = "Added"
+
+    this._listService.addTranslationToList( id )
+            .subscribe( response => {
+            })
+  }
+
+  onDeleteTranslation( $event ){
+    this._listService.removeTranslation( $event.target.id )
+            .subscribe( response => {
+              this.list = new List( response )
             })
   }
 }
