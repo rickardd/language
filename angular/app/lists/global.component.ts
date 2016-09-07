@@ -23,6 +23,7 @@ export class GlobalListComponent{
     this._listService.getGlobalList()
             .subscribe( response => {
               this.list = new List( response )
+              console.log( this.list, response );
             })
   }
 

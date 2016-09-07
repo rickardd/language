@@ -38,6 +38,9 @@ export class WordsComponent{
     this.wordSubmit.emit( { translation: this.translation } )
     this.updateScore()
     this.getWord();
+
+    // ToDO: don't bind on a global scope.
+    let elm = document.getElementById("attempt").value = ""
   }
 
   updateScore() : void {

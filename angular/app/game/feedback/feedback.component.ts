@@ -34,8 +34,10 @@ export class FeedbackComponent{
     this.correctAnswer = this.translation.attempt === this.translation.spanish
     this.attemptValidatedArray = this.getWordValidatedArray()
 
-    // document.querySelector("feedback").querySelector("button").setAttribute("focus", "true");
-    // console.log(document.querySelector("feedback").querySelector("button"));
+    // let button = document.querySelector("feedback").querySelector("button")
+    // let button = document.getElementById("feedback-close-button")
+    // button.focus()
+    // console.log( button);
   }
 
   exitSlide( $event ){
@@ -63,8 +65,8 @@ export class FeedbackComponent{
         self = this;
 
     userWord.forEach(function( properyName, index, key ) {
-        var wordAttempt = key[index]
-        var wordSpanish = to[index]
+        var wordAttempt = key[index].toLowerCase()
+        var wordSpanish = to[index].toLowerCase()
         userWordArray.push( {'index': index, 'word': wordAttempt, 'valid': wordAttempt == wordSpanish } );
     })
     return userWordArray;

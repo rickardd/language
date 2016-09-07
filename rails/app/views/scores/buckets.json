@@ -1,67 +1,26 @@
-// Each bucket belongs to a bucket group according to following...
-// BucketGroup1: [0,1,2,3]
-// BucketGroup2: [4,5,6]
-// BucketGroup3: [7,8,9]
-// BucketGroup4: [10,11,12,13,14]
 [
   { // 0
-      "delay": 1, //1 second
-      "steps": 3
+      "delay": 1,
+      "steps": 4
   },
   { // 1
-      "delay": 30, //30 seconds
-      "steps": 5
+      "delay": 1,
+      "steps": 4
   },
   { // 2
-      "delay": 60, // 60 seconds
-      "steps": 14
+      "delay": 1,
+      "steps": 4
   },
   { // 3
-      "delay": 120, // 2 min
-      "steps": 10
+      "delay": 1,
+      "steps": 4
   },
   { // 4
-      "delay": 300, // 5 min
-      "steps": 5
+      "delay": 1,
+      "steps": 4
+  },
+  { // 5
+      "delay": 1,
+      "steps": 4
   }
-  // { // 5
-  //     "delay": 600, // 10 min
-  //     "steps": 3
-  // },
-  // { // 6
-  //     "delay": 1200, // 20 min
-  //     "steps": 3
-  // },
-  // { // 7
-  //     "delay": 2400, // 40 min
-  //     "steps": 3
-  // },
-  // { // 8
-  //     "delay": 3600, // 60 min
-  //     "steps": 3
-  // },
-  // { // 9
-  //     "delay": 86400, // 1 day
-  //     "steps": 1
-  // },
-  // { // 10
-  //     "delay": 172800, // 2 days
-  //     "steps": 1
-  // },
-  // { // 11
-  //     "delay": 432000, // 5 days
-  //     "steps": 1
-  // },
-  // { // 12
-  //     "delay": 604800, // 1 week
-  //     "steps": 1
-  // },
-  // { // 13
-  //     "delay": 1209600, // 2 weeks
-  //     "steps": 1
-  // },
-  // { // 14
-  //     "delay": 263000000, // 1 month
-  //     "steps": 1
-  // }
 ]

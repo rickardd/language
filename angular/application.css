@@ -5,7 +5,11 @@
 .table {
   color: white; }
   .table .phrase {
-    background-color: red; }
+    background-color: green; }
+  .table .difficult {
+    color: red; }
+  .table .easy {
+    color: green; }
 
 .button {
   padding: 8px;

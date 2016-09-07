@@ -13,10 +13,14 @@ class Score < ActiveRecord::Base
 
   # ToDo: Score: bucket, step seems to allow nil values. Shout be not null field
 
-
-
   def move_up
     self.touch
+
+    puts no_of_succeeded = self.no_of_succeeded + 1
+    puts no_of_attempts = self.no_of_attempts + 1
+
+    self.update( no_of_succeeded: no_of_succeeded, no_of_attempts: no_of_attempts )
+
     maximum_steps = BUCKETS[self.bucket]["steps"]
 
     if self.step < maximum_steps
@@ -28,6 +32,12 @@ class Score < ActiveRecord::Base
 
   def move_down
     self.touch
+
+    puts no_of_failed = self.no_of_failed + 1
+    puts no_of_attempts = self.no_of_attempts + 1
+
+    self.update( no_of_failed: no_of_failed, no_of_attempts: no_of_attempts )
+
     if self.step > 0
       return step_down
     else

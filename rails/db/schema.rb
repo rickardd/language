@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905132124) do
+ActiveRecord::Schema.define(version: 20160905214601) do
 
   create_table "lists", force: :cascade do |t|
     t.string   "name",       default: "private"
@@ -27,12 +27,15 @@ ActiveRecord::Schema.define(version: 20160905132124) do
   end
 
   create_table "scores", force: :cascade do |t|
-    t.integer  "bucket",         default: 0
-    t.integer  "step",           default: 0
+    t.integer  "bucket",          default: 0
+    t.integer  "step",            default: 0
+    t.integer  "no_of_succeeded", default: 0
+    t.integer  "no_of_failed",    default: 0
+    t.integer  "no_of_attempts",  default: 0
     t.integer  "translation_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
     t.integer  "user_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["translation_id"], name: "index_scores_on_translation_id"
     t.index ["user_id"], name: "index_scores_on_user_id"
   end

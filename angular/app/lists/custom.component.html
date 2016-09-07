@@ -1,8 +1,10 @@
 <h1>Custom list</h1>
 
 <form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
-  <input type="text" ngControl="english" >
+  <lable>spanish</lable>
   <input type="text" ngControl="spanish" >
+  <lable>English</lable>
+  <input type="text" ngControl="english" >
   <input type="submit">
 </form>
 
@@ -13,6 +15,12 @@
       <td>Delete</td>
       <td>Spanish</td>
       <td>English</td>
+      <td>difficulty</td>
+      <td>strenght</td>
+      <td>attemps</td>
+      <td>failed</td>
+      <td>succeded</td>
+      <td>private list</td>
     </tr>
   </thead>
   <tbody *ngFor="#translation of list.collection">
@@ -20,8 +28,14 @@
     <tr>
       <td><button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button></td>
       <td><button (click)="onDeleteTranslation( $event )" id="{{translation.id}}" class="button">Delete</button></td>
-      <td>{{translation.english}}</td>
       <td>{{translation.spanish}}</td>
+      <td>{{translation.english}}</td>
+      <td [class.difficult]=" translation.difficulty > 50 ">{{translation.difficulty}}%</td>
+      <td [class.easy]=" translation.strength > 50 ">{{translation.strength}}%</td>
+      <td>{{translation.no_of_attempts}}</td>
+      <td>{{translation.no_of_failed}}</td>
+      <td>{{translation.no_of_succeeded}}</td>
+      <td>{{translation.private_match}}</td>
     </tr>
   </tbody>
 </table>

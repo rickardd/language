@@ -87,6 +87,7 @@ class TranslationsController < ApplicationController
     translation.user_id = current_user.id
 
       if translation.save
+        current_user.lists.find_by( name: :my_list ).translations << translation
         render json: translation.to_json
       else
         throw "coulnd't save translation"
@@ -120,9 +121,23 @@ class TranslationsController < ApplicationController
   # DELETE /translations/1.json
   def destroy
 
-    if @translation.destroy
-      translation = Translation.all.where( user_id: current_user.id )
-      render json: translation.to_json
+    # ToDo: If user tries to remove a translation the user didn't create an error arises.
+    # Bad error handling.
+
+    translation = Translation.where( id: params[:id], user_id: current_user.id ).first
+    # ToDO: remove first.destroy
+    if translation.destroy
+
+      score = Score.find_by( user: current_user, translation_id: params[:id] )
+      if !!score
+        score.delete
+      end
+
+      # translation = currentTranslation.all.where( user_id: current_user.id )
+
+      translations = current_user.lists.find_by( name: :my_list ).translations.order("created_at DESC")
+
+      render json: translations.to_json
     else
       throw "coulnd't destroy translation #{params[:id]}"
     end

@@ -29,7 +29,7 @@ export class ProfileService {
       .map( resulut => resulut.json() )
   }
 
-  getUserStats( userId? : number = -1 ){
+  getUserStats( userId : number = -1 ){
     let url = this.rootUrl + "scores/stats/" + userId
     return this._http.get( url )
                 .map( result => result.json() )

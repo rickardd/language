@@ -15,6 +15,8 @@ export class PrivateListComponent{
 
   list : List = new List()
 
+  quantity : number
+
   constructor( private _listService : ListService ){
 
   }
@@ -23,6 +25,8 @@ export class PrivateListComponent{
     this._listService.getPrivateList()
             .subscribe( response => {
               this.list = new List( response )
+              this.quantity = this.list.quantity()
+              console.log(this.quantity);
             })
   }
 
