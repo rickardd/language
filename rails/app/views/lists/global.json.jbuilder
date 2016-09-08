@@ -1,6 +1,7 @@
 json.array! @translations do |translation|
   json.spanish translation.spanish
   json.english translation.english
+  json.category translation.category
   json.id translation.id
   if @private_translations
     json.private_match @private_translations.include?( translation )
