@@ -31,7 +31,22 @@ export class FeedbackComponent{
   }
 
   ngOnChanges(){
-    this.correctAnswer = this.translation.attempt === this.translation.spanish
+    // prevets error of undefined attempt
+    if( !!this.translation.attempt ){
+      // let attempt = this.translation.attempt
+      let attempt = this.translation.attempt
+      let spanish = this.translation.spanish
+
+      if( _.contains([".", "!", "?"], _.last( attempt ) ) ){
+        attempt = attempt.slice(0, -1)
+      }
+
+      if( _.contains([".", "!", "?"], _.last( spanish ) ) ){
+        spanish = spanish.slice(0, -1)
+      }
+
+      this.correctAnswer = attempt.toLowerCase() === spanish.toLowerCase()
+    }
     this.attemptValidatedArray = this.getWordValidatedArray()
 
     // let button = document.querySelector("feedback").querySelector("button")

@@ -25,7 +25,7 @@ export class Translation{
   difficulty : number // percentage value 0-100
   strength : number
 
-  constructor( obj : iTranslation = {id: -1, english: "", spanish: "", category: "", no_of_attempts: 0, no_of_failed: 0, no_of_succeeded: 0, private_match: false }){
+  constructor( obj : iTranslation = {id: -1, english: "", spanish: "", attempt: "", category: "", no_of_attempts: 0, no_of_failed: 0, no_of_succeeded: 0, private_match: false }){
     this.id = obj.id
     this.english = obj.english
     this.spanish = obj.spanish
@@ -34,9 +34,9 @@ export class Translation{
     this.no_of_failed = obj.no_of_failed
     this.no_of_succeeded = obj.no_of_succeeded
     this.private_match = obj.private_match
-    if( obj.attempt ){
+    // if( obj.attempt ){
       this.attempt = obj.attempt
-    }
+    // }
     this.difficulty = 0
     if( this.no_of_attempts > 0 ){
       this.difficulty = Math.round( ( this.no_of_failed / this.no_of_attempts ) * 100 )

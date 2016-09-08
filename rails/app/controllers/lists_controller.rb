@@ -2,10 +2,9 @@ class ListsController < ApplicationController
   # before_filter :authorize
 
   def global
-    @translations = Translation.all.limit( params[:limit] ).offset( params[:count_from] )
+    @translations = Translation.where(user_id: -1).limit( params[:limit] ).offset( params[:count_from] )
     # @private_translations = Translation.where( user_id: current_user.id )
     @private_translations = current_user.lists.find_by( name: :my_list).translations
-
     @user_scores = current_user.scores
     # @private_translations = current_user.private_list.translations
     # Use the json jbuilder to combine the private and global list in an object
