@@ -3,20 +3,27 @@
   <div class="translatoin-box">
     {{translation.english}}
   </div>
-  <div *ngIf="correctAnswer">
-    <div class="right-box">
+  <div *ngIf="translation.attempt == '' ">
+    <div class="help-box">
       {{translation.spanish}}
     </div>
   </div>
-  <div *ngIf="!correctAnswer">
-      <div class="wrong-box">
-        <span *ngFor="#word of attemptValidatedArray">
-          <span class="right-word" *ngIf="word.valid">{{word.word}}</span>
-          <span class="wrong-word" *ngIf="!word.valid">{{word.word}}</span>
-        </span>
+  <div *ngIf="translation.attempt != '' ">
+    <div *ngIf="correctAnswer">
+      <div class="right-box">
+        {{translation.spanish}}
       </div>
-    <div class="right-box">
-      {{translation.spanish}}
+    </div>
+    <div *ngIf="!correctAnswer">
+        <div class="wrong-box">
+          <span *ngFor="#word of attemptValidatedArray">
+            <span class="right-word" *ngIf="word.valid">{{word.word}}</span>
+            <span class="wrong-word" *ngIf="!word.valid">{{word.word}}</span>
+          </span>
+        </div>
+      <div class="right-box">
+        {{translation.spanish}}
+      </div>
     </div>
   </div>
   <button type="button" (click)="onClose()" (keypress)="onClose()" id="feedback-close-button" class="button button-24 border-red" role="none" [focus]="slide.enter">close</button>
