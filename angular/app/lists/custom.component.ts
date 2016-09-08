@@ -41,6 +41,8 @@ export class CustomListComponent{
               // ToDo: Unnessesary request. Try to push the new translation to list instead
               // See onDeleteTranslation()
               this.getList()
+              this.form.controls["spanish"].updateValue("")
+              this.form.controls["english"].updateValue("")
             })
   }
 

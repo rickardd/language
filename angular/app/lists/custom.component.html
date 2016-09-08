@@ -1,10 +1,8 @@
 <h1>Custom list</h1>
 
 <form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
-  <lable>spanish</lable>
-  <input type="text" ngControl="spanish" >
-  <lable>English</lable>
-  <input type="text" ngControl="english" >
+  <input type="text" ngControl="spanish" placeholder="Spanish" >
+  <input type="text" ngControl="english" placeholder="English">
   <input type="submit">
 </form>
 
