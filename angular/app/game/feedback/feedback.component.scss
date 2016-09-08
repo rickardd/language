@@ -5,6 +5,7 @@ $grey-1: #eee;
 $text-dark: #555;
 $text-red: red;
 $text-green: green;
+$text-blue: #005a65;
 
 .slide{
   position: fixed;
@@ -22,7 +23,8 @@ $text-green: green;
 
   .translatoin-box,
     .right-box,
-    .wrong-box{
+    .wrong-box,
+    .help-box{
     padding: 8px;
     }
 
@@ -35,8 +37,8 @@ $text-green: green;
     background-color: $green-0;
     }
     .help-box{
-    color: $text-green;
-    background-color: blue;
+    color: $text-blue;
+    background-color: #74cad4;
     }
     .wrong-box{
       background-color: $grey-1;
@@ -49,6 +51,7 @@ $text-green: green;
     .right-word{
     color: $text-green;
     }
+
 
     .button{
       position: absolute;

@@ -2,6 +2,12 @@
   background-color: #74cad4;
   padding: 10px; }
 
+.loading-logo {
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 100px;
+  text-align: center; }
+
 .table {
   color: white; }
   .table .phrase {
