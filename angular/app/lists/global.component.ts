@@ -14,6 +14,7 @@ import {Translation, List} from '../shared/translation'
 export class GlobalListComponent{
 
   list : List = new List()
+  quantity : number
 
   constructor( private _listService : ListService ){
 
@@ -23,7 +24,7 @@ export class GlobalListComponent{
     this._listService.getGlobalList()
             .subscribe( response => {
               this.list = new List( response )
-              console.log( this.list, response );
+              this.quantity = this.list.quantity()
             })
   }
 

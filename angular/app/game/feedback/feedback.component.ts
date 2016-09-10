@@ -32,7 +32,7 @@ export class FeedbackComponent{
 
   ngOnChanges(){
     // prevets error of undefined attempt
-    if( !!this.translation.attempt ){
+    if( !!this.translation.attempt && !!this.translation.spanish ){
       // let attempt = this.translation.attempt
       let attempt = this.translation.attempt
       let spanish = this.translation.spanish

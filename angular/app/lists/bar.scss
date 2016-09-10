@@ -1,0 +1,26 @@
+.bar-item{
+  width: 100px;
+}
+.horizontal-bar{
+  float: left;
+  position: relative;
+  width: 50px;
+  height: 20px;
+  background: rgba( 255, 255, 255, .2);
+}
+.horizontal-fill{
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: white;
+  &.difficult{
+    background: #b74c4c;
+  }
+  &.easy{
+    background: #008000;
+  }
+}
+.label{
+  float: left;
+  width: 30px;
+}

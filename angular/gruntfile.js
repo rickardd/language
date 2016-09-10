@@ -43,7 +43,8 @@ module.exports = function (grunt) {
           'app/game/feedback/feedback.component.css': 'app/game/feedback/feedback.component.scss',
           'app/game/stats/stats.component.css': 'app/game/stats/stats.component.scss',
           'app/game/words/word.component.css': 'app/game/words/word.component.scss',
-          'app/profile/profile.component.css': 'app/profile/profile.component.scss'
+          'app/profile/profile.component.css': 'app/profile/profile.component.scss',
+          'app/lists/bar.css': 'app/lists/bar.scss'
         }
       }
     },

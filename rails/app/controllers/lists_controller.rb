@@ -2,20 +2,32 @@ class ListsController < ApplicationController
   # before_filter :authorize
 
   def global
-    @translations = Translation.where(user_id: -1).limit( params[:limit] ).offset( params[:count_from] )
-    # @private_translations = Translation.where( user_id: current_user.id )
-    @private_translations = current_user.lists.find_by( name: :my_list).translations
-    @user_scores = current_user.scores
-    # @private_translations = current_user.private_list.translations
-    # Use the json jbuilder to combine the private and global list in an object
-    # render json: @translations.to_json
-    render 'lists/global.json.jbuilder'
+    translations = Translation.where(user_id: -1).limit( params[:limit] ).offset( params[:count_from] )
+    private_translations = current_user.lists.find_by( name: :my_list).translations
+    user_scores = current_user.scores
+
+    @combined = []
+
+    translations.each do |t|
+      score = user_scores.where( translation_id: t.id)[0]
+      @combined.push( { translation: t, score: score } )
+    end
+
+    render 'lists/translation_score.json.jbuilder'
   end
 
   def private
-    @translations = current_user.lists.find_by(name: :private).translations.limit( params[:limit] ).offset( params[:count_from] )
-    # render 'lists/global'
-    render json: @translations
+    translations = current_user.lists.find_by(name: :private).translations.limit( params[:limit] ).offset( params[:count_from] )
+    user_scores = current_user.scores
+
+    @combined = []
+
+    translations.each do |t|
+      score = user_scores.where( translation_id: t.id)[0]
+      @combined.push( { translation: t, score: score } )
+    end
+
+    render 'lists/translation_score.json.jbuilder'
   end
 
   def custom
@@ -24,7 +36,16 @@ class ListsController < ApplicationController
     #
     # translations = Translation.all.where( user_id: current_user.id )
     translations = current_user.lists.find_by(name: :my_list).translations.order("created_at DESC")
-    render json: translations
+    user_scores = current_user.scores
+
+    @combined = []
+
+    translations.each do |t|
+      score = user_scores.where( translation_id: t.id)[0]
+      @combined.push( { translation: t, score: score } )
+    end
+
+    render 'lists/translation_score.json.jbuilder'
   end
 
   def add_translation

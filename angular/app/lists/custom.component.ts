@@ -7,6 +7,7 @@ import {Translation, List} from '../shared/translation'
 @Component({
   selector: "custom-list",
   templateUrl: "app/lists/custom.component.html",
+  styleUrls: [ "app/lists/bar.css"],
   providers: [
     ListService
   ]
@@ -16,6 +17,7 @@ export class CustomListComponent{
 
   list : List = new List()
   form : ControlGroup
+  quantity : number
 
   constructor( private _listService : ListService, private _fb : FormBuilder ){
 
@@ -29,6 +31,8 @@ export class CustomListComponent{
     this._listService.getCustomList()
               .subscribe( response => {
                 this.list = new List( response )
+                this.quantity = this.list.quantity()
+                console.log(response);
               })
   }
 

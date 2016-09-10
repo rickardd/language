@@ -1,4 +1,4 @@
-<h1>My list</h1>
+<h1>My list ({{ quantity }})</h1>
 
 <form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
   <input type="text" ngControl="spanish" placeholder="Spanish" >
@@ -18,6 +18,7 @@
       <td>attemps</td>
       <td>failed</td>
       <td>succeded</td>
+      <td>bucket/s</td>
       <td>private list</td>
     </tr>
   </thead>
@@ -28,12 +29,26 @@
       <td><button (click)="onDeleteTranslation( $event )" id="{{translation.id}}" class="button">Delete</button></td>
       <td>{{translation.spanish}}</td>
       <td>{{translation.english}}</td>
-      <td [class.difficult]=" translation.difficulty > 50 ">{{translation.difficulty}}%</td>
+      <td>
+        <div class="bar-item" *ngIf="translation.no_of_attempts > 0">
+          <div class="horizontal-bar">
+            <div
+              class="horizontal-fill"
+              [class.difficult]="translation.difficulty > 50"
+              [class.easy]="translation.difficulty < 10"
+              style="width: {{translation.difficulty}}%;">
+            </div>
+          </div>
+          <div class="label"> {{translation.no_of_failed}} / {{translation.no_of_attempts}} </div>
+        </div>
+      </td>
       <td [class.easy]=" translation.strength > 50 ">{{translation.strength}}%</td>
       <td>{{translation.no_of_attempts}}</td>
       <td>{{translation.no_of_failed}}</td>
       <td>{{translation.no_of_succeeded}}</td>
+      <td>{{translation.bucket}} / {{translation.step}}</td>
       <td>{{translation.private_match}}</td>
+
     </tr>
   </tbody>
 </table>

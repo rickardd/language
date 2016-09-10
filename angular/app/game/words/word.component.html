@@ -1,7 +1,7 @@
 
 <div class="container">
   <div class="source-word">
-    {{translation.english}}
+    {{translation.english | capitalizeFirst }}
   </div>
 
   <form [ngFormModel]="form" (ngSubmit)="onSubmit()">
