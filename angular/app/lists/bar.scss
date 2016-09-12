@@ -24,3 +24,63 @@
   float: left;
   width: 30px;
 }
+
+
+.bucket-list{
+  list-style: none;
+  width: 140px;
+  padding: 0;
+}
+.bucket-marker{
+  float: left;
+  margin-left: 8px;
+  &:first-child{
+    margin-left: 0;
+  }
+
+  .outer{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #b6e3e8;
+    padding: 2px;
+  }
+  .inner{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #74cad4;
+    border: 2px solid #74cad4;
+  }
+}
+
+.is-bucket-1{
+  .outer{
+    background-color: #b74c4c;
+  }
+}
+.is-bucket-2{
+  .outer, .inner{
+    background-color: #b74c4c;
+  }
+}
+.is-bucket-3{
+  .outer{
+    background-color: #fdd400;
+  }
+}
+.is-bucket-4{
+  .outer, .inner{
+    background-color: #fdd400;
+  }
+}
+.is-bucket-5{
+  .outer{
+    background-color: #0a790a;
+  }
+}
+.is-bucket-6{
+  .outer, .inner{
+    background-color: #0a790a;
+  }
+}
