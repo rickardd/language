@@ -11,7 +11,7 @@
       <td>attemps</td>
       <td>failed</td>
       <td>succeded</td>
-      <td>private list</td>
+      <td>Buckets</td>
     </tr>
   </thead>
   <tbody *ngFor="#translation of list.collection">
@@ -27,7 +27,28 @@
       <td>{{translation.no_of_attempts}}</td>
       <td>{{translation.no_of_failed}}</td>
       <td>{{translation.no_of_succeeded}}</td>
-      <td>{{translation.private_match}}</td>
+      <td>
+        <ul class="bucket-list clearfix" *ngIf="translation.no_of_attempts">
+          <li class="bucket-marker" [class.is-bucket-1]="translation.bucket==0">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-2]="translation.bucket==1">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-3]="translation.bucket==2">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-4]="translation.bucket==3">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-5]="translation.bucket==4">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-6]="translation.bucket==5">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -15,7 +15,6 @@
       <td>English</td>
       <td>Difficulty</td>
       <td>Bucket</td>
-      <td>Strenght</td>
       <td>Attemps</td>
       <td>Failed</td>
       <td>Succeded</td>
@@ -50,7 +49,7 @@
         </div>
       </td>
       <td>
-        <ul class="bucket-list clearfix">
+        <ul class="bucket-list clearfix" *ngIf="translation.no_of_attempts">
           <li class="bucket-marker" [class.is-bucket-1]="translation.bucket==0">
             <div class="outer"><div class="inner"></div></div>
           </li>
@@ -71,11 +70,6 @@
           </li>
         </ul>
       </td>
-      <td [class.easy]=" translation.strength > 50 ">
-        <span *ngIf="translation.strength">
-          {{translation.strength}}%
-        </span>
-      </td>
       <td>
         <span *ngIf="translation.no_of_attempts">
           {{translation.no_of_attempts}}
@@ -89,11 +83,6 @@
       <td>
         <span *ngIf="translation.no_of_attempts">
           {{translation.no_of_succeeded}}
-        </span>
-      </td>
-      <td>
-        <span *ngIf="translation.no_of_attempts">
-          {{translation.bucket}} / {{translation.step}}
         </span>
       </td>
       <td>

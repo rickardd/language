@@ -6,6 +6,7 @@ import {Translation, List} from '../shared/translation'
 @Component({
   selector: "gloabal-list",
   templateUrl: "app/lists/global.component.html",
+  styleUrls: [ "app/lists/bar.css"],
   providers: [
     ListService
   ]
@@ -28,7 +29,7 @@ export class GlobalListComponent{
             })
   }
 
-  onAddTranslation( $event ){
+  onAddToPrivate( $event ){
     let elm : any = $event.target
     let id : number = parseInt( elm.id, 10 )
 

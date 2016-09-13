@@ -42,11 +42,10 @@ $text-blue: #005a65;
     }
     .wrong-box{
       background-color: $grey-1;
-    margin-bottom: 4px;
+      margin-bottom: 4px;
     }
     .wrong-word{
     color: $text-red;
-    text-decoration: line-through;
     }
     .right-word{
     color: $text-green;

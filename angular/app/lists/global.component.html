@@ -3,32 +3,105 @@
 <table class="table">
   <thead>
     <tr>
-      <td>Action</td>
+      <td>Add</td>
       <td>Spanish</td>
       <td>English</td>
       <td>Difficulty</td>
-      <td>Strenght</td>
+      <td>Bucket</td>
       <td>Attemps</td>
       <td>Failed</td>
       <td>Succeded</td>
-      <td>Private_list</td>
-      <td>Category</td>
+      <td>private_list</td>
     </tr>
   </thead>
   <tbody>
-
     <tr *ngFor="#translation of list.collection">
-
-      <td><button (click)="onAddTranslation( $event )" id="{{translation.id}}" class="button">Add</button></td>
-      <td>{{translation.spanish}}</td>
-      <td>{{translation.english}}</td>
-      <td [class.difficult]=" translation.difficulty > 50 ">{{translation.difficulty}}%</td>
-      <td [class.easy]=" translation.strength > 50 ">{{translation.strength}}%</td>
-      <td>{{translation.no_of_attempts}}</td>
-      <td>{{translation.no_of_failed}}</td>
-      <td>{{translation.no_of_succeeded}}</td>
-      <td>{{translation.private_match}}</td>
-      <td>{{translation.category}}</td>
+      <td>
+        <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button>
+      </td>
+      <td>
+        {{translation.spanish}}
+      </td>
+      <td>
+        {{translation.english}}
+      </td>
+      <td>
+        <div class="bar-item" *ngIf="translation.no_of_attempts > 0">
+          <div class="horizontal-bar">
+            <div
+              class="horizontal-fill"
+              [class.difficult]="translation.difficulty > 50"
+              [class.easy]="translation.difficulty < 10"
+              style="width: {{translation.difficulty}}%;">
+            </div>
+          </div>
+          <div class="label"> {{translation.no_of_failed}} / {{translation.no_of_attempts}} </div>
+        </div>
+      </td>
+      <td>
+        <ul class="bucket-list clearfix" *ngIf="translation.no_of_attempts">
+          <li class="bucket-marker" [class.is-bucket-1]="translation.bucket==0">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-2]="translation.bucket==1">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-3]="translation.bucket==2">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-4]="translation.bucket==3">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-5]="translation.bucket==4">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+          <li class="bucket-marker" [class.is-bucket-6]="translation.bucket==5">
+            <div class="outer"><div class="inner"></div></div>
+          </li>
+        </ul>
+      </td>
+      <td>
+        <span *ngIf="translation.no_of_attempts">
+          {{translation.no_of_attempts}}
+        </span>
+      </td>
+      <td>
+        <span *ngIf="translation.no_of_attempts">
+          {{translation.no_of_failed}}
+        </span>
+      </td>
+      <td>
+        <span *ngIf="translation.no_of_attempts">
+          {{translation.no_of_succeeded}}
+        </span>
+      </td>
+      <td>
+        <span *ngIf="translation.strength">
+          {{translation.private_match}}
+        </span>
+      </td>
     </tr>
   </tbody>
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

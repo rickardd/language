@@ -6,6 +6,7 @@ import {Translation, List} from '../shared/translation'
 @Component({
   selector: "private-list",
   templateUrl: "app/lists/private.component.html",
+  styleUrls: [ "app/lists/bar.css"],
   providers: [
     ListService
   ]
