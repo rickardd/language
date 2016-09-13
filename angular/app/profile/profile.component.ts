@@ -21,9 +21,6 @@ export class ProfileComponent{
 
   buckets = '[{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0}]'
 
-  // hej : new Bars()
-  // aranña
-
   userStats : Object = { knowing: -1, playing: -1, waiting: -1 }
 
   constructor( private _profileSerivice : ProfileService ){

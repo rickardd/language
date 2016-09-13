@@ -15,8 +15,8 @@ import {Translation, List} from '../shared/translation'
 export class PrivateListComponent{
 
   list : List = new List()
-
   quantity : number
+  hasTranslations : boolean = false
 
   constructor( private _listService : ListService ){
 
@@ -25,6 +25,8 @@ export class PrivateListComponent{
   ngOnInit(){
     this._listService.getPrivateList()
             .subscribe( response => {
+              console.log( !!response && response.length !== 0);
+              if( !!response && response.length !== 0 ) this.hasTranslations = true
               this.list = new List( response )
               this.quantity = this.list.quantity()
             })

@@ -1,54 +1,67 @@
-<h1>Play list ({{ quantity }})</h1>
+<div *ngIf="hasTranslations">
 
-<table class="table">
-  <thead>
-    <tr>
-      <td>Action</td>
-      <td>Spanish</td>
-      <td>English</td>
-      <td>difficulty</td>
-      <td>strenght</td>
-      <td>attemps</td>
-      <td>failed</td>
-      <td>succeded</td>
-      <td>Buckets</td>
-    </tr>
-  </thead>
-  <tbody *ngFor="#translation of list.collection">
+  <h1>Play list ({{ quantity }})</h1>
 
-    <tr>
-      <td>
-        <button (click)="onRemoveTranslation( $event )" id="{{translation.id}}" class="button">Delete</button>
-      </td>
-      <td>{{translation.spanish}}</td>
-      <td>{{translation.english}}</td>
-      <td [class.difficult]=" translation.difficulty > 50 ">{{translation.difficulty}}%</td>
-      <td [class.easy]=" translation.strength > 50 ">{{translation.strength}}%</td>
-      <td>{{translation.no_of_attempts}}</td>
-      <td>{{translation.no_of_failed}}</td>
-      <td>{{translation.no_of_succeeded}}</td>
-      <td>
-        <ul class="bucket-list clearfix" *ngIf="translation.no_of_attempts">
-          <li class="bucket-marker" [class.is-bucket-1]="translation.bucket==0">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-2]="translation.bucket==1">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-3]="translation.bucket==2">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-4]="translation.bucket==3">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-5]="translation.bucket==4">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-6]="translation.bucket==5">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Action</td>
+        <td>Spanish</td>
+        <td>English</td>
+        <td>difficulty</td>
+        <td>strenght</td>
+        <td>attemps</td>
+        <td>failed</td>
+        <td>succeded</td>
+        <td>Buckets</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="#translation of list.collection">
+
+      <tr>
+        <td>
+          <button (click)="onRemoveTranslation( $event )" id="{{translation.id}}" class="button">Delete</button>
+        </td>
+        <td>{{translation.spanish}}</td>
+        <td>{{translation.english}}</td>
+        <td [class.difficult]=" translation.difficulty > 50 ">{{translation.difficulty}}%</td>
+        <td [class.easy]=" translation.strength > 50 ">{{translation.strength}}%</td>
+        <td>{{translation.no_of_attempts}}</td>
+        <td>{{translation.no_of_failed}}</td>
+        <td>{{translation.no_of_succeeded}}</td>
+        <td>
+          <ul class="bucket-list clearfix" *ngIf="translation.no_of_attempts">
+            <li class="bucket-marker" [class.is-bucket-1]="translation.bucket==0">
+              <div class="outer"><div class="inner"></div></div>
+            </li>
+            <li class="bucket-marker" [class.is-bucket-2]="translation.bucket==1">
+              <div class="outer"><div class="inner"></div></div>
+            </li>
+            <li class="bucket-marker" [class.is-bucket-3]="translation.bucket==2">
+              <div class="outer"><div class="inner"></div></div>
+            </li>
+            <li class="bucket-marker" [class.is-bucket-4]="translation.bucket==3">
+              <div class="outer"><div class="inner"></div></div>
+            </li>
+            <li class="bucket-marker" [class.is-bucket-5]="translation.bucket==4">
+              <div class="outer"><div class="inner"></div></div>
+            </li>
+            <li class="bucket-marker" [class.is-bucket-6]="translation.bucket==5">
+              <div class="outer"><div class="inner"></div></div>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<div *ngIf="!hasTranslations">
+  <div class="view-placeholder">No Words In Playlist</div>
+</div>
+
+
+
+

@@ -9,13 +9,24 @@ import {GameService} from './game.service'
 
 @Component({
   template: `
-    <words [translation]="translation" (wordSubmit)="onWordSubmit($event)" (scoreUpdate)="onScoreUpdate($event)"></words>
-    <stats [scoreUpdate]="scoreUpdate"></stats>
-    <feedback
-          [translation]="translation"
-          [slide]="slide"
-          (close)="onFeedbackClose()">
-    </feedback>
+    <div *ngIf="hasTranslations">
+      <words
+        [translation]="translation"
+        (wordSubmit)="onWordSubmit($event)"
+        (scoreUpdate)="onScoreUpdate($event)">
+      </words>
+      <stats
+        [scoreUpdate]="scoreUpdate">
+      </stats>
+      <feedback
+            [translation]="translation"
+            [slide]="slide"
+            (close)="onFeedbackClose()">
+      </feedback>
+    </div>
+    <div *ngIf="!hasTranslations">
+      <div class="view-placeholder">No Words To Play</div>
+    </div>
   `,
   directives: [
     WordsComponent,
@@ -33,6 +44,7 @@ export class GameComponent{
   slide = new Slide( false, false)
   wordSubmited : number = 0
   scoreUpdate : Translation
+  hasTranslations : boolean = false
 
   constructor( private _gameService: GameService ){
 
@@ -42,6 +54,7 @@ export class GameComponent{
     this._gameService.getWord()
           .subscribe( response => {
                       this.translation = response
+                      if(!!response) this.hasTranslations = true
                     })
   }
 
