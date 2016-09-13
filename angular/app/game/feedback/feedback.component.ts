@@ -68,7 +68,7 @@ export class FeedbackComponent{
     }
   }
 
-  getWordValidatedArray(){
+  getWordValidatedArray() : Object[] {
     // ToDo: Do a nested loop.
     // atm "this is a word" will give all words wrong if "x this is a word"
     this.translation.attempt = this.translation.attempt || ""
@@ -80,9 +80,15 @@ export class FeedbackComponent{
         self = this;
 
     userWord.forEach(function( properyName, index, key ) {
-        var wordAttempt = key[index].toLowerCase()
-        var wordSpanish = to[index].toLowerCase()
-        userWordArray.push( {'index': index, 'word': wordAttempt, 'valid': wordAttempt == wordSpanish } );
+      var wordAttempt = key[index]
+      if( !!wordAttempt ){
+        wordAttempt.toLowerCase()
+      }
+      var wordSpanish = to[index]
+      if( !!wordSpanish ){
+        wordSpanish.toLowerCase()
+      }
+      userWordArray.push( {'index': index, 'word': wordAttempt, 'valid': wordAttempt == wordSpanish } );
     })
     return userWordArray;
   }
