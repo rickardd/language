@@ -25,8 +25,7 @@ export class PrivateListComponent{
   ngOnInit(){
     this._listService.getPrivateList()
             .subscribe( response => {
-              console.log( !!response && response.length !== 0);
-              if( !!response && response.length !== 0 ) this.hasTranslations = true
+              this.hasTranslations = ( !!response && response.length !== 0 ) ? true : false ;
               this.list = new List( response )
               this.quantity = this.list.quantity()
             })
@@ -41,7 +40,7 @@ export class PrivateListComponent{
 
     this._listService.removeTranslationFromList( id )
             .subscribe( response => {
-              console.log( response , "Removed")
+              this.hasTranslations = ( !!response && response.length !== 0 ) ? true : false ;
             })
   }
 }
