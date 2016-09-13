@@ -27,7 +27,6 @@ export class PrivateListComponent{
             .subscribe( response => {
               this.list = new List( response )
               this.quantity = this.list.quantity()
-              console.log(this.quantity);
             })
   }
 

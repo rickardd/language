@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core'
+import {Component, ViewChild} from 'angular2/core'
 import {ListService} from './list.service'
 import {ControlGroup, FormBuilder} from 'angular2/common'
 
@@ -15,9 +15,12 @@ import {Translation, List} from '../shared/translation'
 
 export class CustomListComponent{
 
+  @ViewChild('inputSpanish') inputSpanish;
+
   list : List = new List()
   form : ControlGroup
   quantity : number
+
 
   constructor( private _listService : ListService, private _fb : FormBuilder ){
 
@@ -32,16 +35,14 @@ export class CustomListComponent{
               .subscribe( response => {
                 this.list = new List( response )
                 this.quantity = this.list.quantity()
-                console.log(response);
               })
   }
 
   onAddTranslation( $event ) : void{
-    console.log("submit", this.form.value.english);
+    this.inputSpanish.nativeElement.focus()
     // translation = new Translation( { spanish: "test", english: "eng-test"} )
     this._listService.addTranslation( { spanish: this.form.value.spanish, english: this.form.value.english } )
             .subscribe( response => {
-              console.log( response , "Translatoin added")
               // ToDo: Unnessesary request. Try to push the new translation to list instead
               // See onDeleteTranslation()
               this.getList()

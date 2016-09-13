@@ -1,7 +1,7 @@
 <h1>My list ({{ quantity }})</h1>
 
 <form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
-  <input type="text" ngControl="spanish" placeholder="Spanish" >
+  <input type="text" ngControl="spanish" placeholder="Spanish" #inputSpanish>
   <input type="text" ngControl="english" placeholder="English">
   <input type="submit">
 </form>

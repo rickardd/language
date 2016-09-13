@@ -38,7 +38,6 @@ export class ProfileComponent{
   getBuckets(){
     this._profileSerivice.getBuckets()
           .subscribe( response => {
-            console.log(response);
             this.buckets = response
           })
   }

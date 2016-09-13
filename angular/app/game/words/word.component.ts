@@ -52,7 +52,6 @@ export class WordsComponent{
     let trans = this.translation
     this._gameService.updateScore( this.translation )
                   .subscribe( response => {
-                    console.log(response);
                     this.scoreUpdate.emit( response )
                   })
   }

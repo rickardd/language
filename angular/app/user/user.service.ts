@@ -23,7 +23,6 @@ export class UserService {
       )
       .map(res => res.json())
       .map((res) => {
-        console.log(res);
         if (res.success) {
           // localStorage.setItem('auth_token', res.auth_token);
           this.loggedIn = true;

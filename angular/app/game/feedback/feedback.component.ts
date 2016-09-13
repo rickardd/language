@@ -69,7 +69,6 @@ export class FeedbackComponent{
 
   onClose(  ){
     // this.exitSlide( $event )
-    console.log(event, event.target);
     if( event.type == "click" || event.key == "Enter"){
       this.exitSlide( event )
     }
