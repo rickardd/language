@@ -3,17 +3,22 @@
   background-color: rgba(255, 255, 255, 0.24);
   padding: 8px;
   text-align: center;
-  float: right; }
-
+  float: right;
+}
 .source-word {
   font-size: 24px;
   margin-bottom: 12px;
-  color: #005a65; }
-
+  color: #005a65;
+}
+.context-phrase{
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #005a65;
+}
 .cheat-word {
   font-size: 12px;
-  color: #359ba7; }
-
+  color: #359ba7;
+}
 .input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.4);

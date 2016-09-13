@@ -40,6 +40,7 @@ export class ListService{
   }
   // todo: Add the translation type
   addTranslation( translation /*translation : Translation*/ ){
+    console.log("translation", translation);
     return this._http.post( this._urlRoot + "/translations/", JSON.stringify( translation ) )
                 .map( response => response.json() )
   }

@@ -1,9 +1,11 @@
 <h1>My list ({{ quantity }})</h1>
 
 <form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
-  <input type="text" ngControl="spanish" placeholder="Spanish" #inputSpanish>
-  <input type="text" ngControl="english" placeholder="English">
-  <input type="submit">
+  <input type="text" ngControl="spanish" placeholder="Spanish" class="text-input" #inputSpanish >
+  <input type="text" ngControl="english" placeholder="English" class="text-input">
+  <input type="text" ngControl="context" placeholder="Context" class="text-input">
+  <input type="text" ngControl="category" placeholder="Category" class="text-input">
+  <input type="submit" class="submit">
 </form>
 
 <table class="table">
@@ -13,6 +15,8 @@
       <td>Delete</td>
       <td>Spanish</td>
       <td>English</td>
+      <td>Context</td>
+      <td>Category</td>
       <td>Difficulty</td>
       <td>Bucket</td>
       <td>Attemps</td>
@@ -34,6 +38,12 @@
       </td>
       <td>
         {{translation.english}}
+      </td>
+      <td>
+        {{translation.context}}
+      </td>
+      <td>
+        {{translation.category}}
       </td>
       <td>
         <div class="bar-item" *ngIf="translation.no_of_attempts > 0">

@@ -3,6 +3,10 @@
   <div class="source-word">
     {{translation.english | spaceSentence | capitalizeFirst }}
   </div>
+  <div class="context-phrase">
+    {{translation.category | capitalizeFirst }} :
+    {{translation.context | spaceSentence | capitalizeFirst }}
+  </div>
 
   <form [ngFormModel]="form" (ngSubmit)="onSubmit()">
     <input

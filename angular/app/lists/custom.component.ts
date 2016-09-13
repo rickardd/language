@@ -27,7 +27,12 @@ export class CustomListComponent{
   }
 
   ngOnInit(){
-    this.form = this._fb.group( { spanish: [""], english: [""] } )
+    this.form = this._fb.group({
+                                spanish: [""],
+                                english: [""],
+                                context: [""],
+                                category: [""]
+                              })
     this.getList()
   }
   getList(){
@@ -41,13 +46,21 @@ export class CustomListComponent{
   onAddTranslation( $event ) : void{
     this.inputSpanish.nativeElement.focus()
     // translation = new Translation( { spanish: "test", english: "eng-test"} )
-    this._listService.addTranslation( { spanish: this.form.value.spanish, english: this.form.value.english } )
+    this._listService
+            .addTranslation({
+              spanish: this.form.value.spanish,
+              english: this.form.value.english,
+              context: this.form.value.context,
+              category: this.form.value.category
+            })
             .subscribe( response => {
               // ToDo: Unnessesary request. Try to push the new translation to list instead
               // See onDeleteTranslation()
               this.getList()
               this.form.controls["spanish"].updateValue("")
               this.form.controls["english"].updateValue("")
+              this.form.controls["context"].updateValue("")
+              this.form.controls["category"].updateValue("")
             })
   }
 

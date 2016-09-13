@@ -3,6 +3,7 @@ json.array! @combined do |c|
   json.spanish c[:translation].spanish
   json.english c[:translation].english
   json.category c[:translation].category
+  json.context c[:translation].context
   json.id c[:translation].id
 
   if c[:score]
