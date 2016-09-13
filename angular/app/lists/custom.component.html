@@ -20,8 +20,6 @@
       <td>Difficulty</td>
       <td>Bucket</td>
       <td>Attemps</td>
-      <td>Failed</td>
-      <td>Succeded</td>
       <td>private_list</td>
     </tr>
   </thead>
@@ -81,19 +79,18 @@
         </ul>
       </td>
       <td>
-        <span *ngIf="translation.no_of_attempts">
-          {{translation.no_of_attempts}}
-        </span>
-      </td>
-      <td>
-        <span *ngIf="translation.no_of_attempts">
-          {{translation.no_of_failed}}
-        </span>
-      </td>
-      <td>
-        <span *ngIf="translation.no_of_attempts">
-          {{translation.no_of_succeeded}}
-        </span>
+        <div *ngIf="translation.no_of_attempts">
+          <span>
+            {{translation.no_of_attempts}}
+          </span>
+          <span class="text-red">
+            {{translation.no_of_failed}}
+          </span>
+          <span class="text-green">
+            {{translation.no_of_succeeded}}
+          </span>
+
+        </div>
       </td>
       <td>
         <span *ngIf="translation.strength">

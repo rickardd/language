@@ -19,10 +19,6 @@
   .table td {
     border-top: 1px solid rgba(255, 255, 255, 0.1); }
 
-::-webkit-input-placeholder,
-::-moz-placeholder {
-  color: white; }
-
 .text-input {
   background-color: rgba(255, 255, 255, 0.4);
   color: #005a65;
@@ -64,5 +60,11 @@
 
 .right {
   float: right; }
+
+.text-red {
+  color: #b74c4c; }
+
+.text-green {
+  color: #0a790a; }
 
 /*# sourceMappingURL=application.css.map */
