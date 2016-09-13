@@ -2,6 +2,8 @@ import {Component, EventEmitter, Output, Input} from 'angular2/core'
 import {ControlGroup, FormBuilder} from 'angular2/common'
 
 import {CapitalizeFirstPipe} from '../../pipes/capititalize-first.pipe'
+import {SpaceSentencePipe} from '../../pipes/space-sentence.pipe'
+
 import {Bucket} from '../shared/score'
 import {Translation} from '../../shared/translation'
 import {GameService} from '../game.service'
@@ -14,7 +16,10 @@ import {GameService} from '../game.service'
   providers: [
     GameService
   ],
-  pipes: [CapitalizeFirstPipe]
+  pipes: [
+    CapitalizeFirstPipe,
+    SpaceSentencePipe
+  ]
 })
 
 // ToDo: remove plurar from class name

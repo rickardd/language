@@ -1,5 +1,8 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core'
 
+import {CapitalizeFirstPipe} from '../../pipes/capititalize-first.pipe'
+import {SpaceSentencePipe} from '../../pipes/space-sentence.pipe'
+
 import {FeedbackService} from './feedback.service'
 import {Slide} from '../shared/slide'
 import {Translation} from '../../shared/translation'
@@ -10,6 +13,10 @@ import {Translation} from '../../shared/translation'
   styleUrls: ["app/game/feedback/feedback.component.css"],
   providers: [
     FeedbackService
+  ],
+  pipes: [
+    CapitalizeFirstPipe,
+    SpaceSentencePipe
   ]
 })
 
