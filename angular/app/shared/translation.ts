@@ -75,4 +75,8 @@ export class List{
     return this.collection.length
   }
 
+  getTranslation( id : number ){
+     return _.find( this.collection, function( item ){ return item.id == id} )
+  }
+
 }

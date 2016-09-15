@@ -13,6 +13,7 @@
     <tr>
       <td>Add</td>
       <td>Delete</td>
+      <td>Edit</td>
       <td>Spanish</td>
       <td>English</td>
       <td>Context</td>
@@ -23,13 +24,21 @@
       <td>private_list</td>
     </tr>
   </thead>
-  <tbody>
-    <tr *ngFor="#translation of list.collection">
+  <tbody #tableBody>
+    <tr *ngFor="#translation of list.collection" id="translation-{{translation.id}}">
       <td>
+        <!-- todo: replace with data-id instead of id attribute -->
         <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button>
       </td>
       <td>
+        <!-- todo: replace with data-id instead of id attribute -->
         <button (click)="onDeleteTranslation( $event )" id="{{translation.id}}" class="button">Delete</button>
+      </td>
+      <td>
+        <button
+          (click)="onEditTranslation( $event )"
+          [attr.data-id]="translation.id" id="edit-{{translation.id}}" class="button">Edit
+        </button>
       </td>
       <td>
         {{translation.spanish}}
@@ -102,12 +111,16 @@
 </table>
 
 
-
-
-
-
-
-
+<div class="edit-popup" [hidden]="closeEditTranslation" >
+  <form [ngFormModel]="editForm" (ngSubmit)="onUpdateTranslation()" #editFormElement >
+    <input type="text" ngControl="spanish" placeholder="Spanish" class="text-input">
+    <input type="text" ngControl="english" placeholder="English" class="text-input">
+    <input type="text" ngControl="context" placeholder="Context" class="text-input">
+    <input type="text" ngControl="category" placeholder="Category" class="text-input">
+    <input type="submit" class="button button-white" value="Update Translation">
+  </form>
+  <button class="button button-white right" (click)="onCancelEditTranslation()">Cancel</button>
+</div>
 
 
 

@@ -49,4 +49,10 @@ export class ListService{
                 .map( response => response.json() )
   }
 
+  updateTranslation( translation ){
+    console.log( translation );
+    return this._http.put( this._urlRoot + "/translations/" + translation.id, JSON.stringify( translation ) )
+                .map( response => response.json() )
+  }
+
 }

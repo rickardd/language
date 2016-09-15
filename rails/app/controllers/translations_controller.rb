@@ -107,9 +107,12 @@ class TranslationsController < ApplicationController
   # PATCH/PUT /translations/1
   # PATCH/PUT /translations/1.json
   def update
-    # translation = Translation.find(params[:id])
-    # if current_user.private_list.translations.include?(translation)
-    #   render json: "{ \"private_match\": true, \"action\": \"already_exist\", \"id\": \"#{params[:id]}\"}"
+    params_body = JSON.parse(request.raw_post).with_indifferent_access
+    translation = Translation.find(params[:id])
+    if current_user.lists.find_by( name: :my_list ).translations.include?(translation)
+      Translation.update( params[:id], spanish: params_body[:spanish], english: params_body[:english], category: params_body[:category], context: params_body[:context] )
+      render json: translation.to_json
+    end
     # else
     #   current_user.private_list.translations << Translation.find(params[:id])
     #   current_user.scores.create( translation_id: params[:id])

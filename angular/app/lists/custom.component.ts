@@ -16,10 +16,15 @@ import {Translation, List} from '../shared/translation'
 export class CustomListComponent{
 
   @ViewChild('inputSpanish') inputSpanish;
+  @ViewChild('editFormElement') editFormElement;
+  @ViewChild('tableBody') tableBody;
+
 
   list : List = new List()
   form : ControlGroup
+  editForm : ControlGroup
   quantity : number
+  closeEditTranslation : boolean = true
 
 
   constructor( private _listService : ListService, private _fb : FormBuilder ){
@@ -33,13 +38,26 @@ export class CustomListComponent{
                                 context: [""],
                                 category: [""]
                               })
+
+    this.editForm = this._fb.group({
+                                spanish: ["hello"],
+                                english: [""],
+                                context: [""],
+                                category: ["asdf"]
+                              })
+
+
     this.getList()
   }
-  getList(){
+  getList( affectedElement? ){
     this._listService.getCustomList()
               .subscribe( response => {
                 this.list = new List( response )
                 this.quantity = this.list.quantity()
+
+                if( !!affectedElement ){
+                  console.log(affectedElement);
+                }
               })
   }
 
@@ -81,6 +99,43 @@ export class CustomListComponent{
             .subscribe( response => {
               this.list = new List( response )
             })
+  }
+
+  onEditTranslation( $event ){
+    let id = $event.target.dataset.id
+    let translation = this.list.getTranslation( id )
+    let formElement = this.editFormElement.nativeElement
+
+    formElement.setAttribute("data-id", id )
+    this.closeEditTranslation = false
+    this.editForm.controls["spanish"].updateValue( translation.spanish )
+    this.editForm.controls["english"].updateValue( translation.english )
+    this.editForm.controls["context"].updateValue( translation.context )
+    this.editForm.controls["category"].updateValue( translation.category )
+
+  }
+
+  onUpdateTranslation( $event ){
+    this.closeEditTranslation = true
+    let id = this.editFormElement.nativeElement.dataset.id
+    this._listService
+            .updateTranslation({
+              id: id,
+              spanish: this.editForm.value.spanish,
+              english: this.editForm.value.english,
+              context: this.editForm.value.context,
+              category: this.editForm.value.category
+            })
+            .subscribe( response => {
+              // this.tableBody.querySelector('#translation-' + id )
+              let row = this.tableBody.nativeElement.querySelector('#translation-' + id )
+              this.getList( row )
+            })
+  }
+
+  onCancelEditTranslation( $event ){
+    console.log("cancel edit");
+    this.closeEditTranslation = true
   }
 }
 
