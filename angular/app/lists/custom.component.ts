@@ -17,14 +17,13 @@ export class CustomListComponent{
 
   @ViewChild('inputSpanish') inputSpanish;
   @ViewChild('editFormElement') editFormElement;
-  @ViewChild('tableBody') tableBody;
-
 
   list : List = new List()
   form : ControlGroup
   editForm : ControlGroup
   quantity : number
   closeEditTranslation : boolean = true
+  affectedTranslationId : number
 
 
   constructor( private _listService : ListService, private _fb : FormBuilder ){
@@ -49,21 +48,16 @@ export class CustomListComponent{
 
     this.getList()
   }
-  getList( affectedElement? ){
+  getList(){
     this._listService.getCustomList()
               .subscribe( response => {
                 this.list = new List( response )
                 this.quantity = this.list.quantity()
-
-                if( !!affectedElement ){
-                  console.log(affectedElement);
-                }
               })
   }
 
   onAddTranslation( $event ) : void{
     this.inputSpanish.nativeElement.focus()
-    // translation = new Translation( { spanish: "test", english: "eng-test"} )
     this._listService
             .addTranslation({
               spanish: this.form.value.spanish,
@@ -118,6 +112,7 @@ export class CustomListComponent{
   onUpdateTranslation( $event ){
     this.closeEditTranslation = true
     let id = this.editFormElement.nativeElement.dataset.id
+    this.affectedTranslationId = parseInt(id, 10)
     this._listService
             .updateTranslation({
               id: id,
@@ -127,14 +122,11 @@ export class CustomListComponent{
               category: this.editForm.value.category
             })
             .subscribe( response => {
-              // this.tableBody.querySelector('#translation-' + id )
-              let row = this.tableBody.nativeElement.querySelector('#translation-' + id )
-              this.getList( row )
+              this.getList()
             })
   }
 
   onCancelEditTranslation( $event ){
-    console.log("cancel edit");
     this.closeEditTranslation = true
   }
 }

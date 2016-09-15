@@ -24,8 +24,13 @@
       <td>private_list</td>
     </tr>
   </thead>
-  <tbody #tableBody>
-    <tr *ngFor="#translation of list.collection" id="translation-{{translation.id}}">
+  <tbody>
+    <tr
+        *ngFor="#translation of list.collection"
+        id="translation-{{translation.id}}"
+        class="list-row"
+        [class.row-highlight]="translation.id === affectedTranslationId">
+
       <td>
         <!-- todo: replace with data-id instead of id attribute -->
         <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button>
