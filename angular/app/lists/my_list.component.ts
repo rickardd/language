@@ -73,6 +73,7 @@ export class MyListComponent{
               this.form.controls["english"].updateValue("")
               this.form.controls["context"].updateValue("")
               this.form.controls["category"].updateValue("")
+
             })
   }
 
@@ -86,6 +87,8 @@ export class MyListComponent{
     this._listService.addTranslationToList( id )
             .subscribe( response => {
             })
+
+
   }
 
   onDeleteTranslation( $event ){

@@ -28,6 +28,7 @@ export class ListService{
                  .map( response => response.json())
   }
   addTranslationToList( id : number ){
+    console.log("add to play-list", id);
     return this._http.post( this._urlRoot + "/lists/private/translation/" + id, JSON.stringify("{id: id}") )
                 .map( response => response.json() )
   }
@@ -40,7 +41,6 @@ export class ListService{
   }
   // todo: Add the translation type
   addTranslation( translation /*translation : Translation*/ ){
-    console.log("translation", translation);
     return this._http.post( this._urlRoot + "/translations/", JSON.stringify( translation ) )
                 .map( response => response.json() )
   }

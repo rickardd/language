@@ -1,3 +1,4 @@
+
 interface iTranslation{
   id : number
   english : string
@@ -77,6 +78,9 @@ export class List{
 
   getTranslation( id : number ){
      return _.find( this.collection, function( item ){ return item.id == id} )
+  }
+  removeTranslation( id : number ){
+     return _.filter( this.collection, function( item ){ return item.id != id} )
   }
 
 }

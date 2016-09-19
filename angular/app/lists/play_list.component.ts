@@ -25,22 +25,28 @@ export class PlayListComponent{
   ngOnInit(){
     this._listService.getPrivateList()
             .subscribe( response => {
-              this.hasTranslations = ( !!response && response.length !== 0 ) ? true : false ;
-              this.list = new List( response )
-              this.quantity = this.list.quantity()
+              this.updateList( response )
             })
   }
 
   onRemoveTranslation( $event ){
     let elm : any = $event.target
     let id : number = parseInt( elm.id, 10 )
+    let newList : List = this.list.removeTranslation( id )
 
-    // ToDo: ugly. Remove translation from the list variable insted.
-    elm.parentNode.parentElement.remove()
+    this.updateList( newList )
 
     this._listService.removeTranslationFromList( id )
             .subscribe( response => {
-              // this.hasTranslations = ( !!response && response.length !== 0 ) ? true : false ;
+
             })
   }
+
+  updateList( list ){
+    this.list = new List( list )
+    this.quantity = this.list.quantity()
+    this.hasTranslations = ( !!list && list.length !== 0 ) ? true : false ;
+    console.log( "update", list);
+  }
+
 }
