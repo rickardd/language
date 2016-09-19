@@ -4,43 +4,40 @@ import {ListService} from './list.service'
 import {Translation, List} from '../shared/translation'
 
 @Component({
-  selector: "private-list",
-  templateUrl: "app/lists/private.component.html",
+  selector: "common-list",
+  templateUrl: "app/lists/common_list.component.html",
   styleUrls: [ "app/lists/bar.css"],
   providers: [
     ListService
   ]
 })
 
-export class PrivateListComponent{
+export class CommonListComponent{
 
   list : List = new List()
   quantity : number
-  hasTranslations : boolean = false
 
   constructor( private _listService : ListService ){
 
   }
 
   ngOnInit(){
-    this._listService.getPrivateList()
+    this._listService.getGlobalList()
             .subscribe( response => {
-              this.hasTranslations = ( !!response && response.length !== 0 ) ? true : false ;
               this.list = new List( response )
               this.quantity = this.list.quantity()
             })
   }
 
-  onRemoveTranslation( $event ){
+  onAddToPrivate( $event ){
     let elm : any = $event.target
     let id : number = parseInt( elm.id, 10 )
 
-    // ToDo: ugly. Remove translation from the list variable insted.
-    elm.parentNode.parentElement.remove()
+    elm.className = elm.className += " button-disabled"
+    elm.innerHTML = "Added"
 
-    this._listService.removeTranslationFromList( id )
+    this._listService.addTranslationToList( id )
             .subscribe( response => {
-              this.hasTranslations = ( !!response && response.length !== 0 ) ? true : false ;
             })
   }
 }

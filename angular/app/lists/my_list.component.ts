@@ -5,15 +5,15 @@ import {ControlGroup, FormBuilder} from 'angular2/common'
 import {Translation, List} from '../shared/translation'
 
 @Component({
-  selector: "custom-list",
-  templateUrl: "app/lists/custom.component.html",
+  selector: "my-list",
+  templateUrl: "app/lists/my_list.component.html",
   styleUrls: [ "app/lists/bar.css"],
   providers: [
     ListService
   ]
 })
 
-export class CustomListComponent{
+export class MyListComponent{
 
   @ViewChild('inputSpanish') inputSpanish;
   @ViewChild('editFormElement') editFormElement;
