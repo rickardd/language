@@ -16,8 +16,8 @@ json.array! @combined do |c|
     json.no_of_succeeded 0
     json.no_of_failed 0
     json.no_of_attempts 0
-    json.bucket 0
-    json.step 0
+    json.bucket -1
+    json.step -1
   end
 
 end

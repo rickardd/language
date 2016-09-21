@@ -18,12 +18,16 @@ export class MyListComponent{
   @ViewChild('inputSpanish') inputSpanish;
   @ViewChild('editFormElement') editFormElement;
 
-  list : List = new List()
+  coreList : List = new List() // Contains all translations in list
+  list : List = new List()  // List to be displayed and modified
   form : ControlGroup
   editForm : ControlGroup
   quantity : number
   closeEditTranslation : boolean = true
   affectedTranslationId : number
+  hasTranslations : boolean
+  // bucketsCount : Object = {}
+  listCounts = { buckets: {}, category: {}, all: {} }
 
 
   constructor( private _listService : ListService, private _fb : FormBuilder ){
@@ -39,10 +43,10 @@ export class MyListComponent{
                               })
 
     this.editForm = this._fb.group({
-                                spanish: ["hello"],
+                                spanish: [""],
                                 english: [""],
                                 context: [""],
-                                category: ["asdf"]
+                                category: [""]
                               })
 
 
@@ -51,8 +55,7 @@ export class MyListComponent{
   getList(){
     this._listService.getCustomList()
               .subscribe( response => {
-                this.list = new List( response )
-                this.quantity = this.list.quantity()
+                this.updateList( response )
               })
   }
 
@@ -76,6 +79,17 @@ export class MyListComponent{
 
             })
   }
+  // to be called after new http request
+  updateList( list ){
+    console.info("should only be called after the http request");
+    this.list = this.coreList = new List( list )
+    this.quantity = this.list.quantity()
+    this.hasTranslations = ( !!list && list.length !== 0 ) ? true : false ;
+    this.listCounts.buckets = this.coreList.countBuckets()
+    this.listCounts.category = this.coreList.countCategory()
+    this.listCounts.all = this.coreList.quantity()
+
+  }
 
   onAddToPrivate( $event ){
     let elm : any = $event.target
@@ -85,8 +99,7 @@ export class MyListComponent{
     elm.innerHTML = "Added"
 
     this._listService.addTranslationToList( id )
-            .subscribe( response => {
-            })
+            .subscribe( response => {})
 
 
   }
@@ -94,7 +107,7 @@ export class MyListComponent{
   onDeleteTranslation( $event ){
     this._listService.removeTranslation( $event.target.id )
             .subscribe( response => {
-              this.list = new List( response )
+              this.updateList( response )
             })
   }
 
@@ -131,6 +144,19 @@ export class MyListComponent{
 
   onCancelEditTranslation( $event ){
     this.closeEditTranslation = true
+  }
+
+  onDisplayAll(){
+    this.list = new List( this.coreList.collection );
+  }
+  onSortBy( sortTerm ){
+    this.list = new List( this.list.sortBy( sortTerm ) );
+  }
+  onFilterCategory( category : string ){
+    this.list = new List( this.coreList.filterCategory( category ) );
+  }
+  onFilterBucket( bucket : number ){
+    this.list = new List( this.coreList.filterBucket( bucket ) );
   }
 }
 

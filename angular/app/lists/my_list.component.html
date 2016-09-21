@@ -8,6 +8,34 @@
   <input type="submit" class="button" value="Add Translation">
 </form>
 
+<a (click)="onDisplayAll()" ><strong>All</strong> ({{ listCounts.all }})</a>
+<br>
+<span>SORT BY:</span>
+<a (click)="onSortBy('Spanish')" ><strong>Spanish</strong></a> |
+<a (click)="onSortBy('English')" ><strong>English</strong></a> |
+<a (click)="onSortBy('Category')" ><strong>Category</strong></a> |
+<a><strong>Time added</strong></a> |
+<a><strong>Time played</strong></a> |
+<a (click)="onSortBy('Bucket')" ><strong>Bucket</strong></a>
+<br>
+<span>FILTER BY CATEGORY:</span>
+<a (click)="onFilterCategory( 'verb' )" ><strong>Verbs</strong> ({{ listCounts.category.verbs }})</a> |
+<a (click)="onFilterCategory( 'idiom' )" ><strong>Idioms</strong> ({{ listCounts.category.idioms }})</a> |
+<a (click)="onFilterCategory( 'phrase' )" ><strong>Phrases</strong> ({{ listCounts.category.phrases }})</a> |
+<a (click)="onFilterCategory( 'noun' )" ><strong>Noun</strong> ({{ listCounts.category.nouns }})</a> |
+<a (click)="onFilterCategory( 'conjunction' )" ><strong>Conjunctions</strong> ({{ listCounts.category.conjunctions }})</a> |
+<a (click)="onFilterCategory( 'adjective' )" ><strong>Adjective</strong> ({{ listCounts.category.adjectives }})</a> |
+<a (click)="onFilterCategory( 'other' )" ><strong>Other</strong> ({{ listCounts.category.other }})</a>
+<br>
+<span>FILTER BY BUCKETS:</span>
+<a (click)="onFilterBucket( -1 )" ><strong>Not played</strong> ({{ listCounts.buckets[0] }})</a> |
+<a (click)="onFilterBucket( 0 )" ><strong>Bucket 1</strong> ({{ listCounts.buckets[1] }})</a> |
+<a (click)="onFilterBucket( 1 )" ><strong>Bucket 2</strong> ({{ listCounts.buckets[2] }})</a> |
+<a (click)="onFilterBucket( 2 )" ><strong>Bucket 3</strong> ({{ listCounts.buckets[3] }})</a> |
+<a (click)="onFilterBucket( 3 )" ><strong>Bucket 4</strong> ({{ listCounts.buckets[4] }})</a> |
+<a (click)="onFilterBucket( 4 )" ><strong>Bucket 5</strong> ({{ listCounts.buckets[5] }})</a> |
+<a (click)="onFilterBucket( 5 )" ><strong>Bucket 6</strong> ({{ listCounts.buckets[6] }})</a>
+
 <table class="table">
   <thead>
     <tr>
