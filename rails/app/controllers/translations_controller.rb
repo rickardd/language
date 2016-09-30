@@ -11,9 +11,15 @@ class TranslationsController < ApplicationController
   # GET /translations
   # GET /translations.json
   def index
+    list = current_user.lists.find_by( name: :private )
+    translation_mix = []
+    translation_mix.push( list.translations )
+    translation_mix.push( list.verbs )
+    @translation = translation_mix.flatten.shuffle.first
 
     # Tempoorary random function
-      render json: current_user.lists.find_by( name: :private ).translations.shuffle.first.to_json
+      # render json: translation_mix.flatten.shuffle.first.to_json
+      render "_translation.json.jbuilder"
       return
     # End temporary...
 
