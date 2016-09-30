@@ -1,10 +1,22 @@
 json.array! @combined do |c|
 
-  json.spanish c[:translation].spanish
-  json.english c[:translation].english
-  json.category c[:translation].category
-  json.context c[:translation].context
-  json.id c[:translation].id
+  if c[:translation]
+    json.type :translation
+    json.spanish c[:translation].spanish
+    json.english c[:translation].english
+    json.category c[:translation].category
+    json.context c[:translation].context
+    json.id c[:translation].id
+  elsif c[:verb]
+    json.type :verb
+    json.id c[:verb].id
+    json.english c[:verb].infinitve_english
+    json.spanish c[:verb].infinitve_spanish
+    json.created_at c[:verb].created_at
+    json.updated_at c[:verb].updated_at
+  end
+
+
 
   if c[:score]
     json.no_of_succeeded c[:score].no_of_succeeded
@@ -19,5 +31,7 @@ json.array! @combined do |c|
     json.bucket -1
     json.step -1
   end
+
+
 
 end

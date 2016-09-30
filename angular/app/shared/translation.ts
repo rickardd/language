@@ -1,6 +1,7 @@
 
 interface iTranslation{
   id : number
+  type : string
   english : string
   spanish : string
   attempt? : string
@@ -18,6 +19,7 @@ interface iTranslation{
 export class Translation{
 
   id : number
+  type : string
   english : string
   spanish : string
   attempt : string
@@ -32,8 +34,9 @@ export class Translation{
   difficulty : number // percentage value 0-100
   strength : number
 
-  constructor( obj : iTranslation = {id: -1, english: "", spanish: "", attempt: "", category: "", context: "", no_of_attempts: 0, no_of_failed: 0, no_of_succeeded: 0, bucket: -1, step: -1, private_match: false }){
+  constructor( obj : iTranslation = {id: -1, type: "string", english: "", spanish: "", attempt: "", category: "", context: "", no_of_attempts: 0, no_of_failed: 0, no_of_succeeded: 0, bucket: -1, step: -1, private_match: false }){
     this.id = obj.id
+    this.type = obj.type
     this.english = obj.english
     this.spanish = obj.spanish
     this.category = obj.category

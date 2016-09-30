@@ -14,8 +14,10 @@ Rails.application.routes.draw do
       get 'global'
       get 'private'
       get 'custom'
-      post 'private/translation/:translation_id' => 'lists#add_translation'
-      delete 'private/translation/:translation_id' => 'lists#remove_translation'
+      post 'private/translation/:translation_id' => 'lists#add_translation_to_private'
+      delete 'private/translation/:translation_id' => 'lists#remove_translation_from_private'
+      post 'private/verb/:verb_id' => 'lists#add_verb_to_private'
+      delete 'private/verb/:verb_id' => 'lists#remove_verb_from_private'
     end
   end
 

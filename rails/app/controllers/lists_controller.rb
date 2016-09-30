@@ -17,7 +17,9 @@ class ListsController < ApplicationController
   end
 
   def private
-    translations = current_user.lists.find_by(name: :private).translations.limit( params[:limit] ).offset( params[:count_from] )
+    private_list = current_user.lists.find_by(name: :private)
+    translations = private_list.translations.limit( params[:limit] ).offset( params[:count_from] )
+    verbs = private_list.verbs.limit( params[:limit] ).offset( params[:count_from] )
     user_scores = current_user.scores
 
     @combined = []
@@ -25,6 +27,13 @@ class ListsController < ApplicationController
     translations.each do |t|
       score = user_scores.where( translation_id: t.id)[0]
       @combined.push( { translation: t, score: score } )
+    end
+
+    # @combined_verb = []
+
+    verbs.each do |t|
+      score = user_scores.where( verb_id: t.id)[0]
+      @combined.push( { verb: t, score: score } )
     end
 
     render 'lists/translation_score.json.jbuilder'
@@ -48,7 +57,7 @@ class ListsController < ApplicationController
     render 'lists/translation_score.json.jbuilder'
   end
 
-  def add_translation
+  def add_translation_to_private
     translation = Translation.find( params[:translation_id] )
 
     if current_user.lists.find_by(name: :private).translations << translation
@@ -58,14 +67,36 @@ class ListsController < ApplicationController
     end
   end
 
+  def add_verb_to_private
+    verb = Verb.find( params[:verb_id] )
 
-  def remove_translation
+
+    if current_user.lists.find_by(name: :private).verbs << verb
+      render json: verb.to_json
+    else
+      throw "Verb #{params[:verb_id]} coulnd't be found"
+    end
+
+  end
+
+
+  def remove_translation_from_private
     list_translation = current_user.lists.find_by(name: :private).translations
 
     if list_translation.delete( params[:translation_id] )
       render json: "{message: 'translation #{params[:translation_id]} is removed'"
     else
       throw "translation #{params[:translation_id]} for user couldn't be found"
+    end
+  end
+
+  def remove_verb_from_private
+    list_verb = current_user.lists.find_by(name: :private).verbs
+
+    if list_verb.delete( params[:verb_id] )
+      render json: "{message: 'translation #{params[:verb_id]} is removed'"
+    else
+      throw "translation #{params[:verb_id]} for user couldn't be found"
     end
   end
 

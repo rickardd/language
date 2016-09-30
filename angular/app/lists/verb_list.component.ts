@@ -40,10 +40,10 @@ export class VerbListComponent{
   onAddVerbToPrivate( $event, type ){
     let id = $event.target.dataset.id
     console.log("adding " + type + " to my_list with id " + id);
-    // this._listService.addVerbToPlayList( id )
-    //         .subscribe( response => {
-
-    //         })
+    this._listService.addVerbToPlayList( id )
+            .subscribe( response => {
+              console.log( response );
+            })
   }
 
   onAddTensToPrivate(){
@@ -57,7 +57,7 @@ export class VerbListComponent{
   //   elm.className = elm.className += " button-disabled"
   //   elm.innerHTML = "Added"
 
-  //   this._listService.addTranslationToList( id )
+  //   this._listService.addTranslationToPlayList( id )
   //           .subscribe( response => {
   //           })
   // }

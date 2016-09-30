@@ -32,14 +32,23 @@ export class PlayListComponent{
   onRemoveTranslation( $event ){
     let elm : any = $event.target
     let id : number = parseInt( elm.id, 10 )
+    let translation = this.list.getTranslation( id )
     let newList : List = this.list.removeTranslation( id )
+
+    console.log(translation);
 
     this.updateList( newList )
 
-    this._listService.removeTranslationFromList( id )
-            .subscribe( response => {
-
-            })
+    this._listService.removeTranslationFromList( id, translation.type )
+            .subscribe(
+              response => {
+                console.log( response );
+              },
+              error =>{
+                alert( "Translation could NOT be removed" );
+                console.error( "Error during removal of translation from my_list",  error );
+              }
+            )
   }
 
   updateList( list ){

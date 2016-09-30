@@ -98,7 +98,7 @@ export class MyListComponent{
     elm.className = elm.className += " button-disabled"
     elm.innerHTML = "Added"
 
-    this._listService.addTranslationToList( id )
+    this._listService.addTranslationToPlayList( id )
             .subscribe( response => {})
 
 

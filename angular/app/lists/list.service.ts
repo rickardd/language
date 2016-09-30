@@ -31,19 +31,18 @@ export class ListService{
     return this._http.get( this._urlRoot + "/verbs")
                  .map( response => response.json())
   }
-  addTranslationToList( id : number ){
+  addTranslationToPlayList( id : number ){
     console.log("add to play-list", id);
     return this._http.post( this._urlRoot + "/lists/private/translation/" + id, JSON.stringify("{id: id}") )
                 .map( response => response.json() )
   }
   addVerbToPlayList( id : number ){
     console.log("SERVICE: Adding verb " + id + " to play-list");
-    return this._http.post( this._urlRoot + "/xx/xx/xx/" + id, JSON.stringify("{id: id}") )
-                .map( response => response.json() )
+    return this._http.post( this._urlRoot + "/lists/private/verb/" + id, JSON.stringify("{id: id}") )
+                // .map( response => response.json() )
   }
-  removeTranslationFromList( id : number ){
-
-    return this._http.delete( this._urlRoot + "/lists/private/translation/" + id )
+  removeTranslationFromList( id : number, translation_type : string ){
+    return this._http.delete( this._urlRoot + "/lists/private/" + translation_type + "/" + id )
                 .map( response => {
 
                 })
