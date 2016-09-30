@@ -1,0 +1,3871 @@
+[{
+  "infinitve": {
+    "spanish": "ser",
+    "english": "to be (essential/permanent quality)"
+  },
+  "pastParticiple": {
+    "spanish": "sido",
+    "english": "been"
+  },
+  "gerund": {
+    "spanish": "siendo",
+    "english": "being"
+  },
+  "collection": [{
+    "section": {
+      "title": " Indicative",
+      "collection": [{
+        "conjugations": [{
+          "english": "I am, I am being",
+          "pron": "yo",
+          "spanish": "soy",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you are, you are being",
+          "pron": "tú",
+          "spanish": "eres",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it is, he/she/it is being",
+          "pron": "él",
+          "spanish": "es",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we are, we are being",
+          "pron": "nosotros",
+          "spanish": "somos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you are, you are being",
+          "pron": "vosotros",
+          "spanish": "sois",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they are, they are being",
+          "pron": "ellos",
+          "spanish": "son",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I will be",
+          "pron": "yo",
+          "spanish": "seré",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you will be",
+          "pron": "tú",
+          "spanish": "serás",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it will be",
+          "pron": "él",
+          "spanish": "será",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we will be",
+          "pron": "nosotros",
+          "spanish": "seremos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you will be",
+          "pron": "vosotros",
+          "spanish": "seréis",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they will be",
+          "pron": "ellos",
+          "spanish": "serán",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Future"
+      }, {
+        "conjugations": [{
+          "english": "I was being, I used to be",
+          "pron": "yo",
+          "spanish": "era",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were being, you used to be",
+          "pron": "tú",
+          "spanish": "eras",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was being, he/she/it used to be",
+          "pron": "él",
+          "spanish": "era",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were being, we used to be",
+          "pron": "nosotros",
+          "spanish": "éramos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were being, you used to be",
+          "pron": "vosotros",
+          "spanish": "erais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were being, they used to be",
+          "pron": "ellos",
+          "spanish": "eran",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I was",
+          "pron": "yo",
+          "spanish": "fui",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were",
+          "pron": "tú",
+          "spanish": "fuiste",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was",
+          "pron": "él",
+          "spanish": "fue",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were",
+          "pron": "nosotros",
+          "spanish": "fuimos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were",
+          "pron": "vosotros",
+          "spanish": "fuisteis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were",
+          "pron": "ellos",
+          "spanish": "fueron",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Preterite"
+      }, {
+        "conjugations": [{
+          "english": "I would be",
+          "pron": "yo",
+          "spanish": "sería",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you would be",
+          "pron": "tú",
+          "spanish": "serías",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it would be",
+          "pron": "él",
+          "spanish": "sería",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we would be",
+          "pron": "nosotros",
+          "spanish": "seríamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you would be",
+          "pron": "vosotros",
+          "spanish": "seríais",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they would be",
+          "pron": "ellos",
+          "spanish": "serían",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Conditional"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "he",
+          "isRegular": true
+        }, {
+          "english": "you have been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "has",
+          "isRegular": true
+        }, {
+          "english": "he/she/it has been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "ha",
+          "isRegular": true
+        }, {
+          "english": "we have been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "hemos",
+          "isRegular": true
+        }, {
+          "english": "you have been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "habéis",
+          "isRegular": true
+        }, {
+          "english": "they have been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "han",
+          "isRegular": true
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "habré",
+          "isRegular": true
+        }, {
+          "english": "you will have been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "habrás",
+          "isRegular": true
+        }, {
+          "english": "he/she/it will have been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "habrá",
+          "isRegular": true
+        }, {
+          "english": "we will have been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "habremos",
+          "isRegular": true
+        }, {
+          "english": "you will have been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "habréis",
+          "isRegular": true
+        }, {
+          "english": "they will have been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "habrán",
+          "isRegular": true
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "había",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "habías",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "había",
+          "isRegular": true
+        }, {
+          "english": "we had been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "habíamos",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "habíais",
+          "isRegular": true
+        }, {
+          "english": "they had been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "habían",
+          "isRegular": true
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I would have been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "habría",
+          "isRegular": true
+        }, {
+          "english": "you would have been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "habrías",
+          "isRegular": true
+        }, {
+          "english": "he/she/it would have been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "habría",
+          "isRegular": true
+        }, {
+          "english": "we would have been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "habríamos",
+          "isRegular": true
+        }, {
+          "english": "you would have been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "habríais",
+          "isRegular": true
+        }, {
+          "english": "they would have been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "habrían",
+          "isRegular": true
+        }],
+        "title": "Conditional Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "hube",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "hubiste",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "hubo",
+          "isRegular": true
+        }, {
+          "english": "we had been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "hubimos",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "hubisteis",
+          "isRegular": true
+        }, {
+          "english": "they had been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "hubieron",
+          "isRegular": true
+        }],
+        "title": "Past Anterior"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive",
+      "collection": [{
+        "conjugations": [{
+          "english": "I am, I am being",
+          "pron": "yo",
+          "spanish": "sea",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you are, you are being",
+          "pron": "tú",
+          "spanish": "seas",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it is, he/she/it is being",
+          "pron": "él",
+          "spanish": "sea",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we are, we are being",
+          "pron": "nosotros",
+          "spanish": "seamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you are, you are being",
+          "pron": "vosotros",
+          "spanish": "seáis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they are, they are being",
+          "pron": "ellos",
+          "spanish": "sean",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I was, I was being",
+          "pron": "yo",
+          "spanish": "fuera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were, you were being",
+          "pron": "tú",
+          "spanish": "fueras",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was, he/she/it was being",
+          "pron": "él",
+          "spanish": "fuera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were, we were being",
+          "pron": "nosotros",
+          "spanish": "fuéramos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were, you were being",
+          "pron": "vosotros",
+          "spanish": "fuerais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were, they were being",
+          "pron": "ellos",
+          "spanish": "fueran",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I was, I was being",
+          "pron": "yo",
+          "spanish": "fuese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were, you were being",
+          "pron": "tú",
+          "spanish": "fueses",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was, he/she/it was being",
+          "pron": "él",
+          "spanish": "fuese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were, we were being",
+          "pron": "nosotros",
+          "spanish": "fuésemos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were, you were being",
+          "pron": "vosotros",
+          "spanish": "fueseis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were, they were being",
+          "pron": "ellos",
+          "spanish": "fuesen",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect 2"
+      }, {
+        "conjugations": [{
+          "english": "I will be",
+          "pron": "yo",
+          "spanish": "fuere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will be",
+          "pron": "tú",
+          "spanish": "fueres",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will be",
+          "pron": "él",
+          "spanish": "fuere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we will be",
+          "pron": "nosotros",
+          "spanish": "fuéremos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will be",
+          "pron": "vosotros",
+          "spanish": "fuereis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they will be",
+          "pron": "ellos",
+          "spanish": "fueren",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Future"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "haya",
+          "isRegular": true
+        }, {
+          "english": "you have been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "hayas",
+          "isRegular": true
+        }, {
+          "english": "he/she/it has been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "haya",
+          "isRegular": true
+        }, {
+          "english": "we have been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "hayamos",
+          "isRegular": true
+        }, {
+          "english": "you have been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "hayáis",
+          "isRegular": true
+        }, {
+          "english": "they have been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "hayan",
+          "isRegular": true
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "hubiere",
+          "isRegular": true
+        }, {
+          "english": "you will have been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "hubieres",
+          "isRegular": true
+        }, {
+          "english": "he/she/it will have been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "hubiere",
+          "isRegular": true
+        }, {
+          "english": "we will have been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "hubiéremos",
+          "isRegular": true
+        }, {
+          "english": "you will have been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "hubiereis",
+          "isRegular": true
+        }, {
+          "english": "they will have been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "hubieren",
+          "isRegular": true
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "hubiera",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "hubieras",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "hubiera",
+          "isRegular": true
+        }, {
+          "english": "we had been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "hubiéramos",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "hubierais",
+          "isRegular": true
+        }, {
+          "english": "they had been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "hubieran",
+          "isRegular": true
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been",
+          "pron": "yo",
+          "spanish": "sido",
+          "helperVerb": "hubiese",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "tú",
+          "spanish": "sido",
+          "helperVerb": "hubieses",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been",
+          "pron": "él",
+          "spanish": "sido",
+          "helperVerb": "hubiese",
+          "isRegular": true
+        }, {
+          "english": "we had been",
+          "pron": "nosotros",
+          "spanish": "sido",
+          "helperVerb": "hubiésemos",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "vosotros",
+          "spanish": "sido",
+          "helperVerb": "hubieseis",
+          "isRegular": true
+        }, {
+          "english": "they had been",
+          "pron": "ellos",
+          "spanish": "sido",
+          "helperVerb": "hubiesen",
+          "isRegular": true
+        }],
+        "title": "Pluperfect 2"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Imperative (Commands)",
+      "collection": [{
+        "conjugations": [{
+          "english": "(you) be",
+          "pron": "(tú)",
+          "spanish": "sé",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(he/she/it) be",
+          "pron": "(él)",
+          "spanish": "sea",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(we) let's be",
+          "pron": "(nosotros)",
+          "spanish": "seamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(you) be",
+          "pron": "(vosotros)",
+          "spanish": "sed",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "(they) be",
+          "pron": "(ellos)",
+          "spanish": "sean",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Affirmative"
+      }]
+    }
+  }]
+}, {
+  "infinitve": {
+    "spanish": "estar",
+    "english": "to be (health, location, state)"
+  },
+  "pastParticiple": {
+    "spanish": "estado",
+    "english": "been"
+  },
+  "gerund": {
+    "spanish": "estando",
+    "english": "being"
+  },
+  "collection": [{
+    "section": {
+      "title": " Indicative",
+      "collection": [{
+        "conjugations": [{
+          "english": "I am, I am being",
+          "pron": "yo",
+          "spanish": "estoy",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you are, you are being",
+          "pron": "tú",
+          "spanish": "estás",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it is, he/she/it is being",
+          "pron": "él",
+          "spanish": "está",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we are, we are being",
+          "pron": "nosotros",
+          "spanish": "estamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you are, you are being",
+          "pron": "vosotros",
+          "spanish": "estáis",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they are, they are being",
+          "pron": "ellos",
+          "spanish": "están",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I will be",
+          "pron": "yo",
+          "spanish": "estaré",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you will be",
+          "pron": "tú",
+          "spanish": "estarás",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it will be",
+          "pron": "él",
+          "spanish": "estará",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we will be",
+          "pron": "nosotros",
+          "spanish": "estaremos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you will be",
+          "pron": "vosotros",
+          "spanish": "estaréis",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they will be",
+          "pron": "ellos",
+          "spanish": "estarán",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Future"
+      }, {
+        "conjugations": [{
+          "english": "I was being, I used to be",
+          "pron": "yo",
+          "spanish": "estaba",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you were being, you used to be",
+          "pron": "tú",
+          "spanish": "estabas",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it was being, he/she/it used to be",
+          "pron": "él",
+          "spanish": "estaba",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we were being, we used to be",
+          "pron": "nosotros",
+          "spanish": "estábamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you were being, you used to be",
+          "pron": "vosotros",
+          "spanish": "estabais",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they were being, they used to be",
+          "pron": "ellos",
+          "spanish": "estaban",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I was",
+          "pron": "yo",
+          "spanish": "estuve",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were",
+          "pron": "tú",
+          "spanish": "estuviste",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was",
+          "pron": "él",
+          "spanish": "estuvo",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were",
+          "pron": "nosotros",
+          "spanish": "estuvimos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were",
+          "pron": "vosotros",
+          "spanish": "estuvisteis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were",
+          "pron": "ellos",
+          "spanish": "estuvieron",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Preterite"
+      }, {
+        "conjugations": [{
+          "english": "I would be",
+          "pron": "yo",
+          "spanish": "estaría",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you would be",
+          "pron": "tú",
+          "spanish": "estarías",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it would be",
+          "pron": "él",
+          "spanish": "estaría",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we would be",
+          "pron": "nosotros",
+          "spanish": "estaríamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you would be",
+          "pron": "vosotros",
+          "spanish": "estaríais",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they would be",
+          "pron": "ellos",
+          "spanish": "estarían",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Conditional"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "he",
+          "isRegular": true
+        }, {
+          "english": "you have been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "has",
+          "isRegular": true
+        }, {
+          "english": "he/she/it has been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "ha",
+          "isRegular": true
+        }, {
+          "english": "we have been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "hemos",
+          "isRegular": true
+        }, {
+          "english": "you have been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "habéis",
+          "isRegular": true
+        }, {
+          "english": "they have been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "han",
+          "isRegular": true
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "habré",
+          "isRegular": true
+        }, {
+          "english": "you will have been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "habrás",
+          "isRegular": true
+        }, {
+          "english": "he/she/it will have been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "habrá",
+          "isRegular": true
+        }, {
+          "english": "we will have been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "habremos",
+          "isRegular": true
+        }, {
+          "english": "you will have been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "habréis",
+          "isRegular": true
+        }, {
+          "english": "they will have been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "habrán",
+          "isRegular": true
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "había",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "habías",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "había",
+          "isRegular": true
+        }, {
+          "english": "we had been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "habíamos",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "habíais",
+          "isRegular": true
+        }, {
+          "english": "they had been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "habían",
+          "isRegular": true
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I would have been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "habría",
+          "isRegular": true
+        }, {
+          "english": "you would have been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "habrías",
+          "isRegular": true
+        }, {
+          "english": "he/she/it would have been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "habría",
+          "isRegular": true
+        }, {
+          "english": "we would have been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "habríamos",
+          "isRegular": true
+        }, {
+          "english": "you would have been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "habríais",
+          "isRegular": true
+        }, {
+          "english": "they would have been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "habrían",
+          "isRegular": true
+        }],
+        "title": "Conditional Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "hube",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "hubiste",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "hubo",
+          "isRegular": true
+        }, {
+          "english": "we had been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "hubimos",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "hubisteis",
+          "isRegular": true
+        }, {
+          "english": "they had been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "hubieron",
+          "isRegular": true
+        }],
+        "title": "Past Anterior"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive",
+      "collection": [{
+        "conjugations": [{
+          "english": "I am, I am being",
+          "pron": "yo",
+          "spanish": "esté",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you are, you are being",
+          "pron": "tú",
+          "spanish": "estés",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it is, he/she/it is being",
+          "pron": "él",
+          "spanish": "esté",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we are, we are being",
+          "pron": "nosotros",
+          "spanish": "estemos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you are, you are being",
+          "pron": "vosotros",
+          "spanish": "estéis",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they are, they are being",
+          "pron": "ellos",
+          "spanish": "estén",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I was, I was being",
+          "pron": "yo",
+          "spanish": "estuviera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were, you were being",
+          "pron": "tú",
+          "spanish": "estuvieras",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was, he/she/it was being",
+          "pron": "él",
+          "spanish": "estuviera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were, we were being",
+          "pron": "nosotros",
+          "spanish": "estuviéramos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were, you were being",
+          "pron": "vosotros",
+          "spanish": "estuvierais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were, they were being",
+          "pron": "ellos",
+          "spanish": "estuvieran",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I was, I was being",
+          "pron": "yo",
+          "spanish": "estuviese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were, you were being",
+          "pron": "tú",
+          "spanish": "estuvieses",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was, he/she/it was being",
+          "pron": "él",
+          "spanish": "estuviese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were, we were being",
+          "pron": "nosotros",
+          "spanish": "estuviésemos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were, you were being",
+          "pron": "vosotros",
+          "spanish": "estuvieseis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were, they were being",
+          "pron": "ellos",
+          "spanish": "estuviesen",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect 2"
+      }, {
+        "conjugations": [{
+          "english": "I will be",
+          "pron": "yo",
+          "spanish": "estuviere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will be",
+          "pron": "tú",
+          "spanish": "estuvieres",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will be",
+          "pron": "él",
+          "spanish": "estuviere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we will be",
+          "pron": "nosotros",
+          "spanish": "estuviéremos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will be",
+          "pron": "vosotros",
+          "spanish": "estuviereis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they will be",
+          "pron": "ellos",
+          "spanish": "estuvieren",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Future"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "haya",
+          "isRegular": true
+        }, {
+          "english": "you have been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "hayas",
+          "isRegular": true
+        }, {
+          "english": "he/she/it has been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "haya",
+          "isRegular": true
+        }, {
+          "english": "we have been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "hayamos",
+          "isRegular": true
+        }, {
+          "english": "you have been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "hayáis",
+          "isRegular": true
+        }, {
+          "english": "they have been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "hayan",
+          "isRegular": true
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "hubiere",
+          "isRegular": true
+        }, {
+          "english": "you will have been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "hubieres",
+          "isRegular": true
+        }, {
+          "english": "he/she/it will have been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "hubiere",
+          "isRegular": true
+        }, {
+          "english": "we will have been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "hubiéremos",
+          "isRegular": true
+        }, {
+          "english": "you will have been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "hubiereis",
+          "isRegular": true
+        }, {
+          "english": "they will have been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "hubieren",
+          "isRegular": true
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "hubiera",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "hubieras",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "hubiera",
+          "isRegular": true
+        }, {
+          "english": "we had been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "hubiéramos",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "hubierais",
+          "isRegular": true
+        }, {
+          "english": "they had been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "hubieran",
+          "isRegular": true
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been",
+          "pron": "yo",
+          "spanish": "estado",
+          "helperVerb": "hubiese",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "tú",
+          "spanish": "estado",
+          "helperVerb": "hubieses",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been",
+          "pron": "él",
+          "spanish": "estado",
+          "helperVerb": "hubiese",
+          "isRegular": true
+        }, {
+          "english": "we had been",
+          "pron": "nosotros",
+          "spanish": "estado",
+          "helperVerb": "hubiésemos",
+          "isRegular": true
+        }, {
+          "english": "you had been",
+          "pron": "vosotros",
+          "spanish": "estado",
+          "helperVerb": "hubieseis",
+          "isRegular": true
+        }, {
+          "english": "they had been",
+          "pron": "ellos",
+          "spanish": "estado",
+          "helperVerb": "hubiesen",
+          "isRegular": true
+        }],
+        "title": "Pluperfect 2"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Imperative (Commands)",
+      "collection": [{
+        "conjugations": [{
+          "english": "(you) be",
+          "pron": "(tú)",
+          "spanish": "está",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(he/she/it) be",
+          "pron": "(él)",
+          "spanish": "esté",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(we) let's be",
+          "pron": "(nosotros)",
+          "spanish": "estemos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "(you) be",
+          "pron": "(vosotros)",
+          "spanish": "estad",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "(they) be",
+          "pron": "(ellos)",
+          "spanish": "estén",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Affirmative"
+      }]
+    }
+  }]
+}, {
+  "infinitve": {
+    "spanish": "hacer",
+    "english": "to do, make"
+  },
+  "pastParticiple": {
+    "spanish": "hecho",
+    "english": "done"
+  },
+  "gerund": {
+    "spanish": "haciendo",
+    "english": "doing"
+  },
+  "collection": [{
+    "section": {
+      "title": " Indicative",
+      "collection": [{
+        "conjugations": [{
+          "english": "I do, I am doing",
+          "pron": "yo",
+          "spanish": "hago",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you do, you are doing",
+          "pron": "tú",
+          "spanish": "haces",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it does, he/she/it is doing",
+          "pron": "él",
+          "spanish": "hace",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we do, we are doing",
+          "pron": "nosotros",
+          "spanish": "hacemos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you do, you are doing",
+          "pron": "vosotros",
+          "spanish": "hacéis",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they do, they are doing",
+          "pron": "ellos",
+          "spanish": "hacen",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I will do",
+          "pron": "yo",
+          "spanish": "haré",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will do",
+          "pron": "tú",
+          "spanish": "harás",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will do",
+          "pron": "él",
+          "spanish": "hará",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we will do",
+          "pron": "nosotros",
+          "spanish": "haremos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will do",
+          "pron": "vosotros",
+          "spanish": "haréis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they will do",
+          "pron": "ellos",
+          "spanish": "harán",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Future"
+      }, {
+        "conjugations": [{
+          "english": "I was doing, I used to do",
+          "pron": "yo",
+          "spanish": "hacía",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you were doing, you used to do",
+          "pron": "tú",
+          "spanish": "hacías",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it was doing, he/she/it used to do",
+          "pron": "él",
+          "spanish": "hacía",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we were doing, we used to do",
+          "pron": "nosotros",
+          "spanish": "hacíamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you were doing, you used to do",
+          "pron": "vosotros",
+          "spanish": "hacíais",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they were doing, they used to do",
+          "pron": "ellos",
+          "spanish": "hacían",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I did",
+          "pron": "yo",
+          "spanish": "hice",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you did",
+          "pron": "tú",
+          "spanish": "hiciste",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it did",
+          "pron": "él",
+          "spanish": "hizo",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we did",
+          "pron": "nosotros",
+          "spanish": "hicimos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you did",
+          "pron": "vosotros",
+          "spanish": "hicisteis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they did",
+          "pron": "ellos",
+          "spanish": "hicieron",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Preterite"
+      }, {
+        "conjugations": [{
+          "english": "I would do",
+          "pron": "yo",
+          "spanish": "haría",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you would do",
+          "pron": "tú",
+          "spanish": "harías",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it would do",
+          "pron": "él",
+          "spanish": "haría",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we would do",
+          "pron": "nosotros",
+          "spanish": "haríamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you would do",
+          "pron": "vosotros",
+          "spanish": "haríais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they would do",
+          "pron": "ellos",
+          "spanish": "harían",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Conditional"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "he",
+          "isRegular": false
+        }, {
+          "english": "you have done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "has",
+          "isRegular": false
+        }, {
+          "english": "he/she/it has done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "ha",
+          "isRegular": false
+        }, {
+          "english": "we have done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "hemos",
+          "isRegular": false
+        }, {
+          "english": "you have done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "habéis",
+          "isRegular": false
+        }, {
+          "english": "they have done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "han",
+          "isRegular": false
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "habré",
+          "isRegular": false
+        }, {
+          "english": "you will have done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "habrás",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will have done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "habrá",
+          "isRegular": false
+        }, {
+          "english": "we will have done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "habremos",
+          "isRegular": false
+        }, {
+          "english": "you will have done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "habréis",
+          "isRegular": false
+        }, {
+          "english": "they will have done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "habrán",
+          "isRegular": false
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "había",
+          "isRegular": false
+        }, {
+          "english": "you had done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "habías",
+          "isRegular": false
+        }, {
+          "english": "he/she/it had done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "había",
+          "isRegular": false
+        }, {
+          "english": "we had done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "habíamos",
+          "isRegular": false
+        }, {
+          "english": "you had done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "habíais",
+          "isRegular": false
+        }, {
+          "english": "they had done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "habían",
+          "isRegular": false
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I would have done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "habría",
+          "isRegular": false
+        }, {
+          "english": "you would have done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "habrías",
+          "isRegular": false
+        }, {
+          "english": "he/she/it would have done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "habría",
+          "isRegular": false
+        }, {
+          "english": "we would have done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "habríamos",
+          "isRegular": false
+        }, {
+          "english": "you would have done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "habríais",
+          "isRegular": false
+        }, {
+          "english": "they would have done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "habrían",
+          "isRegular": false
+        }],
+        "title": "Conditional Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "hube",
+          "isRegular": false
+        }, {
+          "english": "you had done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "hubiste",
+          "isRegular": false
+        }, {
+          "english": "he/she/it had done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "hubo",
+          "isRegular": false
+        }, {
+          "english": "we had done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "hubimos",
+          "isRegular": false
+        }, {
+          "english": "you had done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "hubisteis",
+          "isRegular": false
+        }, {
+          "english": "they had done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "hubieron",
+          "isRegular": false
+        }],
+        "title": "Past Anterior"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive",
+      "collection": [{
+        "conjugations": [{
+          "english": "I do, I am doing",
+          "pron": "yo",
+          "spanish": "haga",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you do, you are doing",
+          "pron": "tú",
+          "spanish": "hagas",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it does, he/she/it is doing",
+          "pron": "él",
+          "spanish": "haga",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we do, we are doing",
+          "pron": "nosotros",
+          "spanish": "hagamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you do, you are doing",
+          "pron": "vosotros",
+          "spanish": "hagáis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they do, they are doing",
+          "pron": "ellos",
+          "spanish": "hagan",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I did, I was doing",
+          "pron": "yo",
+          "spanish": "hiciera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you did, you were doing",
+          "pron": "tú",
+          "spanish": "hicieras",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it did, he/she/it was doing",
+          "pron": "él",
+          "spanish": "hiciera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we did, we were doing",
+          "pron": "nosotros",
+          "spanish": "hiciéramos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you did, you were doing",
+          "pron": "vosotros",
+          "spanish": "hicierais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they did, they were doing",
+          "pron": "ellos",
+          "spanish": "hicieran",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I did, I was doing",
+          "pron": "yo",
+          "spanish": "hiciese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you did, you were doing",
+          "pron": "tú",
+          "spanish": "hicieses",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it did, he/she/it was doing",
+          "pron": "él",
+          "spanish": "hiciese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we did, we were doing",
+          "pron": "nosotros",
+          "spanish": "hiciésemos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you did, you were doing",
+          "pron": "vosotros",
+          "spanish": "hicieseis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they did, they were doing",
+          "pron": "ellos",
+          "spanish": "hiciesen",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect 2"
+      }, {
+        "conjugations": [{
+          "english": "I will do",
+          "pron": "yo",
+          "spanish": "hiciere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will do",
+          "pron": "tú",
+          "spanish": "hicieres",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will do",
+          "pron": "él",
+          "spanish": "hiciere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we will do",
+          "pron": "nosotros",
+          "spanish": "hiciéremos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will do",
+          "pron": "vosotros",
+          "spanish": "hiciereis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they will do",
+          "pron": "ellos",
+          "spanish": "hicieren",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Future"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "haya",
+          "isRegular": false
+        }, {
+          "english": "you have done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "hayas",
+          "isRegular": false
+        }, {
+          "english": "he/she/it has done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "haya",
+          "isRegular": false
+        }, {
+          "english": "we have done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "hayamos",
+          "isRegular": false
+        }, {
+          "english": "you have done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "hayáis",
+          "isRegular": false
+        }, {
+          "english": "they have done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "hayan",
+          "isRegular": false
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "hubiere",
+          "isRegular": false
+        }, {
+          "english": "you will have done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "hubieres",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will have done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "hubiere",
+          "isRegular": false
+        }, {
+          "english": "we will have done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "hubiéremos",
+          "isRegular": false
+        }, {
+          "english": "you will have done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "hubiereis",
+          "isRegular": false
+        }, {
+          "english": "they will have done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "hubieren",
+          "isRegular": false
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "hubiera",
+          "isRegular": false
+        }, {
+          "english": "you had done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "hubieras",
+          "isRegular": false
+        }, {
+          "english": "he/she/it had done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "hubiera",
+          "isRegular": false
+        }, {
+          "english": "we had done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "hubiéramos",
+          "isRegular": false
+        }, {
+          "english": "you had done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "hubierais",
+          "isRegular": false
+        }, {
+          "english": "they had done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "hubieran",
+          "isRegular": false
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I had done",
+          "pron": "yo",
+          "spanish": "hecho",
+          "helperVerb": "hubiese",
+          "isRegular": false
+        }, {
+          "english": "you had done",
+          "pron": "tú",
+          "spanish": "hecho",
+          "helperVerb": "hubieses",
+          "isRegular": false
+        }, {
+          "english": "he/she/it had done",
+          "pron": "él",
+          "spanish": "hecho",
+          "helperVerb": "hubiese",
+          "isRegular": false
+        }, {
+          "english": "we had done",
+          "pron": "nosotros",
+          "spanish": "hecho",
+          "helperVerb": "hubiésemos",
+          "isRegular": false
+        }, {
+          "english": "you had done",
+          "pron": "vosotros",
+          "spanish": "hecho",
+          "helperVerb": "hubieseis",
+          "isRegular": false
+        }, {
+          "english": "they had done",
+          "pron": "ellos",
+          "spanish": "hecho",
+          "helperVerb": "hubiesen",
+          "isRegular": false
+        }],
+        "title": "Pluperfect 2"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Imperative (Commands)",
+      "collection": [{
+        "conjugations": [{
+          "english": "(you) do",
+          "pron": "(tú)",
+          "spanish": "haz",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(he/she/it) do",
+          "pron": "(él)",
+          "spanish": "haga",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(we) let's do",
+          "pron": "(nosotros)",
+          "spanish": "hagamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(you) do",
+          "pron": "(vosotros)",
+          "spanish": "haced",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "(they) do",
+          "pron": "(ellos)",
+          "spanish": "hagan",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Affirmative"
+      }]
+    }
+  }]
+}, {
+  "infinitve": {
+    "spanish": "poder",
+    "english": "to be able, can"
+  },
+  "pastParticiple": {
+    "spanish": "podido",
+    "english": "been"
+  },
+  "gerund": {
+    "spanish": "pudiendo",
+    "english": "being"
+  },
+  "collection": [{
+    "section": {
+      "title": " Indicative",
+      "collection": [{
+        "conjugations": [{
+          "english": "I am able, I am being able",
+          "pron": "yo",
+          "spanish": "puedo",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you are able, you are being able",
+          "pron": "tú",
+          "spanish": "puedes",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it is able, he/she/it is being able",
+          "pron": "él",
+          "spanish": "puede",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we are able, we are being able",
+          "pron": "nosotros",
+          "spanish": "podemos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you are able, you are being able",
+          "pron": "vosotros",
+          "spanish": "podéis",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they are able, they are being able",
+          "pron": "ellos",
+          "spanish": "pueden",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I will be able",
+          "pron": "yo",
+          "spanish": "podré",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will be able",
+          "pron": "tú",
+          "spanish": "podrás",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will be able",
+          "pron": "él",
+          "spanish": "podrá",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we will be able",
+          "pron": "nosotros",
+          "spanish": "podremos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will be able",
+          "pron": "vosotros",
+          "spanish": "podréis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they will be able",
+          "pron": "ellos",
+          "spanish": "podrán",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Future"
+      }, {
+        "conjugations": [{
+          "english": "I was being able, I used to be able",
+          "pron": "yo",
+          "spanish": "podía",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you were being able, you used to be able",
+          "pron": "tú",
+          "spanish": "podías",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it was being able, he/she/it used to be able",
+          "pron": "él",
+          "spanish": "podía",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we were being able, we used to be able",
+          "pron": "nosotros",
+          "spanish": "podíamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you were being able, you used to be able",
+          "pron": "vosotros",
+          "spanish": "podíais",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they were being able, they used to be able",
+          "pron": "ellos",
+          "spanish": "podían",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I was able",
+          "pron": "yo",
+          "spanish": "pude",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were able",
+          "pron": "tú",
+          "spanish": "pudiste",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was able",
+          "pron": "él",
+          "spanish": "pudo",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were able",
+          "pron": "nosotros",
+          "spanish": "pudimos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were able",
+          "pron": "vosotros",
+          "spanish": "pudisteis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were able",
+          "pron": "ellos",
+          "spanish": "pudieron",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Preterite"
+      }, {
+        "conjugations": [{
+          "english": "I would be able",
+          "pron": "yo",
+          "spanish": "podría",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you would be able",
+          "pron": "tú",
+          "spanish": "podrías",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it would be able",
+          "pron": "él",
+          "spanish": "podría",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we would be able",
+          "pron": "nosotros",
+          "spanish": "podríamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you would be able",
+          "pron": "vosotros",
+          "spanish": "podríais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they would be able",
+          "pron": "ellos",
+          "spanish": "podrían",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Conditional"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "he",
+          "isRegular": true
+        }, {
+          "english": "you have been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "has",
+          "isRegular": true
+        }, {
+          "english": "he/she/it has been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "ha",
+          "isRegular": true
+        }, {
+          "english": "we have been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "hemos",
+          "isRegular": true
+        }, {
+          "english": "you have been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "habéis",
+          "isRegular": true
+        }, {
+          "english": "they have been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "han",
+          "isRegular": true
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "habré",
+          "isRegular": true
+        }, {
+          "english": "you will have been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "habrás",
+          "isRegular": true
+        }, {
+          "english": "he/she/it will have been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "habrá",
+          "isRegular": true
+        }, {
+          "english": "we will have been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "habremos",
+          "isRegular": true
+        }, {
+          "english": "you will have been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "habréis",
+          "isRegular": true
+        }, {
+          "english": "they will have been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "habrán",
+          "isRegular": true
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "había",
+          "isRegular": true
+        }, {
+          "english": "you had been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "habías",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "había",
+          "isRegular": true
+        }, {
+          "english": "we had been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "habíamos",
+          "isRegular": true
+        }, {
+          "english": "you had been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "habíais",
+          "isRegular": true
+        }, {
+          "english": "they had been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "habían",
+          "isRegular": true
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I would have been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "habría",
+          "isRegular": true
+        }, {
+          "english": "you would have been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "habrías",
+          "isRegular": true
+        }, {
+          "english": "he/she/it would have been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "habría",
+          "isRegular": true
+        }, {
+          "english": "we would have been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "habríamos",
+          "isRegular": true
+        }, {
+          "english": "you would have been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "habríais",
+          "isRegular": true
+        }, {
+          "english": "they would have been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "habrían",
+          "isRegular": true
+        }],
+        "title": "Conditional Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "hube",
+          "isRegular": true
+        }, {
+          "english": "you had been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "hubiste",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "hubo",
+          "isRegular": true
+        }, {
+          "english": "we had been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "hubimos",
+          "isRegular": true
+        }, {
+          "english": "you had been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "hubisteis",
+          "isRegular": true
+        }, {
+          "english": "they had been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "hubieron",
+          "isRegular": true
+        }],
+        "title": "Past Anterior"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive",
+      "collection": [{
+        "conjugations": [{
+          "english": "I am able, I am being able",
+          "pron": "yo",
+          "spanish": "pueda",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you are able, you are being able",
+          "pron": "tú",
+          "spanish": "puedas",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it is able, he/she/it is being able",
+          "pron": "él",
+          "spanish": "pueda",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we are able, we are being able",
+          "pron": "nosotros",
+          "spanish": "podamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you are able, you are being able",
+          "pron": "vosotros",
+          "spanish": "podáis",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they are able, they are being able",
+          "pron": "ellos",
+          "spanish": "puedan",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I was able, I was being able",
+          "pron": "yo",
+          "spanish": "pudiera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were able, you were being able",
+          "pron": "tú",
+          "spanish": "pudieras",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was able, he/she/it was being able",
+          "pron": "él",
+          "spanish": "pudiera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were able, we were being able",
+          "pron": "nosotros",
+          "spanish": "pudiéramos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were able, you were being able",
+          "pron": "vosotros",
+          "spanish": "pudierais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were able, they were being able",
+          "pron": "ellos",
+          "spanish": "pudieran",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I was able, I was being able",
+          "pron": "yo",
+          "spanish": "pudiese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were able, you were being able",
+          "pron": "tú",
+          "spanish": "pudieses",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it was able, he/she/it was being able",
+          "pron": "él",
+          "spanish": "pudiese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we were able, we were being able",
+          "pron": "nosotros",
+          "spanish": "pudiésemos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you were able, you were being able",
+          "pron": "vosotros",
+          "spanish": "pudieseis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they were able, they were being able",
+          "pron": "ellos",
+          "spanish": "pudiesen",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect 2"
+      }, {
+        "conjugations": [{
+          "english": "I will be able",
+          "pron": "yo",
+          "spanish": "pudiere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will be able",
+          "pron": "tú",
+          "spanish": "pudieres",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will be able",
+          "pron": "él",
+          "spanish": "pudiere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we will be able",
+          "pron": "nosotros",
+          "spanish": "pudiéremos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will be able",
+          "pron": "vosotros",
+          "spanish": "pudiereis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they will be able",
+          "pron": "ellos",
+          "spanish": "pudieren",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Future"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "haya",
+          "isRegular": true
+        }, {
+          "english": "you have been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "hayas",
+          "isRegular": true
+        }, {
+          "english": "he/she/it has been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "haya",
+          "isRegular": true
+        }, {
+          "english": "we have been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "hayamos",
+          "isRegular": true
+        }, {
+          "english": "you have been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "hayáis",
+          "isRegular": true
+        }, {
+          "english": "they have been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "hayan",
+          "isRegular": true
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "hubiere",
+          "isRegular": true
+        }, {
+          "english": "you will have been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "hubieres",
+          "isRegular": true
+        }, {
+          "english": "he/she/it will have been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "hubiere",
+          "isRegular": true
+        }, {
+          "english": "we will have been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "hubiéremos",
+          "isRegular": true
+        }, {
+          "english": "you will have been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "hubiereis",
+          "isRegular": true
+        }, {
+          "english": "they will have been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "hubieren",
+          "isRegular": true
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "hubiera",
+          "isRegular": true
+        }, {
+          "english": "you had been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "hubieras",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "hubiera",
+          "isRegular": true
+        }, {
+          "english": "we had been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "hubiéramos",
+          "isRegular": true
+        }, {
+          "english": "you had been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "hubierais",
+          "isRegular": true
+        }, {
+          "english": "they had been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "hubieran",
+          "isRegular": true
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I had been able",
+          "pron": "yo",
+          "spanish": "podido",
+          "helperVerb": "hubiese",
+          "isRegular": true
+        }, {
+          "english": "you had been able",
+          "pron": "tú",
+          "spanish": "podido",
+          "helperVerb": "hubieses",
+          "isRegular": true
+        }, {
+          "english": "he/she/it had been able",
+          "pron": "él",
+          "spanish": "podido",
+          "helperVerb": "hubiese",
+          "isRegular": true
+        }, {
+          "english": "we had been able",
+          "pron": "nosotros",
+          "spanish": "podido",
+          "helperVerb": "hubiésemos",
+          "isRegular": true
+        }, {
+          "english": "you had been able",
+          "pron": "vosotros",
+          "spanish": "podido",
+          "helperVerb": "hubieseis",
+          "isRegular": true
+        }, {
+          "english": "they had been able",
+          "pron": "ellos",
+          "spanish": "podido",
+          "helperVerb": "hubiesen",
+          "isRegular": true
+        }],
+        "title": "Pluperfect 2"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Imperative (Commands)",
+      "collection": [{
+        "conjugations": [{
+          "english": "(you) be able",
+          "pron": "(tú)",
+          "spanish": "puede",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(he/she/it) be able",
+          "pron": "(él)",
+          "spanish": "pueda",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(we) let's be able",
+          "pron": "(nosotros)",
+          "spanish": "podamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "(you) be able",
+          "pron": "(vosotros)",
+          "spanish": "poded",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "(they) be able",
+          "pron": "(ellos)",
+          "spanish": "puedan",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Affirmative"
+      }]
+    }
+  }]
+}, {
+  "infinitve": {
+    "spanish": "decir",
+    "english": "to say, tell"
+  },
+  "pastParticiple": {
+    "spanish": "dicho",
+    "english": "said"
+  },
+  "gerund": {
+    "spanish": "diciendo",
+    "english": "saying"
+  },
+  "collection": [{
+    "section": {
+      "title": " Indicative",
+      "collection": [{
+        "conjugations": [{
+          "english": "I say, I am saying",
+          "pron": "yo",
+          "spanish": "digo",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you say, you are saying",
+          "pron": "tú",
+          "spanish": "dices",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it says, he/she/it is saying",
+          "pron": "él",
+          "spanish": "dice",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we say, we are saying",
+          "pron": "nosotros",
+          "spanish": "decimos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you say, you are saying",
+          "pron": "vosotros",
+          "spanish": "decís",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they say, they are saying",
+          "pron": "ellos",
+          "spanish": "dicen",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I will say",
+          "pron": "yo",
+          "spanish": "diré",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will say",
+          "pron": "tú",
+          "spanish": "dirás",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will say",
+          "pron": "él",
+          "spanish": "dirá",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we will say",
+          "pron": "nosotros",
+          "spanish": "diremos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will say",
+          "pron": "vosotros",
+          "spanish": "diréis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they will say",
+          "pron": "ellos",
+          "spanish": "dirán",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Future"
+      }, {
+        "conjugations": [{
+          "english": "I was saying, I used to say",
+          "pron": "yo",
+          "spanish": "decía",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you were saying, you used to say",
+          "pron": "tú",
+          "spanish": "decías",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "he/she/it was saying, he/she/it used to say",
+          "pron": "él",
+          "spanish": "decía",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "we were saying, we used to say",
+          "pron": "nosotros",
+          "spanish": "decíamos",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "you were saying, you used to say",
+          "pron": "vosotros",
+          "spanish": "decíais",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "they were saying, they used to say",
+          "pron": "ellos",
+          "spanish": "decían",
+          "helperVerb": "",
+          "isRegular": true
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I said",
+          "pron": "yo",
+          "spanish": "dije",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you said",
+          "pron": "tú",
+          "spanish": "dijiste",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it said",
+          "pron": "él",
+          "spanish": "dijo",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we said",
+          "pron": "nosotros",
+          "spanish": "dijimos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you said",
+          "pron": "vosotros",
+          "spanish": "dijisteis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they said",
+          "pron": "ellos",
+          "spanish": "dijeron",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Preterite"
+      }, {
+        "conjugations": [{
+          "english": "I would say",
+          "pron": "yo",
+          "spanish": "diría",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you would say",
+          "pron": "tú",
+          "spanish": "dirías",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it would say",
+          "pron": "él",
+          "spanish": "diría",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we would say",
+          "pron": "nosotros",
+          "spanish": "diríamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you would say",
+          "pron": "vosotros",
+          "spanish": "diríais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they would say",
+          "pron": "ellos",
+          "spanish": "dirían",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Conditional"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "he",
+          "isRegular": false
+        }, {
+          "english": "you have said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "has",
+          "isRegular": false
+        }, {
+          "english": "he/she/it has said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "ha",
+          "isRegular": false
+        }, {
+          "english": "we have said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "hemos",
+          "isRegular": false
+        }, {
+          "english": "you have said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "habéis",
+          "isRegular": false
+        }, {
+          "english": "they have said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "han",
+          "isRegular": false
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "habré",
+          "isRegular": false
+        }, {
+          "english": "you will have said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "habrás",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will have said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "habrá",
+          "isRegular": false
+        }, {
+          "english": "we will have said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "habremos",
+          "isRegular": false
+        }, {
+          "english": "you will have said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "habréis",
+          "isRegular": false
+        }, {
+          "english": "they will have said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "habrán",
+          "isRegular": false
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "había",
+          "isRegular": false
+        }, {
+          "english": "you had said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "habías",
+          "isRegular": false
+        }, {
+          "english": "he/she/it had said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "había",
+          "isRegular": false
+        }, {
+          "english": "we had said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "habíamos",
+          "isRegular": false
+        }, {
+          "english": "you had said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "habíais",
+          "isRegular": false
+        }, {
+          "english": "they had said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "habían",
+          "isRegular": false
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I would have said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "habría",
+          "isRegular": false
+        }, {
+          "english": "you would have said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "habrías",
+          "isRegular": false
+        }, {
+          "english": "he/she/it would have said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "habría",
+          "isRegular": false
+        }, {
+          "english": "we would have said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "habríamos",
+          "isRegular": false
+        }, {
+          "english": "you would have said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "habríais",
+          "isRegular": false
+        }, {
+          "english": "they would have said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "habrían",
+          "isRegular": false
+        }],
+        "title": "Conditional Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "hube",
+          "isRegular": false
+        }, {
+          "english": "you had said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "hubiste",
+          "isRegular": false
+        }, {
+          "english": "he/she/it had said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "hubo",
+          "isRegular": false
+        }, {
+          "english": "we had said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "hubimos",
+          "isRegular": false
+        }, {
+          "english": "you had said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "hubisteis",
+          "isRegular": false
+        }, {
+          "english": "they had said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "hubieron",
+          "isRegular": false
+        }],
+        "title": "Past Anterior"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive",
+      "collection": [{
+        "conjugations": [{
+          "english": "I say, I am saying",
+          "pron": "yo",
+          "spanish": "diga",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you say, you are saying",
+          "pron": "tú",
+          "spanish": "digas",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it says, he/she/it is saying",
+          "pron": "él",
+          "spanish": "diga",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we say, we are saying",
+          "pron": "nosotros",
+          "spanish": "digamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you say, you are saying",
+          "pron": "vosotros",
+          "spanish": "digáis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they say, they are saying",
+          "pron": "ellos",
+          "spanish": "digan",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Present"
+      }, {
+        "conjugations": [{
+          "english": "I said, I was saying",
+          "pron": "yo",
+          "spanish": "dijera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you said, you were saying",
+          "pron": "tú",
+          "spanish": "dijeras",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it said, he/she/it was saying",
+          "pron": "él",
+          "spanish": "dijera",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we said, we were saying",
+          "pron": "nosotros",
+          "spanish": "dijéramos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you said, you were saying",
+          "pron": "vosotros",
+          "spanish": "dijerais",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they said, they were saying",
+          "pron": "ellos",
+          "spanish": "dijeran",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect"
+      }, {
+        "conjugations": [{
+          "english": "I said, I was saying",
+          "pron": "yo",
+          "spanish": "dijese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you said, you were saying",
+          "pron": "tú",
+          "spanish": "dijeses",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it said, he/she/it was saying",
+          "pron": "él",
+          "spanish": "dijese",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we said, we were saying",
+          "pron": "nosotros",
+          "spanish": "dijésemos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you said, you were saying",
+          "pron": "vosotros",
+          "spanish": "dijeseis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they said, they were saying",
+          "pron": "ellos",
+          "spanish": "dijesen",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Imperfect 2"
+      }, {
+        "conjugations": [{
+          "english": "I will say",
+          "pron": "yo",
+          "spanish": "dijere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will say",
+          "pron": "tú",
+          "spanish": "dijeres",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will say",
+          "pron": "él",
+          "spanish": "dijere",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "we will say",
+          "pron": "nosotros",
+          "spanish": "dijéremos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "you will say",
+          "pron": "vosotros",
+          "spanish": "dijereis",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "they will say",
+          "pron": "ellos",
+          "spanish": "dijeren",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Future"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Subjunctive Perfect",
+      "collection": [{
+        "conjugations": [{
+          "english": "I have said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "haya",
+          "isRegular": false
+        }, {
+          "english": "you have said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "hayas",
+          "isRegular": false
+        }, {
+          "english": "he/she/it has said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "haya",
+          "isRegular": false
+        }, {
+          "english": "we have said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "hayamos",
+          "isRegular": false
+        }, {
+          "english": "you have said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "hayáis",
+          "isRegular": false
+        }, {
+          "english": "they have said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "hayan",
+          "isRegular": false
+        }],
+        "title": "Present Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I will have said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "hubiere",
+          "isRegular": false
+        }, {
+          "english": "you will have said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "hubieres",
+          "isRegular": false
+        }, {
+          "english": "he/she/it will have said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "hubiere",
+          "isRegular": false
+        }, {
+          "english": "we will have said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "hubiéremos",
+          "isRegular": false
+        }, {
+          "english": "you will have said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "hubiereis",
+          "isRegular": false
+        }, {
+          "english": "they will have said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "hubieren",
+          "isRegular": false
+        }],
+        "title": "Future Perfect"
+      }, {
+        "conjugations": [{
+          "english": "I had said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "hubiera",
+          "isRegular": false
+        }, {
+          "english": "you had said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "hubieras",
+          "isRegular": false
+        }, {
+          "english": "he/she/it had said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "hubiera",
+          "isRegular": false
+        }, {
+          "english": "we had said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "hubiéramos",
+          "isRegular": false
+        }, {
+          "english": "you had said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "hubierais",
+          "isRegular": false
+        }, {
+          "english": "they had said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "hubieran",
+          "isRegular": false
+        }],
+        "title": "Pluperfect"
+      }, {
+        "conjugations": [{
+          "english": "I had said",
+          "pron": "yo",
+          "spanish": "dicho",
+          "helperVerb": "hubiese",
+          "isRegular": false
+        }, {
+          "english": "you had said",
+          "pron": "tú",
+          "spanish": "dicho",
+          "helperVerb": "hubieses",
+          "isRegular": false
+        }, {
+          "english": "he/she/it had said",
+          "pron": "él",
+          "spanish": "dicho",
+          "helperVerb": "hubiese",
+          "isRegular": false
+        }, {
+          "english": "we had said",
+          "pron": "nosotros",
+          "spanish": "dicho",
+          "helperVerb": "hubiésemos",
+          "isRegular": false
+        }, {
+          "english": "you had said",
+          "pron": "vosotros",
+          "spanish": "dicho",
+          "helperVerb": "hubieseis",
+          "isRegular": false
+        }, {
+          "english": "they had said",
+          "pron": "ellos",
+          "spanish": "dicho",
+          "helperVerb": "hubiesen",
+          "isRegular": false
+        }],
+        "title": "Pluperfect 2"
+      }]
+    }
+  }, {
+    "section": {
+      "title": " Imperative (Commands)",
+      "collection": [{
+        "conjugations": [{
+          "english": "(you) say",
+          "pron": "(tú)",
+          "spanish": "di",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(he/she/it) say",
+          "pron": "(él)",
+          "spanish": "diga",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(we) let's say",
+          "pron": "(nosotros)",
+          "spanish": "digamos",
+          "helperVerb": "",
+          "isRegular": false
+        }, {
+          "english": "(you) say",
+          "pron": "(vosotros)",
+          "spanish": "decid",
+          "helperVerb": "",
+          "isRegular": true
+        }, {
+          "english": "(they) say",
+          "pron": "(ellos)",
+          "spanish": "digan",
+          "helperVerb": "",
+          "isRegular": false
+        }],
+        "title": "Affirmative"
+      }]
+    }
+  }]
+}]

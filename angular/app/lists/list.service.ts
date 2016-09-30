@@ -27,9 +27,18 @@ export class ListService{
     return this._http.get( this._urlRoot + "/lists/global")
                  .map( response => response.json())
   }
+  getVerbList(){
+    return this._http.get( this._urlRoot + "/verbs")
+                 .map( response => response.json())
+  }
   addTranslationToList( id : number ){
     console.log("add to play-list", id);
     return this._http.post( this._urlRoot + "/lists/private/translation/" + id, JSON.stringify("{id: id}") )
+                .map( response => response.json() )
+  }
+  addVerbToPlayList( id : number ){
+    console.log("SERVICE: Adding verb " + id + " to play-list");
+    return this._http.post( this._urlRoot + "/xx/xx/xx/" + id, JSON.stringify("{id: id}") )
                 .map( response => response.json() )
   }
   removeTranslationFromList( id : number ){

@@ -19,9 +19,15 @@
     <div class="data">{{userStats.waiting}}</div>
   </div>
   <div class="stat-box">
+    <div class="label">Played last 24h</div>
+    <div class="data">{{userStats.today.played}}</div>
+  </div>
+  <div class="stat-box">
     <bars-wiget [buckets]="buckets" [size]="'big'" ></bars-wiget>
   </div>
 </section>
+
+
 
 <div class="seperator"></div>
 

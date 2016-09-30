@@ -9,6 +9,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {MyListComponent} from './lists/my_list.component';
 import {PlayListComponent} from './lists/play_list.component';
 import {CommonListComponent} from './lists/common_list.component';
+import {VerbListComponent} from './lists/verb_list.component';
 
 @RouteConfig([
                { path: "/game", name: "Game", component: GameComponent},
@@ -17,6 +18,7 @@ import {CommonListComponent} from './lists/common_list.component';
                { path: "/lists/mylist", name: "MyList", component: MyListComponent},
                { path: "/lists/playlist", name: "PlayList", component: PlayListComponent},
                { path: "/lists/commonlist", name: "CommonList", component: CommonListComponent},
+               { path: "/lists/verblist", name: "VerbList", component: VerbListComponent},
                { path: '*others', name: 'Other', redirectTo: ['Profile']}
              ])
 
@@ -35,6 +37,7 @@ import {CommonListComponent} from './lists/common_list.component';
       MyListComponent,
       PlayListComponent,
       CommonListComponent
+      VerbListComponent
       // LoginComponent
     ]
 })

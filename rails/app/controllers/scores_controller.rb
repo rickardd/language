@@ -142,7 +142,16 @@ class ScoresController < ApplicationController
     knowing = scores.where( bucket: Bucket.top_bucket ).count
     playing = scores.count - knowing
     waiting = current_user.lists.find_by( name: :private).translations.count - scores.count
-    render json: { knowing: knowing, playing: playing, waiting: waiting }.to_json
+    # today_played_old_translation = current_user.scores.where( updated_at: 1.day.ago..Date.today ).count
+    today_played_old_translation = current_user.scores.where( updated_at: 1.day.ago..0.day.ago ).count
+    render json: {
+                    knowing: knowing,
+                    playing: playing,
+                    waiting: waiting,
+                    today: {
+                      played: today_played_old_translation
+                    }
+                  }.to_json
   end
 
 

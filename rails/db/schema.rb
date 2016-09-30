@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913191259) do
+ActiveRecord::Schema.define(version: 20160928190922) do
+
+  create_table "conjugations", force: :cascade do |t|
+    t.string   "person"
+    t.string   "spanish_pron"
+    t.string   "spanish"
+    t.string   "english"
+    t.boolean  "is_regular"
+    t.integer  "verb_id"
+    t.string   "section"
+    t.string   "helper_verb"
+    t.string   "tens"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "lists", force: :cascade do |t|
     t.string   "name",       default: "private"
@@ -55,6 +69,17 @@ ActiveRecord::Schema.define(version: 20160913191259) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "verbs", force: :cascade do |t|
+    t.string   "infinitve_english"
+    t.string   "infinitve_spanish"
+    t.string   "past_participle_spanish"
+    t.string   "past_participle_english"
+    t.string   "gerund_spanish"
+    t.string   "gerund_english"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

@@ -21,7 +21,7 @@ export class ProfileComponent{
 
   buckets = '[{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0}]'
 
-  userStats : Object = { knowing: -1, playing: -1, waiting: -1 }
+  userStats : Object = { knowing: -1, playing: -1, waiting: -1, today: { played: "" } }
 
   constructor( private _profileSerivice : ProfileService ){
     this.buckets = JSON.parse(this.buckets)

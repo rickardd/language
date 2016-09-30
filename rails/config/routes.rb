@@ -26,6 +26,8 @@ Rails.application.routes.draw do
       resources :translations, controller: :scores
     end
   end
+
+  resources :verbs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

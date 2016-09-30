@@ -1,0 +1,63 @@
+ul{
+  list-style: none;
+  padding: 0;
+}
+.verb-list{
+
+}
+
+.verb-list__item{
+  padding: 6px 12px;
+  &:nth-child(odd){
+    background-color: #95d7de;
+  }
+}
+
+.vertical-list{
+
+}
+
+.vertical-list__item{
+
+  float: left;
+  margin-right: 12px;
+  display: block;
+
+  &.type{
+    width: 100px;
+  }
+  &.spanish{
+    width: 100px;
+  }
+  &.engish{
+    width: 300px;
+  }
+}
+.tens-box{
+  width: 400px;
+  padding: 12px;
+  margin-top: 6px;
+  background-color: #b2e5ea;
+  float: left;
+  margin-right: 12px;
+}
+
+.tens-headline{
+  font-weight: bold;
+  font-style: 16px;
+  margin-bottom: 6px;
+}
+.tens-list{
+
+}
+
+
+.is-regular{
+
+}
+.is-irregular{
+  text-decoration: underline;
+}
+.spanish{
+  font-weight: bold;
+}
