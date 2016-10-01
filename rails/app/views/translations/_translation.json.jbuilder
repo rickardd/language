@@ -9,8 +9,8 @@ else
   json.type :translation
   json.english @translation[:english]
   json.spanish @translation[:spanish]
-  json.category @translation[:spanish]
-  json.context @translation[:spanish]
+  json.category @translation[:category]
+  json.context @translation[:context]
 end
 
 json.id @translation.id

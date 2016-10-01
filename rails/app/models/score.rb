@@ -1,5 +1,6 @@
 class Score < ActiveRecord::Base
   belongs_to :translation
+  belongs_to :verb
   belongs_to :user
 
   # Move to public place
