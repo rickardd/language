@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160930161641) do
+ActiveRecord::Schema.define(version: 20161001192340) do
 
   create_table "conjugations", force: :cascade do |t|
     t.string   "person"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20160930161641) do
     t.string   "tens"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "conjugations_lists", force: :cascade do |t|
+    t.integer "list_id",        null: false
+    t.integer "conjugation_id", null: false
+    t.index ["conjugation_id"], name: "index_conjugations_lists_on_conjugation_id"
+    t.index ["list_id"], name: "index_conjugations_lists_on_list_id"
   end
 
   create_table "lists", force: :cascade do |t|
@@ -56,6 +63,7 @@ ActiveRecord::Schema.define(version: 20160930161641) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.integer  "verb_id"
+    t.integer  "conjugation_id"
     t.index ["translation_id"], name: "index_scores_on_translation_id"
     t.index ["user_id"], name: "index_scores_on_user_id"
   end

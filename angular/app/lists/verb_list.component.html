@@ -7,7 +7,7 @@
     <ul class="vertical-list clearfix">
       <li class="vertical-list__item">
         <button
-          (click)="onAddVerbToPrivate( $event, 'infinitive')"
+          (click)="onAddToPrivate( $event, 'infinitive')"
           [attr.data-id]="verb.id"
           id="verb-button-{{verb.id}}"
           class="button button-small">
@@ -20,7 +20,7 @@
     </ul>
     <ul class="vertical-list clearfix">
       <li class="vertical-list__item">
-        <button (click)="onAddVerbToPrivate('pastParticiple')" class="button button-small">Add</button>
+        <button (click)="onAddToPrivate('pastParticiple')" class="button button-small">Add</button>
       </li>
       <li class="vertical-list__item type">Past Participle</li>
       <li class="vertical-list__item spanish">{{verb.pastParticiple.spanish}}</li>
@@ -28,7 +28,7 @@
     </ul>
     <ul class="vertical-list clearfix">
       <li class="vertical-list__item">
-        <button (click)="onAddVerbToPrivate('gerund')" class="button button-small">Add</button>
+        <button (click)="onAddToPrivate('gerund')" class="button button-small">Add</button>
       </li>
       <li class="vertical-list__item type">Gerund</li>
       <li class="vertical-list__item spanish">{{verb.gerund.spanish}}</li>
@@ -37,18 +37,48 @@
     <div class="tens-box">
       <div class="tens-headline">Present</div>
       <ul class="tens-list">
-        <li class="tens-list__item" *ngFor="#tens of verb.collection.indicative.present">
+        <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.present">
           <ul class="vertical-list clearfix">
             <li class="vertical-list__item">
-              <button class="button button-small" (click)="onAddTensToPrivate()">Add</button>
+            <button
+              (click)="onAddToPrivate( $event, 'conjugation')"
+              [attr.data-id]="conjugation.id"
+              id="conjugation-button-{{conjugation.id}}"
+              class="button button-small">
+                Add
+            </button>
             </li>
             <li
               class="vertical-list__item spanish"
-              [class.is-irregular]="!tens.is_regular"
-              [class.is-regular]="tens.is_regular">
-                {{tens.spanish}}
+              [class.is-irregular]="!conjugation.is_regular"
+              [class.is-regular]="conjugation.is_regular">
+                {{conjugation.spanish}}
             </li>
-            <li class="vertical-list__item english">{{tens.english}}</li>
+            <li class="vertical-list__item english">{{conjugation.english}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tens-box">
+      <div class="tens-headline">Future</div>
+      <ul class="tens-list">
+        <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.future">
+          <ul class="vertical-list clearfix">
+            <li class="vertical-list__item">
+              <button
+              (click)="onAddToPrivate( $event, 'conjugation')"
+              [attr.data-id]="conjugation.id"
+              id="conjugation-button-{{conjugation.id}}"
+              class="button button-small">
+                Add
+            </button>
+            </li>
+            <li class="vertical-list__item spanish"
+              [class.is-regular]="conjugation.is_regular">
+                {{conjugation.spanish}}
+            </li>
+            <li class="vertical-list__item english">{{conjugation.english}}</li>
           </ul>
         </li>
       </ul>
@@ -57,16 +87,46 @@
     <div class="tens-box">
       <div class="tens-headline">Conditional</div>
       <ul class="tens-list">
-        <li class="tens-list__item" *ngFor="#tens of verb.collection.indicative.conditional">
+        <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.conditional">
           <ul class="vertical-list clearfix">
             <li class="vertical-list__item">
-              <button class="button button-small" (click)="onAddTensToPrivate()">Add</button>
+              <button
+              (click)="onAddToPrivate( $event, 'conjugation')"
+              [attr.data-id]="conjugation.id"
+              id="conjugation-button-{{conjugation.id}}"
+              class="button button-small">
+                Add
+            </button>
             </li>
             <li class="vertical-list__item spanish"
-              [class.is-regular]="tens.is_regular">
-                {{tens.spanish}}
+              [class.is-regular]="conjugation.is_regular">
+                {{conjugation.spanish}}
             </li>
-            <li class="vertical-list__item english">{{tens.english}}</li>
+            <li class="vertical-list__item english">{{conjugation.english}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tens-box">
+      <div class="tens-headline">Preterite</div>
+      <ul class="tens-list">
+        <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.preterite">
+          <ul class="vertical-list clearfix">
+            <li class="vertical-list__item">
+              <button
+              (click)="onAddToPrivate( $event, 'conjugation')"
+              [attr.data-id]="conjugation.id"
+              id="conjugation-button-{{conjugation.id}}"
+              class="button button-small">
+                Add
+            </button>
+            </li>
+            <li class="vertical-list__item spanish"
+              [class.is-regular]="conjugation.is_regular">
+                {{conjugation.spanish}}
+            </li>
+            <li class="vertical-list__item english">{{conjugation.english}}</li>
           </ul>
         </li>
       </ul>
@@ -74,7 +134,5 @@
 
   </li>
 </ul>
-
-
 
 

@@ -37,28 +37,12 @@ export class VerbListComponent{
             })
   }
 
-  onAddVerbToPrivate( $event, type ){
+  onAddToPrivate( $event, verbType : string ){
     let id = $event.target.dataset.id
-    console.log("adding " + type + " to my_list with id " + id);
-    this._listService.addVerbToPlayList( id )
+    console.log("adding " + verbType + " to my_list with id " + id);
+    this._listService.addVerbToPlayList( id, verbType )
             .subscribe( response => {
               console.log( response );
             })
   }
-
-  onAddTensToPrivate(){
-    console.log("adding tens to my_list");
-  }
-
-  // onAddToPrivate( $event ){
-  //   let elm : any = $event.target
-  //   let id : number = parseInt( elm.id, 10 )
-
-  //   elm.className = elm.className += " button-disabled"
-  //   elm.innerHTML = "Added"
-
-  //   this._listService.addTranslationToPlayList( id )
-  //           .subscribe( response => {
-  //           })
-  // }
 }

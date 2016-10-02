@@ -18,6 +18,8 @@ Rails.application.routes.draw do
       delete 'private/translation/:translation_id' => 'lists#remove_translation_from_private'
       post 'private/verb/:verb_id' => 'lists#add_verb_to_private'
       delete 'private/verb/:verb_id' => 'lists#remove_verb_from_private'
+      post 'private/conjugation/:conjugation_id' => 'lists#add_conjugation_to_private'
+      delete 'private/conjugation/:conjugation_id' => 'lists#remove_conjugation_from_private'
     end
   end
 

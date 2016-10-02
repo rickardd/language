@@ -14,9 +14,17 @@ json.array! @combined do |c|
     json.spanish c[:verb].infinitve_spanish
     json.created_at c[:verb].created_at
     json.updated_at c[:verb].updated_at
+  elsif c[:conjugation]
+    json.type :conjugation
+    json.id c[:conjugation].id
+    json.english c[:conjugation].english
+    json.spanish c[:conjugation].spanish
+    json.category c[:conjugation].section
+    json.context c[:conjugation].spanish_pron
+    json.person c[:conjugation].person
+    json.created_at c[:conjugation].created_at
+    json.updated_at c[:conjugation].updated_at
   end
-
-
 
   if c[:score]
     json.no_of_succeeded c[:score].no_of_succeeded
@@ -31,7 +39,5 @@ json.array! @combined do |c|
     json.bucket -1
     json.step -1
   end
-
-
 
 end

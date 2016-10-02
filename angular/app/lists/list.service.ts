@@ -36,9 +36,19 @@ export class ListService{
     return this._http.post( this._urlRoot + "/lists/private/translation/" + id, JSON.stringify("{id: id}") )
                 .map( response => response.json() )
   }
-  addVerbToPlayList( id : number ){
-    console.log("SERVICE: Adding verb " + id + " to play-list");
-    return this._http.post( this._urlRoot + "/lists/private/verb/" + id, JSON.stringify("{id: id}") )
+  addVerbToPlayList( id : number, type : string ){
+    let url = this._urlRoot + "/lists/private/"
+    switch (type) {
+      case "infinitive":
+        url += "verb/" + id
+        break;
+      case "conjugation":
+        url += "conjugation/" + id
+        break;
+      default:
+        throw new Error( "verb type needs to be set to add verb to playlist" )
+    }
+    return this._http.post( url , JSON.stringify("{id: id}") )
                 // .map( response => response.json() )
   }
   removeTranslationFromList( id : number, translation_type : string ){

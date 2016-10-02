@@ -19,6 +19,10 @@ class ScoresController < ApplicationController
       translation = Verb.find(params_body["id"])
       score = Score.find_or_create_by(user: current_user, verb: translation)
       trimmed_db_word = translation.infinitve_spanish.downcase.strip.tr('?!:;.,', '')
+    when "conjugation"
+      translation = Conjugation.find(params_body["id"])
+      score = Score.find_or_create_by(user: current_user, conjugation: translation)
+      trimmed_db_word = translation.spanish.downcase.strip.tr('?!:;.,', '')
     when "translation"
       translation = Translation.find(params_body["id"])
       score = Score.find_or_create_by(user: current_user, translation: translation)
