@@ -176,3 +176,46 @@ export class VerbList{
 //               });
 //   }
 // }
+
+
+
+export class VerbListTemp{
+
+  collection : any[] = []
+
+  constructor( arr : any[] = [] ){
+    this.collection = arr
+    console.log( this.collection, arr );
+  }
+
+  filterConjucation( list, person : string){
+    let stripedList = _.each( list,
+        function( item, collection_index, collection_list ){
+          delete list[collection_index].infinitive
+          delete list[collection_index].gerund
+          delete list[collection_index].pastParticiple
+
+          _.each( item.collection.indicative,
+              function( indicative, indicative_index, indicative_list ){
+                list[collection_index].collection.indicative[indicative_index] = _.filter( indicative, function( conjugation ){
+                  return conjugation.person === person
+                })
+              })
+        })
+    return stripedList
+  }
+
+  filterInfinitive( list ){
+    let stripedList = _.each( list,
+        function( item, collection_index, collection_list ){
+          delete list[collection_index].gerund
+          delete list[collection_index].pastParticiple
+          delete item.collection.indicative
+        })
+    return stripedList
+  }
+}
+
+
+
+

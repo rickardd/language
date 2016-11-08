@@ -1,10 +1,44 @@
-
-
 <h1>Verb list</h1>
 
+<div *ngIf="!list || list && !list.collection">
+  Loading...
+</div>
+
+<div *ngIf="list && list.collection">
+
+
+<br>
+<span>FILTER BY:</span>
+<a (click)="onDisplayAll()" >
+  <strong>All</strong> <!-- ({{ listCounts.all }}) -->
+</a> |
+<a (click)="onDisplayInfinitive()" >
+  <strong>Infinitive</strong>
+</a> |
+<a (click)="onFilterConjugation( '1ps' )" >
+  <strong>Yo</strong>
+</a> |
+<a (click)="onFilterConjugation( '2ps' )" >
+  <strong>Tú</strong>
+</a> |
+<a (click)="onFilterConjugation( '3ps' )" >
+  <strong>él, ella, lo</strong>
+</a> |
+<a (click)="onFilterConjugation( '1pp' )" >
+  <strong>Nosotros</strong>
+</a> |
+<a (click)="onFilterConjugation( '2pp' )" >
+  <strong>Vosotros</strong>
+</a> |
+<a (click)="onFilterConjugation( '3pp' )" >
+  <strong>Ellos</strong>
+</a>
+
+<br><br>
+
 <ul class="verb-list">
-  <li class="verb-list__item clearfix" *ngFor="#verb of list">
-    <ul class="vertical-list clearfix">
+  <li class="verb-list__item clearfix" *ngFor="#verb of list.collection">
+    <ul class="vertical-list clearfix" *ngIf="verb.infinitive">
       <li class="vertical-list__item">
         <button
           (click)="onAddToPrivate( $event, 'infinitive')"
@@ -18,7 +52,7 @@
       <li class="vertical-list__item spanish">{{verb.infinitive.spanish}}</li>
       <li class="vertical-list__item english">{{verb.infinitive.english}}</li>
     </ul>
-    <ul class="vertical-list clearfix">
+    <ul class="vertical-list clearfix" *ngIf="verb.pastParticiple">
       <li class="vertical-list__item">
         <button (click)="onAddToPrivate('pastParticiple')" class="button button-small">Add</button>
       </li>
@@ -26,7 +60,7 @@
       <li class="vertical-list__item spanish">{{verb.pastParticiple.spanish}}</li>
       <li class="vertical-list__item english">{{verb.pastParticiple.english}}</li>
     </ul>
-    <ul class="vertical-list clearfix">
+    <ul class="vertical-list clearfix" *ngIf="verb.gerund">
       <li class="vertical-list__item">
         <button (click)="onAddToPrivate('gerund')" class="button button-small">Add</button>
       </li>
@@ -34,7 +68,7 @@
       <li class="vertical-list__item spanish">{{verb.gerund.spanish}}</li>
       <li class="vertical-list__item english">{{verb.gerund.english}}</li>
     </ul>
-    <div class="tens-box">
+    <div class="tens-box" *ngIf="verb.collection.indicative">
       <div class="tens-headline">Present</div>
       <ul class="tens-list">
         <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.present">
@@ -60,7 +94,7 @@
       </ul>
     </div>
 
-    <div class="tens-box">
+    <div class="tens-box" *ngIf="verb.collection.indicative">
       <div class="tens-headline">Future</div>
       <ul class="tens-list">
         <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.future">
@@ -84,7 +118,7 @@
       </ul>
     </div>
 
-    <div class="tens-box">
+    <div class="tens-box" *ngIf="verb.collection.indicative">
       <div class="tens-headline">Conditional</div>
       <ul class="tens-list">
         <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.conditional">
@@ -108,7 +142,7 @@
       </ul>
     </div>
 
-    <div class="tens-box">
+    <div class="tens-box" *ngIf="verb.collection.indicative">
       <div class="tens-headline">Preterite</div>
       <ul class="tens-list">
         <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.preterite">
@@ -136,3 +170,4 @@
 </ul>
 
 
+</div>

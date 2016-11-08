@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core'
 import {ListService} from './list.service'
 
-import {VerbConjugation} from '../shared/verb_translation'
+import {VerbConjugation, VerbListTemp} from '../shared/verb_translation'
 
 @Component({
   selector: "verb-list",
@@ -16,7 +16,8 @@ export class VerbListComponent{
 
   // list : List = new List()
   quantity : number
-  list : any[]
+  coreList : any[]
+  list : VerbListTemp
 
   constructor( private _listService : ListService ){
 
@@ -25,15 +26,14 @@ export class VerbListComponent{
   ngOnInit(){
     this._listService.getVerbList()
             .subscribe( response => {
-              // this.list = new List( response )
-              // this.quantity = this.list.quantity()
-              console.log(response);
-              this.list = response
+              // this.coreList = new List( response )
+              // this.quantity = this.coreList.quantity()
+              // console.log(response);
+              this.coreList = response
+              this.list = new VerbListTemp( response )
               // response.forEach( function( item ){
               //   console.log( item )
               // })
-
-
             })
   }
 
@@ -45,4 +45,32 @@ export class VerbListComponent{
               console.log( response );
             })
   }
+
+  onDisplayInfinitive(){
+    // Creates a deep level clone
+    let list = JSON.parse(JSON.stringify( this.coreList ));
+    let stripedList = this.list.filterInfinitive( list )
+    this.list = new VerbListTemp( stripedList )
+  }
+
+  onFilterConjugation( person : string ){
+    // Creates a deep level clone
+    let list = JSON.parse(JSON.stringify( this.coreList ));
+    let stripedList = this.list.filterConjucation( list, person )
+    this.list = new VerbListTemp( stripedList )
+  }
+
+
+  onDisplayAll(){
+    this.list = new VerbListTemp( this.coreList )
+  }
 }
+
+
+
+
+
+
+
+
+

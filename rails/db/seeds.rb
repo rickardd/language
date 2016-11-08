@@ -1,20 +1,20 @@
-Dir.glob('dictionaries/spanish-english-verbs.txt').each do |word_file_path|
-  File.open(word_file_path).each_line do | line |
-    line.gsub!(";",'')
-    line.downcase!
-    next unless line.include?(":")
+# Dir.glob('dictionaries/spanish-english-verbs.txt').each do |word_file_path|
+#   File.open(word_file_path).each_line do | line |
+#     line.gsub!(";",'')
+#     line.downcase!
+#     next unless line.include?(":")
 
-    spanish_word = line.split(':')[0].strip
-    english_words = line.split(':')[1].split(",").map(&:strip)
-    category = "verb"
+#     spanish_word = line.split(':')[0].strip
+#     english_words = line.split(':')[1].split(",").map(&:strip)
+#     category = "verb"
 
-    Translation.find_or_create_by( spanish: spanish_word ) do |word|
-      word.english = english_words.join(',')
-      word.category = category
-    end
+#     Translation.find_or_create_by( spanish: spanish_word ) do |word|
+#       word.english = english_words.join(',')
+#       word.category = category
+#     end
 
-  end
-end
+#   end
+# end
 
 # ***********************
 # IMPORTS
@@ -22,8 +22,9 @@ end
 # RELATED conjugationS
 # ***********************
 
+
 require 'json'
-file = File.read('dictionaries/spanish-english-verbs.json')
+file = File.read('dictionaries/spanish-english-verbs/verb-set-4.json')
 data_hash = JSON.parse(file)
 
 data_hash.each do |verb_item|
