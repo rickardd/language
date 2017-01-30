@@ -46,6 +46,7 @@
       <td>English</td>
       <td>Context</td>
       <td>Category</td>
+      <td>Played</td>
       <td>Difficulty</td>
       <td>Bucket</td>
       <td>Attemps</td>
@@ -84,6 +85,9 @@
       </td>
       <td>
         {{translation.category}}
+      </td>
+      <td>
+        ({{translation.days_ago}})
       </td>
       <td>
         <div class="bar-item" *ngIf="translation.no_of_attempts > 0">

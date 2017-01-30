@@ -32,12 +32,14 @@ json.array! @combined do |c|
     json.no_of_attempts c[:score].no_of_attempts
     json.bucket c[:score].bucket
     json.step c[:score].step
+    json.days_ago (Time.zone.now.beginning_of_day - c[:score].updated_at.beginning_of_day).to_i / 1.day
   else
     json.no_of_succeeded 0
     json.no_of_failed 0
     json.no_of_attempts 0
     json.bucket -1
     json.step -1
+    json.days_ago 0
   end
 
 end

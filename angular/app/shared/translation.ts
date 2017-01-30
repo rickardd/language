@@ -13,6 +13,7 @@ interface iTranslation{
   bucket : number
   step : number
   private_match? : boolean
+  days_ago? : number
 }
 
 
@@ -33,8 +34,9 @@ export class Translation{
   private_match : boolean
   difficulty : number // percentage value 0-100
   strength : number
+  days_ago = 666
 
-  constructor( obj : iTranslation = {id: -1, type: "string", english: "", spanish: "", attempt: "", category: "", context: "", no_of_attempts: 0, no_of_failed: 0, no_of_succeeded: 0, bucket: -1, step: -1, private_match: false }){
+  constructor( obj : iTranslation = {id: -1, type: "string", english: "", spanish: "", attempt: "", category: "", context: "", no_of_attempts: 0, no_of_failed: 0, no_of_succeeded: 0, bucket: -1, step: -1, private_match: false, days_ago: 0 }){
     this.id = obj.id
     this.type = obj.type
     this.english = obj.english
@@ -47,6 +49,7 @@ export class Translation{
     this.private_match = obj.private_match
     this.bucket = obj.bucket
     this.step = obj.step
+    this.days_ago = obj.days_ago
     // if( obj.attempt ){
       this.attempt = obj.attempt
     // }
