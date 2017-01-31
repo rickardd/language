@@ -15,10 +15,139 @@
   <form>
     <fieldset>
       <legend>Filter</legend>
-      <input type="text" ngControl="" placeholder="Category" class="text-input">
-      <input type="text" ngControl="" placeholder="Buckets" class="text-input">
+        <div class="filter-wrapper">
+          <div class="filter-header">
+            Category
+          </div>
+
+          <ul class="filter-list clean-list">
+            <li class="filter-item">
+              <a  class="filter-link"
+                  (click)="onFilterCategory( 'verb' )" >
+                  Verbs
+                  <span class="filter-count">{{ listCounts.category.verbs }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a  class="filter-link"
+                  (click)="onFilterCategory( 'idiom' )" >
+                  Idioms
+                  <span class="filter-count">{{ listCounts.category.idioms }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a  class="filter-link"
+                  (click)="onFilterCategory( 'phrase' )" >
+                  Phrases
+                  <span class="filter-count">{{ listCounts.category.phrases }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a  class="filter-link"
+                  (click)="onFilterCategory( 'noun' )" >
+                  Noun
+                  <span class="filter-count">{{ listCounts.category.nouns }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a  class="filter-link"
+                  (click)="onFilterCategory( 'conjunction' )" >
+                  Conjunctions
+                  <span class="filter-count">{{ listCounts.category.conjunctions }}</span>
+              </a>
+             </li>
+            <li class="filter-item">
+              <a  class="filter-link"
+                  (click)="onFilterCategory( 'adjective' )" >
+                  Adjective
+                  <span class="filter-count">{{ listCounts.category.adjectives }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a  class="filter-link"
+                  (click)="onFilterCategory( 'other' )" >
+                  Other
+                  <span class="filter-count">{{ listCounts.category.other }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="filter-wrapper">
+          <div class="filter-header">
+            Buckets
+          </div>
+
+          <ul class="filter-list clean-list">
+            <li class="filter-item">
+            <a class="filter-link"
+                (click)="onFilterBucket( -1 )" >
+                Not played
+                <span class="filter-count">{{ listCounts.buckets[0] }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a class="filter-link"
+                (click)="onFilterBucket( 0 )" >
+                Bucket-1
+                <span class="filter-count">{{ listCounts.buckets[1] }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a class="filter-link"
+                (click)="onFilterBucket( 1 )" >
+                Bucket-2
+                <span class="filter-count">{{ listCounts.buckets[2] }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a class="filter-link"
+                (click)="onFilterBucket( 2 )" >
+                Bucket-3
+                <span class="filter-count">{{ listCounts.buckets[3] }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a class="filter-link"
+                (click)="onFilterBucket( 3 )" >
+                Bucket-4
+                <span class="filter-count">{{ listCounts.buckets[4] }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a class="filter-link"
+                (click)="onFilterBucket( 4 )" >
+                Bucket-5
+                <span class="filter-count">{{ listCounts.buckets[5] }}</span>
+              </a>
+            </li>
+            <li class="filter-item">
+              <a class="filter-link"
+                (click)="onFilterBucket( 5 )" >
+                Bucket-6
+                <span class="filter-count">{{ listCounts.buckets[6] }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
       <input type="submit" class="button button-white" value="36 Urgent">
-      <span class="fg-white fs-small">Total {{ quantity }}</span>
+      <span class="fg-white">
+        <a  class="clickable"
+            (click)="onDisplayAll()" >
+            Total {{ quantity }}
+        </a>
+      </span>
     </fieldset>
   </form>
 
@@ -36,52 +165,18 @@
   </div>
 
 </div>
-<br>
-
-<div class="sub-header clearfix">
-  <a (click)="onDisplayAll()" ><strong>All</strong> ({{ listCounts.all }})</a>
-  <br>
-  <span>SORT BY:</span>
-  <a (click)="onSortBy('Spanish')" ><strong>Spanish</strong></a> |
-  <a (click)="onSortBy('English')" ><strong>English</strong></a> |
-  <a (click)="onSortBy('Category')" ><strong>Category</strong></a> |
-  <a><strong>Time added</strong></a> |
-  <a><strong>Time played</strong></a> |
-  <a (click)="onSortBy('Bucket')" ><strong>Bucket</strong></a>
-  <br>
-  <span>FILTER BY CATEGORY:</span>
-  <a (click)="onFilterCategory( 'verb' )" ><strong>Verbs</strong> ({{ listCounts.category.verbs }})</a> |
-  <a (click)="onFilterCategory( 'idiom' )" ><strong>Idioms</strong> ({{ listCounts.category.idioms }})</a> |
-  <a (click)="onFilterCategory( 'phrase' )" ><strong>Phrases</strong> ({{ listCounts.category.phrases }})</a> |
-  <a (click)="onFilterCategory( 'noun' )" ><strong>Noun</strong> ({{ listCounts.category.nouns }})</a> |
-  <a (click)="onFilterCategory( 'conjunction' )" ><strong>Conjunctions</strong> ({{ listCounts.category.conjunctions }})</a> |
-  <a (click)="onFilterCategory( 'adjective' )" ><strong>Adjective</strong> ({{ listCounts.category.adjectives }})</a> |
-  <a (click)="onFilterCategory( 'other' )" ><strong>Other</strong> ({{ listCounts.category.other }})</a>
-  <br>
-  <span>FILTER BY BUCKETS:</span>
-  <a (click)="onFilterBucket( -1 )" ><strong>Not played</strong> ({{ listCounts.buckets[0] }})</a> |
-  <a (click)="onFilterBucket( 0 )" ><strong>Bucket 1</strong> ({{ listCounts.buckets[1] }})</a> |
-  <a (click)="onFilterBucket( 1 )" ><strong>Bucket 2</strong> ({{ listCounts.buckets[2] }})</a> |
-  <a (click)="onFilterBucket( 2 )" ><strong>Bucket 3</strong> ({{ listCounts.buckets[3] }})</a> |
-  <a (click)="onFilterBucket( 3 )" ><strong>Bucket 4</strong> ({{ listCounts.buckets[4] }})</a> |
-  <a (click)="onFilterBucket( 4 )" ><strong>Bucket 5</strong> ({{ listCounts.buckets[5] }})</a> |
-  <a (click)="onFilterBucket( 5 )" ><strong>Bucket 6</strong> ({{ listCounts.buckets[6] }})</a>
-</div>
-
-
-
 
 <table class="table">
   <thead>
     <tr>
       <td></td>
-      <td>Spanish</td>
-      <td>English</td>
+      <td class="clickable" (click)="onSortBy('Spanish')">Spanish</td>
+      <td class="clickable" (click)="onSortBy('English')">English</td>
       <td>Context</td>
-      <td>Category</td>
+      <td class="clickable" (click)="onSortBy('Category')">Category</td>
       <td>Played</td>
       <td>Difficulty</td>
-      <td>Bucket</td>
+      <td class="clickable" (click)="onSortBy('Bucket')">Bucket</td>
       <td>Attemps</td>
       <td></td>
       <td></td>
@@ -96,7 +191,7 @@
         [class.row-highlight]="translation.id === affectedTranslationId">
       <td>
         <i  (click)="onAddToPrivate( $event )"
-            class="fa fa-check fa-2x"
+            class="fa fa-check fa-2x clickable"
             aria-hidden="true"
             id="{{translation.id}}"
             [ngClass]="{'fg-green': isAdded === true}"
@@ -105,24 +200,26 @@
         <!-- todo: replace with data-id instead of id attribute -->
         <!-- <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button> -->
       </td>
-      <td>
+      <td class="fs-medium">
         {{translation.spanish}}
       </td>
-      <td>
+      <td class="fs-medium">
         {{translation.english}}
       </td>
-      <td>
+      <td class="fs-medium">
         {{translation.context}}
       </td>
-      <td>
+      <td class="fs-smallest">
         {{translation.category}}
       </td>
       <td>
-        <i class="fa fa-calendar" aria-hidden="true"></i>
-        {{translation.days_ago}}
+        <div *ngIf="translation.no_of_attempts">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          {{translation.days_ago}}
+        </div>
       </td>
       <td>
-        <div
+        <div *ngIf="translation.no_of_attempts"
           [class.fg-red]="translation.difficulty > 70"
           [class.fg-green]="translation.difficulty < 30"
           >
@@ -152,7 +249,7 @@
       </td>
       <td>
       <i
-        class="fa fa-pencil"
+        class="fa fa-pencil clickable"
         aria-hidden="true"
         (click)="onEditTranslation( $event )"
         [attr.data-id]="translation.id"
@@ -167,7 +264,7 @@
       </td>
       <td>
         <i
-          class="fa fa-trash-o"
+          class="fa fa-trash-o clickable"
           aria-hidden="true"
           (click)="onDeleteTranslation( $event )"
           id="{{translation.id}}"

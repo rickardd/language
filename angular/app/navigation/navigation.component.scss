@@ -1,14 +1,20 @@
 @import 'variables';
 
 .navigation{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: $color-white;
-
   text-align: center;
+  box-shadow: 0 2px 2px 0px rgba(0,0,0,.2)
 }
 
 .navigation-list{
   list-style: none;
   display: inline-block;
+  vertical-align: top; // removes the space under inline-block
   margin: 0;
   padding: 0;
 }

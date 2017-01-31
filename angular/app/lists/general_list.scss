@@ -38,3 +38,39 @@
   line-height: 12px;
   font-size: 12px;
 }
+
+
+// Filter
+
+.filter-wrapper{
+  background-color: rgba(255, 255, 255, 0.2);
+  float: left;
+  margin-right: 4px;
+  padding: 10px;
+}
+.filter-header{
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-white;
+  border-bottom: 1px solid $color-main;
+}
+
+.filter-list{
+  color: $color-main-dark;
+  font-size: 12px;
+  line-height: 12px;
+}
+.filter-item{
+  margin-bottom: 1px;
+}
+.filter-link{
+  &:hover{
+    cursor: pointer;
+    color: $color-white;
+  }
+}
+.filter-count{
+  font-size: 12px;
+}
