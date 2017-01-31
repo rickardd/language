@@ -1,19 +1,9 @@
+@import 'variables';
 
-.avatar{
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 24px;
-  display: block;
-  clear: both;
-  background: #fff;
-  border-radius: 50%;
-  border: 4px solid #005a70;
-}
-
-.email{
+.logo{
+  font-style: 30px;
+  color: $color-main-dark;
   text-align: center;
-  font-size: 24px;
-  clear: both;
 }
 
 .seperator{
@@ -23,32 +13,37 @@
 
 
 .stat-section{
-  display: block;
-  margin: 0 auto;
-  background: rgba(255, 0, 0, 0.8);
-  padding: 12px;
   text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .stat-box{
-  float: left;
   min-width: 240px;
-  margin: 0 24px;
-  background: rgba( 255, 255, 255, .2);
-  padding: 24px;
-
-  .label{
-    font-size: 24px;
-    margin-bottom: 4px;
-    display: block;
-  }
-  .data{
-    font-size: 24px;
-    font-weight: bold;
-  }
+  min-height: 300px;
+  margin: 12px;
+  background: $color-white;
+  padding: 0 6px;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
 }
 
+.stat-box-header{
+  padding: 12px 6px;
+  border-bottom: 1px solid $color-grey-0;
+  font-size: 16px;
+}
+.stat-box-body{
+  padding: 12px 6px;
 
+}
 
 
 

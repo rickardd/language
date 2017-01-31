@@ -1,30 +1,34 @@
 
-<img class="avatar" width="100" height="100" alt="" src="http://placekitten.com/200/200">
 
-<div class="email">user@somthing.com</div>
+<div class="header">
+  <h1 class="logo">Vocab Master</h1>
+</div>
+
 
 <a [routerLink]="['Game']" class="button button-large center">Play</a>
 
 <section class="stat-section clearfix">
   <div class="stat-box">
-    <div class="label">You Know</div>
-    <div class="data">{{userStats.knowing}}</div>
+    <div class="stat-box-header">You Know</div>
+    <div class="stat-box-body">{{userStats.knowing}}</div>
   </div>
   <div class="stat-box">
-    <div class="label">You are playing</div>
-    <div class="data">{{userStats.playing}}</div>
+    <div class="stat-box-header">
+      Words in play <span>{{userStats.playing}}</span>
+    </div>
+    <div class="stat-box-body" style="background: grey;">
+      <bars-wiget [buckets]="buckets" [size]="'big'" ></bars-wiget>
+    </div>
   </div>
   <div class="stat-box">
-    <div class="label">Waiting to be played</div>
-    <div class="data">{{userStats.waiting}}</div>
+    <div class="stat-box-header">Words waiting to be played</div>
+    <div class="stat-box-body">{{userStats.waiting}}</div>
   </div>
   <div class="stat-box">
-    <div class="label">Played last 24h</div>
-    <div class="data">{{userStats.today.played}}</div>
+    <div class="stat-box-header">Played last 24h</div>
+    <div class="stat-box-body">{{userStats.today.played}}</div>
   </div>
-  <div class="stat-box">
-    <bars-wiget [buckets]="buckets" [size]="'big'" ></bars-wiget>
-  </div>
+
 </section>
 
 
