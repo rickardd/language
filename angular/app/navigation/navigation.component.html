@@ -1,10 +1,47 @@
 <nav class="navigation clearfix">
   <ul class="navigation-list">
-    <li class="navigation-item"><a [routerLink]="['Profile']">Profile</a></li>
-    <li class="navigation-item"><a [routerLink]="['Game']">Game</a></li>
-    <li class="navigation-item"><a [routerLink]="['MyList']">My List</a></li>
-    <li class="navigation-item"><a [routerLink]="['PlayList']">Play List</a></li>
-    <li class="navigation-item"><a [routerLink]="['CommonList']">Common List</a></li>
-    <li class="navigation-item"><a [routerLink]="['VerbList']">Verb List</a></li>
+    <li class="navigation-item">
+      <a [routerLink]="['Profile']">
+        <div class="navigation-icon">
+          <i class="fa fa-pie-chart" aria-hidden="true"></i>
+        </div>
+        Profile
+      </a>
+    </li>
+    <li class="navigation-item">
+      <a [routerLink]="['Game']">
+        <div class="navigation-icon">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </div>
+        Play
+      </a></li>
+    <li class="navigation-item">
+      <a [routerLink]="['PlayList']">
+        <div class="navigation-icon">
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </div>
+        Play List
+      </a></li>
+    <li class="navigation-item">
+      <a [routerLink]="['MyList']">
+        <div class="navigation-icon">
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </div>
+        My List
+      </a></li>
+    <li class="navigation-item">
+      <a [routerLink]="['CommonList']">
+        <div class="navigation-icon">
+          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+        </div>
+        Import/common
+      </a></li>
+    <li class="navigation-item">
+      <a [routerLink]="['VerbList']">
+        <div class="navigation-icon">
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </div>
+        Verb List
+      </a></li>
   </ul>
 </nav>
