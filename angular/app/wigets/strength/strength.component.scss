@@ -1,0 +1,119 @@
+@import 'variables';
+
+.bar{
+  height: 24px;
+  width: 4px;
+  position: relative;
+  float: left;
+  margin-right: 2px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.bar-inner{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $color-grey-dark;
+}
+.bar-inner-1{
+  height: 4px;
+}
+.bar-inner-2{
+  height: 8px;
+}
+.bar-inner-3{
+  height: 12px;
+}
+.bar-inner-4{
+  height: 16px;
+}
+.bar-inner-5{
+  height: 20px;
+}
+.bar-inner-6{
+  height: 24px;
+}
+
+.bucket-1{
+  .bar-inner-1{
+    background-color: $color-red;
+  }
+}
+
+.bucket-2{
+  .bar-inner-1{
+    background-color: $color-red;
+  }
+  .bar-inner-2{
+    background-color: $color-red;
+  }
+}
+
+.bucket-3{
+  .bar-inner-1{
+    background-color: $color-yellow;
+  }
+  .bar-inner-2{
+    background-color: $color-yellow;
+  }
+  .bar-inner-3{
+    background-color: $color-yellow;
+  }
+}
+
+.bucket-4{
+  .bar-inner-1{
+    background-color: $color-yellow;
+  }
+  .bar-inner-2{
+    background-color: $color-yellow;
+  }
+  .bar-inner-3{
+    background-color: $color-yellow;
+  }
+  .bar-inner-4{
+    background-color: $color-yellow;
+  }
+}
+
+.bucket-5{
+  .bar-inner-1{
+    background-color: $color-green;
+  }
+  .bar-inner-2{
+    background-color: $color-green;
+  }
+  .bar-inner-3{
+    background-color: $color-green;
+  }
+  .bar-inner-4{
+    background-color: $color-green;
+  }
+  .bar-inner-5{
+    background-color: $color-green;
+  }
+}
+
+.bucket-6{
+  .bar-inner-1{
+    background-color: $color-green;
+  }
+  .bar-inner-2{
+    background-color: $color-green;
+  }
+  .bar-inner-3{
+    background-color: $color-green;
+  }
+  .bar-inner-4{
+    background-color: $color-green;
+  }
+  .bar-inner-5{
+    background-color: $color-green;
+  }
+  .bar-inner-6{
+    background-color: $color-green;
+  }
+}
+

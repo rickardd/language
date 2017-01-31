@@ -1,15 +1,52 @@
+// ToDo: What is the best way to implement global variables?
+// atm they this file might be included many times in the final css file
+
 $color-main: #369194;
 $color-main-dark: #004143;
-$color-grey-0: #eeeded;
+$color-grey: #eeeded;
+$color-grey-dark: #dcdcdc;
+$color-grey-darkest: #646464;
 $color-white: #fff;
+$color-green: #138a1e;
+$color-red: #a82323;
+$color-yellow: #ba9500;
+
 
 // Background color
 .bg-main{
   background-color: $color-main;
 }
+.bg-green{
+  background-color: $color-green;
+}
+.bg-red{
+  background-color: $color-red;
+}
+.bg-yellow{
+  background-color: $color-yellow;
+}
 
 // Foreground color
 .fg-main{
- background-color: $color-main;
+ color: $color-main;
+}
+.fg-white{
+  color: $color-white;
+}
+.fg-grey{
+  color: $color-grey;
+}
+.fg-grey-dark{
+  color: $color-grey-dark;
+}
+.fg-green{
+  color: $color-green;
+}
+.fg-red{
+  color: $color-red;
 }
 
+// Fonts
+.fs-small{
+  font-size: 14px;
+}

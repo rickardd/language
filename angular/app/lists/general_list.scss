@@ -1,0 +1,40 @@
+@import 'variables';
+.list-counter{
+  display: table;
+  color: $color-grey-darkest;
+}
+.list-counter-number{
+  display: table-cell;
+  font-size: 36px;
+  vertical-align: middle;
+  padding-right: 6px;
+}
+.list-counter-label{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.attempts{
+  display: table;
+}
+.attempts-total{
+  font-size: 26px;
+}
+.attempt-left{
+  display: table-cell;
+  vertical-align: middle;
+}
+.attempt-right{
+  display: table-cell;
+  vertical-align: middle;
+}
+.attempts-failed{
+  color: $color-red;
+  line-height: 12px;
+  font-size: 12px;
+}
+.attempts-succeeded{
+  color: $color-green;
+  line-height: 12px;
+  font-size: 12px;
+}

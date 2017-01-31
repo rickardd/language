@@ -1,47 +1,80 @@
-<h1>My list ({{ quantity }})</h1>
+<div class="header">
 
-<form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
-  <input type="text" ngControl="spanish" placeholder="Spanish" class="text-input" #inputSpanish >
-  <input type="text" ngControl="english" placeholder="English" class="text-input">
-  <input type="text" ngControl="context" placeholder="Context" class="text-input">
-  <input type="text" ngControl="category" placeholder="Category" class="text-input">
-  <input type="submit" class="button" value="Add Translation">
-</form>
+  <form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
+    <fieldset>
+      <legend>Add translation</legend>
+      <input type="text" ngControl="spanish" placeholder="Spanish" class="text-input" #inputSpanish >
+      <input type="text" ngControl="english" placeholder="English" class="text-input">
+      <input type="text" ngControl="context" placeholder="Context" class="text-input">
+      <input type="text" ngControl="category" placeholder="Category" class="text-input">
+      <input type="submit" class="button button-white" value="Add Translation">
+    </fieldset>
+  </form>
 
-<a (click)="onDisplayAll()" ><strong>All</strong> ({{ listCounts.all }})</a>
+  <!-- Todo: Is the form tag nessesary here? -->
+  <form>
+    <fieldset>
+      <legend>Filter</legend>
+      <input type="text" ngControl="" placeholder="Category" class="text-input">
+      <input type="text" ngControl="" placeholder="Buckets" class="text-input">
+      <input type="submit" class="button button-white" value="36 Urgent">
+      <span class="fg-white fs-small">Total {{ quantity }}</span>
+    </fieldset>
+  </form>
+
+</div>
+
+<div class="sub-header clearfix">
+
+  <div class="list-counter clearfix">
+    <div class="list-counter-number">
+      50
+    </div>
+    <div class="list-counter-label">
+      Words in <br> play list
+    </div>
+  </div>
+
+</div>
 <br>
-<span>SORT BY:</span>
-<a (click)="onSortBy('Spanish')" ><strong>Spanish</strong></a> |
-<a (click)="onSortBy('English')" ><strong>English</strong></a> |
-<a (click)="onSortBy('Category')" ><strong>Category</strong></a> |
-<a><strong>Time added</strong></a> |
-<a><strong>Time played</strong></a> |
-<a (click)="onSortBy('Bucket')" ><strong>Bucket</strong></a>
-<br>
-<span>FILTER BY CATEGORY:</span>
-<a (click)="onFilterCategory( 'verb' )" ><strong>Verbs</strong> ({{ listCounts.category.verbs }})</a> |
-<a (click)="onFilterCategory( 'idiom' )" ><strong>Idioms</strong> ({{ listCounts.category.idioms }})</a> |
-<a (click)="onFilterCategory( 'phrase' )" ><strong>Phrases</strong> ({{ listCounts.category.phrases }})</a> |
-<a (click)="onFilterCategory( 'noun' )" ><strong>Noun</strong> ({{ listCounts.category.nouns }})</a> |
-<a (click)="onFilterCategory( 'conjunction' )" ><strong>Conjunctions</strong> ({{ listCounts.category.conjunctions }})</a> |
-<a (click)="onFilterCategory( 'adjective' )" ><strong>Adjective</strong> ({{ listCounts.category.adjectives }})</a> |
-<a (click)="onFilterCategory( 'other' )" ><strong>Other</strong> ({{ listCounts.category.other }})</a>
-<br>
-<span>FILTER BY BUCKETS:</span>
-<a (click)="onFilterBucket( -1 )" ><strong>Not played</strong> ({{ listCounts.buckets[0] }})</a> |
-<a (click)="onFilterBucket( 0 )" ><strong>Bucket 1</strong> ({{ listCounts.buckets[1] }})</a> |
-<a (click)="onFilterBucket( 1 )" ><strong>Bucket 2</strong> ({{ listCounts.buckets[2] }})</a> |
-<a (click)="onFilterBucket( 2 )" ><strong>Bucket 3</strong> ({{ listCounts.buckets[3] }})</a> |
-<a (click)="onFilterBucket( 3 )" ><strong>Bucket 4</strong> ({{ listCounts.buckets[4] }})</a> |
-<a (click)="onFilterBucket( 4 )" ><strong>Bucket 5</strong> ({{ listCounts.buckets[5] }})</a> |
-<a (click)="onFilterBucket( 5 )" ><strong>Bucket 6</strong> ({{ listCounts.buckets[6] }})</a>
+
+<div class="sub-header clearfix">
+  <a (click)="onDisplayAll()" ><strong>All</strong> ({{ listCounts.all }})</a>
+  <br>
+  <span>SORT BY:</span>
+  <a (click)="onSortBy('Spanish')" ><strong>Spanish</strong></a> |
+  <a (click)="onSortBy('English')" ><strong>English</strong></a> |
+  <a (click)="onSortBy('Category')" ><strong>Category</strong></a> |
+  <a><strong>Time added</strong></a> |
+  <a><strong>Time played</strong></a> |
+  <a (click)="onSortBy('Bucket')" ><strong>Bucket</strong></a>
+  <br>
+  <span>FILTER BY CATEGORY:</span>
+  <a (click)="onFilterCategory( 'verb' )" ><strong>Verbs</strong> ({{ listCounts.category.verbs }})</a> |
+  <a (click)="onFilterCategory( 'idiom' )" ><strong>Idioms</strong> ({{ listCounts.category.idioms }})</a> |
+  <a (click)="onFilterCategory( 'phrase' )" ><strong>Phrases</strong> ({{ listCounts.category.phrases }})</a> |
+  <a (click)="onFilterCategory( 'noun' )" ><strong>Noun</strong> ({{ listCounts.category.nouns }})</a> |
+  <a (click)="onFilterCategory( 'conjunction' )" ><strong>Conjunctions</strong> ({{ listCounts.category.conjunctions }})</a> |
+  <a (click)="onFilterCategory( 'adjective' )" ><strong>Adjective</strong> ({{ listCounts.category.adjectives }})</a> |
+  <a (click)="onFilterCategory( 'other' )" ><strong>Other</strong> ({{ listCounts.category.other }})</a>
+  <br>
+  <span>FILTER BY BUCKETS:</span>
+  <a (click)="onFilterBucket( -1 )" ><strong>Not played</strong> ({{ listCounts.buckets[0] }})</a> |
+  <a (click)="onFilterBucket( 0 )" ><strong>Bucket 1</strong> ({{ listCounts.buckets[1] }})</a> |
+  <a (click)="onFilterBucket( 1 )" ><strong>Bucket 2</strong> ({{ listCounts.buckets[2] }})</a> |
+  <a (click)="onFilterBucket( 2 )" ><strong>Bucket 3</strong> ({{ listCounts.buckets[3] }})</a> |
+  <a (click)="onFilterBucket( 3 )" ><strong>Bucket 4</strong> ({{ listCounts.buckets[4] }})</a> |
+  <a (click)="onFilterBucket( 4 )" ><strong>Bucket 5</strong> ({{ listCounts.buckets[5] }})</a> |
+  <a (click)="onFilterBucket( 5 )" ><strong>Bucket 6</strong> ({{ listCounts.buckets[6] }})</a>
+</div>
+
+
+
 
 <table class="table">
   <thead>
     <tr>
-      <td>Add</td>
-      <td>Delete</td>
-      <td>Edit</td>
+      <td></td>
       <td>Spanish</td>
       <td>English</td>
       <td>Context</td>
@@ -50,6 +83,8 @@
       <td>Difficulty</td>
       <td>Bucket</td>
       <td>Attemps</td>
+      <td></td>
+      <td></td>
       <td>private_list</td>
     </tr>
   </thead>
@@ -59,20 +94,16 @@
         id="translation-{{translation.id}}"
         class="list-row"
         [class.row-highlight]="translation.id === affectedTranslationId">
-
       <td>
+        <i  (click)="onAddToPrivate( $event )"
+            class="fa fa-check fa-2x"
+            aria-hidden="true"
+            id="{{translation.id}}"
+            [ngClass]="{'fg-green': isAdded === true}"
+            [ngClass]="{'fg-grey-dark': isAdded === false}">
+        </i>
         <!-- todo: replace with data-id instead of id attribute -->
-        <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button>
-      </td>
-      <td>
-        <!-- todo: replace with data-id instead of id attribute -->
-        <button (click)="onDeleteTranslation( $event )" id="{{translation.id}}" class="button">Delete</button>
-      </td>
-      <td>
-        <button
-          (click)="onEditTranslation( $event )"
-          [attr.data-id]="translation.id" id="edit-{{translation.id}}" class="button">Edit
-        </button>
+        <!-- <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button> -->
       </td>
       <td>
         {{translation.spanish}}
@@ -87,56 +118,63 @@
         {{translation.category}}
       </td>
       <td>
-        ({{translation.days_ago}})
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        {{translation.days_ago}}
       </td>
       <td>
-        <div class="bar-item" *ngIf="translation.no_of_attempts > 0">
-          <div class="horizontal-bar">
-            <div
-              class="horizontal-fill"
-              [class.difficult]="translation.difficulty > 50"
-              [class.easy]="translation.difficulty < 10"
-              style="width: {{translation.difficulty}}%;">
-            </div>
-          </div>
-          <div class="label"> {{translation.no_of_failed}} / {{translation.no_of_attempts}} </div>
+        <div
+          [class.fg-red]="translation.difficulty > 70"
+          [class.fg-green]="translation.difficulty < 30"
+          >
+          <i class="fa fa-line-chart" aria-hidden="true"></i>
+          {{translation.difficulty}}%
         </div>
-      </td>
-      <td>
-        <ul class="bucket-list clearfix" *ngIf="translation.no_of_attempts">
-          <li class="bucket-marker" [class.is-bucket-1]="translation.bucket==0">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-2]="translation.bucket==1">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-3]="translation.bucket==2">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-4]="translation.bucket==3">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-5]="translation.bucket==4">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-          <li class="bucket-marker" [class.is-bucket-6]="translation.bucket==5">
-            <div class="outer"><div class="inner"></div></div>
-          </li>
-        </ul>
       </td>
       <td>
         <div *ngIf="translation.no_of_attempts">
-          <span>
-            {{translation.no_of_attempts}}
-          </span>
-          <span class="text-red">
-            {{translation.no_of_failed}}
-          </span>
-          <span class="text-green">
-            {{translation.no_of_succeeded}}
-          </span>
-
+          <strength-wiget [bucket]="translation.bucket + 1" ></strength-wiget>
         </div>
+      </td>
+      <td>
+        <div class="attempts clearfix" *ngIf="translation.no_of_attempts">
+          <div class="attempt-left attempts-total">
+            {{translation.no_of_attempts}}
+          </div>
+          <div class="attempt-right">
+            <div class="attempts-failed">
+              {{translation.no_of_failed}}
+            </div>
+            <div class="attempts-succeeded">
+              {{translation.no_of_succeeded}}
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+      <i
+        class="fa fa-pencil"
+        aria-hidden="true"
+        (click)="onEditTranslation( $event )"
+        [attr.data-id]="translation.id"
+        id="edit-{{translation.id}}">
+      </i>
+        <!-- <button
+          (click)="onEditTranslation( $event )"
+          [attr.data-id]="translation.id"
+          id="edit-{{translation.id}}"
+          class="button">Edit
+        </button> -->
+      </td>
+      <td>
+        <i
+          class="fa fa-trash-o"
+          aria-hidden="true"
+          (click)="onDeleteTranslation( $event )"
+          id="{{translation.id}}"
+          >
+          </i>
+        <!-- todo: replace with data-id instead of id attribute -->
+<!--         <button (click)="onDeleteTranslation( $event )" id="{{translation.id}}" class="button">Delete</button> -->
       </td>
       <td>
         <span *ngIf="translation.strength">

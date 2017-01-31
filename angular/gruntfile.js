@@ -41,12 +41,14 @@ module.exports = function (grunt) {
           'application.css': 'application.scss',
           'app/navigation/navigation.component.css': 'app/navigation/navigation.component.scss',
           'app/wigets/bars/bars.component.css': 'app/wigets/bars/bars.component.scss',
+          'app/wigets/strength/strength.component.css': 'app/wigets/strength/strength.component.scss',
           'app/game/feedback/feedback.component.css': 'app/game/feedback/feedback.component.scss',
           'app/game/stats/stats.component.css': 'app/game/stats/stats.component.scss',
           'app/game/words/word.component.css': 'app/game/words/word.component.scss',
           'app/profile/profile.component.css': 'app/profile/profile.component.scss',
           'app/lists/verb_list.component.css': 'app/lists/verb_list.component.scss',
-          'app/lists/bar.css': 'app/lists/bar.scss'
+          'app/lists/bar.css': 'app/lists/bar.scss',
+          'app/lists/general_list.css': 'app/lists/general_list.scss'
         }
       }
     },

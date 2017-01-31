@@ -14,6 +14,4 @@ export class BarsComponent{
   @Input() buckets : Object;
   @Input() size : String;
 
-
-
 }

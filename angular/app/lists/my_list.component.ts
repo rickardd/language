@@ -3,13 +3,17 @@ import {ListService} from './list.service'
 import {ControlGroup, FormBuilder} from 'angular2/common'
 
 import {Translation, List} from '../shared/translation'
+import {StrengthComponent} from '../wigets/strength/strength.component'
 
 @Component({
   selector: "my-list",
   templateUrl: "app/lists/my_list.component.html",
-  styleUrls: [ "app/lists/bar.css"],
+  styleUrls: [ "app/lists/general_list.css", "app/lists/bar.css"],
   providers: [
     ListService
+  ],
+  directives: [
+    StrengthComponent
   ]
 })
 
@@ -28,6 +32,7 @@ export class MyListComponent{
   hasTranslations : boolean
   // bucketsCount : Object = {}
   listCounts = { buckets: {}, category: {}, all: {} }
+  isAdded : boolean = false
 
 
   constructor( private _listService : ListService, private _fb : FormBuilder ){
@@ -95,8 +100,13 @@ export class MyListComponent{
     let elm : any = $event.target
     let id : number = parseInt( elm.id, 10 )
 
-    elm.className = elm.className += " button-disabled"
-    elm.innerHTML = "Added"
+    // elm.className = elm.className += " button-disabled"
+    // elm.innerHTML = "Added"
+
+
+    // elm.className = elm.className += " fg-green"
+    this.isAdded = !this.isAdded
+    console.log(this.isAdded);
 
     this._listService.addTranslationToPlayList( id )
             .subscribe( response => {})
