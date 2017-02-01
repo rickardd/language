@@ -187,11 +187,21 @@ legend{
 .button-main{
   background-color: $color-main;
   color: $color-white;
-  &:hover{
+  &.hover-dark:hover{
+    background-color: $color-main-dark;
+    color: $color-main-bright;
+  }
+  &.hover-bright:hover{
+    background-color: $color-main-bright;
+    color: $color-main-dark;
+  }
+  &.hover-invert:hover{
     background-color: $color-white;
     color: $color-main;
   }
 }
+
+
 
 .button-large{
   font-size: 24px;

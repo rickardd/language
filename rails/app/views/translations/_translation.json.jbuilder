@@ -1,4 +1,6 @@
 
+
+
 if @translation[:infinitve_spanish] # unique column name
   json.type :verb
   json.english @translation[:infinitve_english]

@@ -17,8 +17,22 @@
       (close)="onFeedbackClose()">
     </feedback>
   </div>
-  <div *ngIf="!hasTranslations">
-    <div class="view-placeholder">
+  <div *ngIf="!hasTranslations && !isFetchingData">
+    <div class="view-placeholder fs-medium">
+      No words to play <br>
+      Add translations to playlist <br><br>
+      <a class="button button-white clickable"
+          [routerLink]="['MyList']">
+            Add: My List
+      </a>
+      <a class="button button-white clickable"
+          [routerLink]="['VerbList']">
+            Add: Verbs
+      </a>
+    </div>
+  </div>
+  <div *ngIf="isFetchingData">
+    <div class="loading">
       <i class="fa fa-spinner fa-spin fa-5x fg-white loading-spinner"></i>
     </div>
   </div>

@@ -182,7 +182,13 @@ legend {
 .button-main {
   background-color: #369194;
   color: #fff; }
-  .button-main:hover {
+  .button-main.hover-dark:hover {
+    background-color: #004143;
+    color: #72bfc1; }
+  .button-main.hover-bright:hover {
+    background-color: #72bfc1;
+    color: #004143; }
+  .button-main.hover-invert:hover {
     background-color: #fff;
     color: #369194; }
 

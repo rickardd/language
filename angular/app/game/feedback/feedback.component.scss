@@ -1,68 +1,58 @@
 @import 'variables';
 
-$white-0: #fff;
-$green-0: rgba(0, 128, 0, 0.26);
-$grey-1: #eee;
-
-$text-dark: #555;
-$text-red: red;
-$text-green: green;
-$text-blue: #005a65;
-
 .slide{
   position: fixed;
-  top: 230px;
+  top: 135px;
   left: 50%;
   margin-left: -300px;
   min-height: 224px;
   width: 600px;
-  background-color: $white-0;
+  background-color: $color-white;
   padding: 24px;
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    transform: translate(2000px, 0);
+  border-radius: 3px;
+  transform: translate(2000px, 0);
 
-
-  .translatoin-box,
-    .right-box,
-    .wrong-box,
-    .help-box{
+  .right-box,
+  .wrong-box,
+  .help-box{
     padding: 8px;
-    }
+  }
 
-    .translatoin-box{
-    color: $text-dark;
-    font-weight: bold;
-    }
-    .right-box{
-    color: $text-green;
-    background-color: $green-0;
-    }
-    .help-box{
-    color: $text-blue;
-    background-color: $color-main;
-    }
-    .wrong-box{
-      background-color: $grey-1;
-      margin-bottom: 4px;
-    }
-    .wrong-word{
-    color: $text-red;
-    }
-    .right-word{
-    color: $text-green;
-    }
+  .translatoin-box{
+    padding: 8px 0;
+    color: $color-grey-darkest;
+    font-size: 18px;
+  }
+  .right-box{
+    color: $color-green-dark;
+    background-color: $color-green-bright;
+  }
+  .help-box{
+    color: $color-main-dark;
+    background-color: $color-main-bright;
+  }
+  .wrong-box{
+    background-color: $color-grey;
+    margin-bottom: 4px;
+  }
+  .wrong-word{
+    color: $color-red;
+  }
+  .right-word{
+    color: $color-green;
+  }
 
 
-    .button{
-      position: absolute;
-      bottom: 24px;
-      right: 24px;
-      &:focus{
-        border: 2px solid red;
-        outline: none;
-      }
+  .button{
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    &:focus{
+      border: 2px solid $color-red;
+      outline: none;
     }
+  }
 }
 
 

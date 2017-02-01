@@ -1,4 +1,4 @@
-
+@import 'variables';
 
 .container {
   max-width: 500px;
@@ -22,7 +22,7 @@
 .input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
-  // color: $color-main-dark;
+  color: $color-main-dark;
   font-size: 16px;
 
   text-align: center;

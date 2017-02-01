@@ -9,10 +9,24 @@ class TranslationsController < ApplicationController
 
   def index
     list = current_user.lists.find_by( name: :private )
+
     translation_mix = []
-    translation_mix.push( list.translations )
-    translation_mix.push( list.verbs )
-    translation_mix.push( list.conjugations )
+
+    if list.translations.present?
+      translation_mix.push( list.translations )
+    end
+    if list.verbs.present?
+      translation_mix.push( list.verbs )
+    end
+    if list.conjugations.present?
+      translation_mix.push( list.conjugations )
+    end
+
+    if translation_mix.empty?
+      render json: "no_data".to_json
+      return
+    end
+
     @translation = translation_mix.flatten.shuffle.first
     render "_translation.json.jbuilder"
   end

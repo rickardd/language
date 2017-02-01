@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core'
+import {RouterLink} from 'angular2/router'
 
 import {WordsComponent} from './words/word.component'
 import {StatsComponent} from './stats/stats.component'
@@ -13,7 +14,8 @@ import {GameService} from './game.service'
   directives: [
     WordsComponent,
     StatsComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    RouterLink
   ],
   providers: [
     GameService
@@ -27,6 +29,7 @@ export class GameComponent{
   wordSubmited : number = 0
   scoreUpdate : Translation
   hasTranslations : boolean = false
+  isFetchingData : boolean = true
 
   constructor( private _gameService: GameService ){
 
@@ -36,7 +39,8 @@ export class GameComponent{
     this._gameService.getWord()
           .subscribe( response => {
                       this.translation = response
-                      if(!!response) this.hasTranslations = true
+                      this.isFetchingData = false
+                      if(!!response && response !== "no_data") this.hasTranslations = true
                     })
   }
 
