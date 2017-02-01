@@ -18,9 +18,11 @@ rails/tmp
 
 rails/public/*
 **/node_modules
+angular/*.js*
 angular/**/*.js*
+angular/*.css*
 angular/**/*.css*
 rails/dictionaries/spanish-english-verbs/*
 
-
-
+*.sublime-project
+*.sublime-workspace

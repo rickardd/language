@@ -153,147 +153,181 @@
 
 </div>
 
-<div class="sub-header clearfix">
-
-  <div class="list-counter clearfix">
-    <div class="list-counter-number">
-      50
+<div class="section section-padding sub-header clearfix">
+  <div class="grid">
+    <div class="grid-column">
+      <div class="list-counter clearfix">
+        <div class="list-counter-number">
+          50
+        </div>
+        <div class="list-counter-label">
+          Words in <br> play list
+        </div>
+      </div>
     </div>
-    <div class="list-counter-label">
-      Words in <br> play list
+    <div class="grid-column">
+      <a  class="button button-rounded button-main"
+          [routerLink]="['Game']">
+            Play
+            <i class="fa fa-play fs-small" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="grid-column">
+      <a  class="button button-rounded button-main"
+          [routerLink]="['Game']">
+            Play
+            <i class="fa fa-play fs-small" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
-
 </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <td></td>
-      <td class="clickable" (click)="onSortBy('Spanish')">Spanish</td>
-      <td class="clickable" (click)="onSortBy('English')">English</td>
-      <td>Context</td>
-      <td class="clickable" (click)="onSortBy('Category')">Category</td>
-      <td>Played</td>
-      <td>Difficulty</td>
-      <td class="clickable" (click)="onSortBy('Bucket')">Bucket</td>
-      <td>Attemps</td>
-      <td></td>
-      <td></td>
-      <td>private_list</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr
-        *ngFor="#translation of list.collection"
-        id="translation-{{translation.id}}"
-        class="list-row"
-        [class.row-highlight]="translation.id === affectedTranslationId">
-      <td>
-        <i  (click)="onAddToPrivate( $event )"
-            class="fa fa-check fa-2x clickable"
-            aria-hidden="true"
-            id="{{translation.id}}"
-            [ngClass]="{'fg-green': isAdded === true}"
-            [ngClass]="{'fg-grey-dark': isAdded === false}">
-        </i>
-        <!-- todo: replace with data-id instead of id attribute -->
-        <!-- <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button> -->
-      </td>
-      <td class="fs-medium">
-        {{translation.spanish}}
-      </td>
-      <td class="fs-medium">
-        {{translation.english}}
-      </td>
-      <td class="fs-medium">
-        {{translation.context}}
-      </td>
-      <td class="fs-smallest">
-        {{translation.category}}
-      </td>
-      <td>
-        <div *ngIf="translation.no_of_attempts">
-          <i class="fa fa-calendar" aria-hidden="true"></i>
-          {{translation.days_ago}}
-        </div>
-      </td>
-      <td>
-        <div *ngIf="translation.no_of_attempts"
-          [class.fg-red]="translation.difficulty > 70"
-          [class.fg-green]="translation.difficulty < 30"
-          >
-          <i class="fa fa-line-chart" aria-hidden="true"></i>
-          {{translation.difficulty}}%
-        </div>
-      </td>
-      <td>
-        <div *ngIf="translation.no_of_attempts">
-          <strength-wiget [bucket]="translation.bucket + 1" ></strength-wiget>
-        </div>
-      </td>
-      <td>
-        <div class="attempts clearfix" *ngIf="translation.no_of_attempts">
-          <div class="attempt-left attempts-total">
-            {{translation.no_of_attempts}}
+<div class="section section-padding">
+
+  <table class="table">
+    <thead class="thead">
+      <tr>
+        <td></td>
+        <td class="clickable nowrap"
+            (click)="onSortBy('Spanish')">Spanish
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </td>
+        <td class="clickable nowrap"
+            (click)="onSortBy('English')">English
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </td>
+        <td>Context</td>
+        <td class="clickable nowrap"
+            (click)="onSortBy('Category')">Category
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </td>
+        <td>Played</td>
+        <td>Difficulty</td>
+        <td class="clickable nowrap"
+            (click)="onSortBy('Bucket')">Bucket
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </td>
+        <td>Attemps</td>
+        <td></td>
+        <td></td>
+        <td>private_list</td>
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <tr
+          *ngFor="#translation of list.collection"
+          id="translation-{{translation.id}}"
+          class="list-row"
+          [class.row-highlight]="translation.id === affectedTranslationId">
+        <td>
+          <i  (click)="onAddToPrivate( $event )"
+              class="fa fa-check fa-2x clickable"
+              aria-hidden="true"
+              id="{{translation.id}}"
+              [ngClass]="{'fg-green': isAdded === true}"
+              [ngClass]="{'fg-grey-dark': isAdded === false}">
+          </i>
+          <!-- todo: replace with data-id instead of id attribute -->
+          <!-- <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button> -->
+        </td>
+        <td class="fs-medium">
+          {{translation.spanish}}
+        </td>
+        <td class="fs-medium">
+          {{translation.english}}
+        </td>
+        <td class="fs-smallest">
+          {{translation.context}}
+        </td>
+        <td class="fs-smallest">
+          {{translation.category}}
+        </td>
+        <td>
+          <div *ngIf="translation.no_of_attempts">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            {{translation.days_ago}}
           </div>
-          <div class="attempt-right">
-            <div class="attempts-failed">
-              {{translation.no_of_failed}}
+        </td>
+        <td>
+          <div *ngIf="translation.no_of_attempts"
+            [class.fg-red]="translation.difficulty > 75"
+            [class.fg-green]="translation.difficulty < 25"
+            class="nowrap"
+            >
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+            {{translation.difficulty}}%
+          </div>
+        </td>
+        <td>
+          <div *ngIf="translation.no_of_attempts">
+            <strength-wiget [bucket]="translation.bucket + 1" ></strength-wiget>
+          </div>
+        </td>
+        <td>
+          <div class="attempts clearfix" *ngIf="translation.no_of_attempts">
+            <div class="attempt-left attempts-total">
+              {{translation.no_of_attempts}}
             </div>
-            <div class="attempts-succeeded">
-              {{translation.no_of_succeeded}}
+            <div class="attempt-right">
+              <div class="attempts-failed">
+                {{translation.no_of_failed}}
+              </div>
+              <div class="attempts-succeeded">
+                {{translation.no_of_succeeded}}
+              </div>
             </div>
           </div>
-        </div>
-      </td>
-      <td>
-      <i
-        class="fa fa-pencil clickable"
-        aria-hidden="true"
-        (click)="onEditTranslation( $event )"
-        [attr.data-id]="translation.id"
-        id="edit-{{translation.id}}">
-      </i>
-        <!-- <button
+        </td>
+        <td>
+        <i
+          class="fa fa-pencil clickable hover-main"
+          aria-hidden="true"
           (click)="onEditTranslation( $event )"
           [attr.data-id]="translation.id"
-          id="edit-{{translation.id}}"
-          class="button">Edit
-        </button> -->
-      </td>
-      <td>
-        <i
-          class="fa fa-trash-o clickable"
-          aria-hidden="true"
-          (click)="onDeleteTranslation( $event )"
-          id="{{translation.id}}"
-          >
-          </i>
-        <!-- todo: replace with data-id instead of id attribute -->
-<!--         <button (click)="onDeleteTranslation( $event )" id="{{translation.id}}" class="button">Delete</button> -->
-      </td>
-      <td>
-        <span *ngIf="translation.strength">
-          {{translation.private_match}}
-        </span>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-<div class="edit-popup" [hidden]="closeEditTranslation" >
-  <form [ngFormModel]="editForm" (ngSubmit)="onUpdateTranslation()" #editFormElement >
-    <input type="text" ngControl="spanish" placeholder="Spanish" class="text-input">
-    <input type="text" ngControl="english" placeholder="English" class="text-input">
-    <input type="text" ngControl="context" placeholder="Context" class="text-input">
-    <input type="text" ngControl="category" placeholder="Category" class="text-input">
-    <input type="submit" class="button button-white" value="Update Translation">
-  </form>
-  <button class="button button-white right" (click)="onCancelEditTranslation()">Cancel</button>
+          id="edit-{{translation.id}}">
+        </i>
+          <!-- <button
+            (click)="onEditTranslation( $event )"
+            [attr.data-id]="translation.id"
+            id="edit-{{translation.id}}"
+            class="button">Edit
+          </button> -->
+        </td>
+        <td>
+          <i
+            class="fa fa-trash-o clickable hover-main"
+            aria-hidden="true"
+            (click)="onDeleteTranslation( $event )"
+            id="{{translation.id}}"
+            >
+            </i>
+          <!-- todo: replace with data-id instead of id attribute -->
+  <!--         <button (click)="onDeleteTranslation( $event )" id="{{translation.id}}" class="button">Delete</button> -->
+        </td>
+        <td>
+          <span *ngIf="translation.strength">
+            {{translation.private_match}}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
+<article [hidden]="closeEditTranslation">
+  <div class="popup" >
+    <div class="popup-inner edit-popup">
+      <form [ngFormModel]="editForm" (ngSubmit)="onUpdateTranslation()" #editFormElement >
+        <input type="text" ngControl="spanish" placeholder="Spanish" class="text-input">
+        <input type="text" ngControl="english" placeholder="English" class="text-input">
+        <input type="text" ngControl="context" placeholder="Context" class="text-input">
+        <input type="text" ngControl="category" placeholder="Category" class="text-input">
+        <input type="submit" class="button button-white" value="Update Translation">
+        <a class="clickable link-white" (click)="onCancelEditTranslation()">Cancel</a>
+      </form>
+    </div>
+  </div>
+</article>
 
 
 

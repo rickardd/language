@@ -1,6 +1,7 @@
 import {Component, ViewChild} from 'angular2/core'
 import {ListService} from './list.service'
 import {ControlGroup, FormBuilder} from 'angular2/common'
+import {RouterLink} from 'angular2/router'
 
 import {Translation, List} from '../shared/translation'
 import {StrengthComponent} from '../wigets/strength/strength.component'
@@ -13,7 +14,8 @@ import {StrengthComponent} from '../wigets/strength/strength.component'
     ListService
   ],
   directives: [
-    StrengthComponent
+    StrengthComponent,
+    RouterLink
   ]
 })
 
@@ -115,6 +117,13 @@ export class MyListComponent{
   }
 
   onDeleteTranslation( $event ){
+
+    let isConfirmed = confirm("Are you sure you want to delete translation?");
+
+    if( !isConfirmed ){
+      return
+    }
+
     this._listService.removeTranslation( $event.target.id )
             .subscribe( response => {
               this.updateList( response )
@@ -127,7 +136,7 @@ export class MyListComponent{
     let formElement = this.editFormElement.nativeElement
 
     formElement.setAttribute("data-id", id )
-    this.closeEditTranslation = false
+    this.closeEditTranslation = false // displays the popup
     this.editForm.controls["spanish"].updateValue( translation.spanish )
     this.editForm.controls["english"].updateValue( translation.english )
     this.editForm.controls["context"].updateValue( translation.context )

@@ -35,6 +35,14 @@ a{
        // Todo: Make sure this font works deployed
 }
 
+.section{
+
+}
+
+.section-padding{
+  padding: 24px;
+}
+
 .body,
 input{
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -64,7 +72,6 @@ input{
 
 .sub-header{
   background-color: $color-grey-dark;
-  padding: 16px;
 }
 
 .view-placeholder{
@@ -76,31 +83,36 @@ input{
 
 .table{
 
+  border-collapse: collapse;
+  color: $color-grey-darkest;
+
   thead{
     color: $color-main;
   }
-
-  color: $color-grey-darkest;
 
   .row-highlight{
     animation: row-fade-out 3s ease;
   }
 
-  .phrase{
-    background-color: green;
-  }
   .difficult{
-    color: red;
+    color: $color-red;
   }
   .easy{
-    color: green;
+    color: $color-green;
   }
 
   td{
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
     padding: 8px 6px;
   }
+}
 
+.tbody{
+  td{
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  tr:hover{
+    background-color: rgba( 255,255,255,.2 );
+  }
 }
 
 
@@ -140,11 +152,19 @@ legend{
   text-align: center;
   border: none;
   font-size: 14px;
-  margin-bottom: 8px;
   display: inline-block;
   &:hover{
     cursor: pointer;
   }
+}
+
+.button-rounded{
+  min-height: 24px;
+  border-radius: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  line-height: 24px;
+  font-size: 16px;
 }
 
 .button-white{
@@ -153,6 +173,15 @@ legend{
   &:hover{
     background-color: rgba(255,255,255,.4);
     color: $color-white;
+  }
+}
+
+.button-main{
+  background-color: $color-main;
+  color: $color-white;
+  &:hover{
+    background-color: $color-white;
+    color: $color-main;
   }
 }
 
@@ -167,9 +196,43 @@ legend{
 
 .button-disabled{
   background-color: #aaa;
-  color: #fff;
 }
 
+.grid{
+  display: table;
+}
+.grid-column{
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+
+// Popup
+.popup{
+  content: " ";
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,.5);
+  z-index: 99;
+}
+.popup-inner{
+  top: 68px;
+  display: block;
+  padding: 24px;
+  border: 2px solid $color-white;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4);
+  background-color: $color-main;
+  z-index: 101;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: fixed;
+}
 .text-center{
   text-align: center;
 }
@@ -186,6 +249,7 @@ legend{
   float: right;
 }
 
+// ToDo: Remove and use fg-red instead
 .text-red{
   color: #b74c4c;
 }
@@ -195,4 +259,11 @@ legend{
 
 .clickable{
   cursor: pointer;
+}
+
+.link-white{
+  color: $color-white;
+  &:hover{
+    color: $color-main-dark;
+  }
 }

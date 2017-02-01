@@ -46,6 +46,11 @@ $color-yellow: #ba9500;
   color: $color-red;
 }
 
+// Hover
+.hover-main:hover{
+  color: $color-main;
+}
+
 // Fonts
 .fs-smallest{
   font-size: 12px;
@@ -55,4 +60,9 @@ $color-yellow: #ba9500;
 }
 .fs-medium{
   font-size: 16px;
+}
+
+// General useful
+.nowrap{
+  white-space: nowrap;
 }
