@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core'
+import {RouterLink} from 'angular2/router'
 import {ListService} from './list.service'
 
 import {Translation, List} from '../shared/translation'
@@ -9,6 +10,9 @@ import {Translation, List} from '../shared/translation'
   styleUrls: [ "app/lists/bar.css"],
   providers: [
     ListService
+  ],
+  directives: [
+    RouterLink
   ]
 })
 
@@ -17,6 +21,7 @@ export class PlayListComponent{
   list : List = new List()
   quantity : number
   hasTranslations : boolean = false
+  isFetchingData : boolean = true
 
   constructor( private _listService : ListService ){
 
@@ -52,10 +57,10 @@ export class PlayListComponent{
   }
 
   updateList( list ){
+    this.isFetchingData = false
     this.list = new List( list )
     this.quantity = this.list.quantity()
     this.hasTranslations = ( !!list && list.length !== 0 ) ? true : false ;
-    console.log( "update", list);
   }
 
 }
