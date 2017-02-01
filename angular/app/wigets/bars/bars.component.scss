@@ -51,8 +51,9 @@
 
 
   .bar{
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     bottom: 28px;
+
   }
   .fill{
 
@@ -64,6 +65,7 @@
     position: absolute;
     bottom: 0;
     text-align: center;
+    font-size: 12px;
   }
 }
 

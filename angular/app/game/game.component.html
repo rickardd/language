@@ -1,0 +1,23 @@
+
+<section class="section section-padding menu-padding section-game bg-main">
+  <div *ngIf="hasTranslations">
+    <div class="words-wrapper">
+      <words
+        [translation]="translation"
+        (wordSubmit)="onWordSubmit($event)"
+        (scoreUpdate)="onScoreUpdate($event)">
+      </words>
+    </div>
+    <div class="bars-wrapper">
+      <stats [scoreUpdate]="scoreUpdate"></stats>
+    </div>
+    <feedback
+      [translation]="translation"
+      [slide]="slide"
+      (close)="onFeedbackClose()">
+    </feedback>
+  </div>
+  <div *ngIf="!hasTranslations">
+    <div class="view-placeholder">No Words To Play</div>
+  </div>
+</section>

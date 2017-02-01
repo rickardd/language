@@ -1,0 +1,16 @@
+@import 'variables';
+
+.section-game{
+  min-height: 100vh;
+  background-color: $color-main;
+  padding-top: 56px;
+  color: $color-white;
+}
+
+.words-wrapper{
+  margin-bottom: 24px;
+}
+
+.bars-wrapper{
+  float: right;
+}

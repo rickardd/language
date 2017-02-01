@@ -1,28 +1,28 @@
+
+
 .container {
   max-width: 500px;
-  background-color: rgba(255, 255, 255, 0.24);
-  padding: 8px;
   text-align: center;
-  float: right;
+  margin: 90px auto 0;
 }
 .source-word {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 12px;
-  color: #005a65;
+
 }
 .context-phrase{
   font-size: 14px;
   margin-bottom: 12px;
-  color: #005a65;
+
 }
 .cheat-word {
   font-size: 12px;
-  color: #359ba7;
+
 }
 .input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
-  color: #005a65;
+  // color: $color-main-dark;
   font-size: 16px;
 
   text-align: center;

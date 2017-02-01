@@ -36,6 +36,7 @@ export class MyListComponent{
   listCounts = { buckets: {}, category: {}, all: {} }
   isAdded : boolean = false
 
+  isFetchingList : boolean = true
 
   constructor( private _listService : ListService, private _fb : FormBuilder ){
 
@@ -60,6 +61,7 @@ export class MyListComponent{
     this.getList()
   }
   getList(){
+    this.isFetchingList = true
     this._listService.getCustomList()
               .subscribe( response => {
                 this.updateList( response )
@@ -88,6 +90,7 @@ export class MyListComponent{
   }
   // to be called after new http request
   updateList( list ){
+    this.isFetchingList = false
     console.info("should only be called after the http request");
     this.list = this.coreList = new List( list )
     this.quantity = this.list.quantity()

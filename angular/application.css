@@ -43,6 +43,9 @@
 .nowrap {
   white-space: nowrap; }
 
+.menu-padding {
+  padding-top: 56px; }
+
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -74,6 +77,9 @@ a {
   font-family: HelveticaNeue-Light;
   src: local("Helvetica Neue Light"), local("HelveticaNeue-Light"), url(HelveticaNeueLight.ttf); }
 
+.div, section, article, form, input {
+  box-sizing: border-box; }
+
 .section-padding {
   padding: 24px; }
 
@@ -92,8 +98,7 @@ input {
 
 .body {
   background-color: #eeeded;
-  font-size: 14px;
-  padding-top: 56px; }
+  font-size: 14px; }
 
 .header {
   background-color: #369194;
@@ -222,6 +227,16 @@ legend {
   left: 50%;
   transform: translate(-50%, 0);
   position: fixed; }
+
+.loading {
+  padding: 48px; }
+
+.loading-spinner {
+  margin: 0 auto;
+  width: 70px;
+  display: block;
+  height: 70px;
+  color: #369194; }
 
 .text-center {
   text-align: center; }

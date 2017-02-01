@@ -8,26 +8,8 @@ import {Slide} from './shared/slide'
 import {GameService} from './game.service'
 
 @Component({
-  template: `
-    <div *ngIf="hasTranslations">
-      <words
-        [translation]="translation"
-        (wordSubmit)="onWordSubmit($event)"
-        (scoreUpdate)="onScoreUpdate($event)">
-      </words>
-      <stats
-        [scoreUpdate]="scoreUpdate">
-      </stats>
-      <feedback
-            [translation]="translation"
-            [slide]="slide"
-            (close)="onFeedbackClose()">
-      </feedback>
-    </div>
-    <div *ngIf="!hasTranslations">
-      <div class="view-placeholder">No Words To Play</div>
-    </div>
-  `,
+  templateUrl: 'app/game/game.component.html',
+  styleUrls: ['app/game/game.component.css'],
   directives: [
     WordsComponent,
     StatsComponent,

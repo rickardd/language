@@ -35,6 +35,10 @@ a{
        // Todo: Make sure this font works deployed
 }
 
+.div, section, article, form, input{
+  box-sizing: border-box;
+}
+
 .section{
 
 }
@@ -62,7 +66,6 @@ input{
 .body{
   background-color: $color-grey;
   font-size: 14px;
-  padding-top: 56px;
 }
 
 .header{
@@ -233,6 +236,18 @@ legend{
   transform: translate(-50%, 0);
   position: fixed;
 }
+
+.loading{
+  padding: 48px;
+}
+.loading-spinner{
+  margin: 0 auto;
+  width: 70px;
+  display: block;
+  height: 70px;
+  color: #369194;
+}
+
 .text-center{
   text-align: center;
 }
