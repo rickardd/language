@@ -1,64 +1,70 @@
 <div class="menu-padding"></div>
 
+<div class="section section-padding sub-header text-center clearfix">
+  <a  class="button button-rounded button-main hover-bright"
+      [routerLink]="['Game']">
+        Play {{ quantity }}
+        <i class="fa fa-play fs-small fa-1x" aria-hidden="true"></i>
+  </a>
+</div>
+
 <!-- HIDDEN IF FECHING LIST -->
 <div *ngIf="!isFetchingList && hasTranslations">
-
-
-    <h1>Play list ({{ quantity }})</h1>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <td>Action</td>
-          <td>Spanish</td>
-          <td>English</td>
-          <td>difficulty</td>
-          <td>strength</td>
-          <td>attemps</td>
-          <td>failed</td>
-          <td>succeded</td>
-          <td>Buckets</td>
-        </tr>
-      </thead>
-      <tbody *ngFor="#translation of list.collection">
-
-        <tr>
-          <td>
-            <button (click)="onRemoveTranslation( $event )" id="{{translation.id}}" class="button">Delete</button>
-          </td>
-          <td>{{translation.spanish}}</td>
-          <td>{{translation.english}}</td>
-          <td [class.difficult]=" translation.difficulty > 50 ">{{translation.difficulty}}%</td>
-          <td [class.easy]=" translation.strength > 50 ">{{translation.strength}}%</td>
-          <td>{{translation.no_of_attempts}}</td>
-          <td>{{translation.no_of_failed}}</td>
-          <td>{{translation.no_of_succeeded}}</td>
-          <td>
-            <ul class="bucket-list clearfix" *ngIf="translation.no_of_attempts">
-              <li class="bucket-marker" [class.is-bucket-1]="translation.bucket==0">
-                <div class="outer"><div class="inner"></div></div>
-              </li>
-              <li class="bucket-marker" [class.is-bucket-2]="translation.bucket==1">
-                <div class="outer"><div class="inner"></div></div>
-              </li>
-              <li class="bucket-marker" [class.is-bucket-3]="translation.bucket==2">
-                <div class="outer"><div class="inner"></div></div>
-              </li>
-              <li class="bucket-marker" [class.is-bucket-4]="translation.bucket==3">
-                <div class="outer"><div class="inner"></div></div>
-              </li>
-              <li class="bucket-marker" [class.is-bucket-5]="translation.bucket==4">
-                <div class="outer"><div class="inner"></div></div>
-              </li>
-              <li class="bucket-marker" [class.is-bucket-6]="translation.bucket==5">
-                <div class="outer"><div class="inner"></div></div>
-              </li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
+  <div class="section section-padding">
+      <table class="table">
+        <thead class="thead">
+          <tr>
+            <td>Action</td>
+            <td>Spanish</td>
+            <td>English</td>
+            <td>Attemps</td>
+            <td>Difficulty</td>
+            <td>Strength</td>
+          </tr>
+        </thead>
+        <tbody *ngFor="#translation of list.collection" class="tbody">
+          <tr>
+            <td>
+              <button (click)="onRemoveTranslation( $event )"
+                      id="{{translation.id}}"
+                      class="button button-main hover-bright">
+                        Delete
+              </button>
+            </td>
+            <td class="fs-medium">{{translation.spanish}}</td>
+            <td class="fs-medium">{{translation.english}}</td>
+            <td>
+              <div class="attempts clearfix" *ngIf="translation.no_of_attempts">
+                <div class="attempt-left attempts-total">
+                  {{translation.no_of_attempts}}
+                </div>
+                <div class="attempt-right">
+                  <div class="attempts-failed">
+                    {{translation.no_of_failed}}
+                  </div>
+                  <div class="attempts-succeeded">
+                    {{translation.no_of_succeeded}}
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div *ngIf="translation.no_of_attempts"
+                [class.fg-red]="translation.difficulty > 75"
+                [class.fg-green]="translation.difficulty < 25"
+                class="nowrap"
+                >
+                <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i>
+                {{translation.difficulty}}%
+              </div>
+            </td>
+            <td *ngIf="translation.no_of_attempts">
+              <strength-wiget [bucket]="translation.bucket + 1" ></strength-wiget>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
 </div>
 
 

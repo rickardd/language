@@ -3,16 +3,18 @@ import {RouterLink} from 'angular2/router'
 import {ListService} from './list.service'
 
 import {Translation, List} from '../shared/translation'
+import {StrengthComponent} from '../wigets/strength/strength.component'
 
 @Component({
   selector: "play-list",
   templateUrl: "app/lists/play_list.component.html",
-  styleUrls: [ "app/lists/bar.css"],
+  styleUrls: [ "app/lists/bar.css", "app/lists/general_list.css"],
   providers: [
     ListService
   ],
   directives: [
-    RouterLink
+    RouterLink,
+    StrengthComponent
   ]
 })
 

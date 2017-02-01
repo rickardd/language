@@ -119,7 +119,8 @@ input {
 
 .table {
   border-collapse: collapse;
-  color: #646464; }
+  color: #646464;
+  width: 100%; }
   .table thead {
     color: #369194; }
   .table .row-highlight {
