@@ -1,11 +1,16 @@
 <div class="menu-padding"></div>
 
 <div class="section section-padding sub-header text-center clearfix">
-  <a  class="button button-rounded button-main hover-bright"
+
+  <a  *ngIf="!isFetchingData"
+      class="button button-rounded button-main hover-bright"
       [routerLink]="['Game']">
         Play {{ quantity }}
         <i class="fa fa-play fs-small fa-1x" aria-hidden="true"></i>
   </a>
+  <span *ngIf="isFetchingData">
+    <i class="fa fa-spinner fa-spin fa-1x fg-grey-darkest"></i>
+  </span>
 </div>
 
 <!-- HIDDEN IF FECHING LIST -->

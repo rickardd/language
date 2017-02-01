@@ -1,15 +1,12 @@
 <div class="menu-padding"></div>
 
 <div class="section section-padding sub-header text-center clearfix">
-  <span class="fs-medium fg-grey-darkest">
-    <span *ngIf="!isFetchingList">
+    <span *ngIf="!isFetchingList" class="fs-medium fg-grey-darkest">
      In this list {{ quantity }}
     </span>
     <span *ngIf="isFetchingList">
       <i class="fa fa-spinner fa-spin fa-1x fg-grey-darkest"></i>
     </span>
-
-  </span>
 </div>
 
 <div *ngIf="!isFetchingList">
