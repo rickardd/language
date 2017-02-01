@@ -78,11 +78,16 @@ input{
 }
 
 .view-placeholder{
-  font-size: 50px;
-  color: rgba(255,255,255,.8);
   margin-top: 100px;
   text-align: center;
+  .app-header{
+    color: $color-grey-dark;
+    font-size: 30px;
+  }
+
 }
+
+
 
 .table{
 
@@ -245,7 +250,6 @@ legend{
   width: 70px;
   display: block;
   height: 70px;
-  color: #369194;
 }
 
 .text-center{

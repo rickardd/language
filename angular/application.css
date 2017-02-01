@@ -108,10 +108,11 @@ input {
   background-color: #dcdcdc; }
 
 .view-placeholder {
-  font-size: 50px;
-  color: rgba(255, 255, 255, 0.8);
   margin-top: 100px;
   text-align: center; }
+  .view-placeholder .app-header {
+    color: #dcdcdc;
+    font-size: 30px; }
 
 .table {
   border-collapse: collapse;
@@ -235,8 +236,7 @@ legend {
   margin: 0 auto;
   width: 70px;
   display: block;
-  height: 70px;
-  color: #369194; }
+  height: 70px; }
 
 .text-center {
   text-align: center; }
