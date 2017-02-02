@@ -1,0 +1,22 @@
+
+.ct-series-a .ct-slice-donut{
+  stroke: blue !important;
+}
+.ct-series-b .ct-slice-donut{
+  stroke: green !important;
+}
+
+.testx{
+  background-color: red;
+}
+
+
+.ct-series-a .ct-slice-donut {
+    stroke: #d70206;
+}
+
+.ct-series-a{
+  .ct-slice-donut {
+    stroke: #d70206;
+  }
+}

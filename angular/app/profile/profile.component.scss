@@ -33,18 +33,19 @@
   min-width: 240px;
   min-height: 300px;
   margin: 12px;
-  background: $color-white;
-  padding: 0 6px;
+  padding: 0;
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+  background: $color-grey-bright;
 }
 
 .stat-box-header{
-  padding: 12px 6px;
-  border-bottom: 1px solid $color-grey;
-  font-size: 16px;
+  padding: 12px;
+  border-bottom: 1px solid $color-grey-dark;
+  font-size: 18px;
+  background: $color-grey-bright;
 }
 .stat-box-body{
-  padding: 12px 6px;
+  padding: 12px;
 
 }
 

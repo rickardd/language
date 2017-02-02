@@ -5,6 +5,7 @@ import {BarsComponent} from '../wigets/bars/bars.component'
 import {IBars, Bars} from '../shared/bars'
 import {ProfileService} from './profile.service'
 import {StreakComponent} from './streak.component'
+import {UrgentWordsComponent} from './urgent_words.component'
 
 @Component({
   templateUrl: 'app/profile/profile.component.html',
@@ -12,7 +13,8 @@ import {StreakComponent} from './streak.component'
   directives:[
     BarsComponent,
     RouterLink,
-    StreakComponent
+    StreakComponent,
+    UrgentWordsComponent
   ],
   providers: [
     ProfileService

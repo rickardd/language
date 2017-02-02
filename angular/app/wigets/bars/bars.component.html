@@ -9,9 +9,14 @@
   </ul>
 </article>
 
-
-<article class="stats big" *ngIf="size != 'small'">
-  <ul class="list clearfix">
+<article  class="stats"
+          *ngIf="size != 'small'"
+          [ngClass]="{
+                          'colored': colored === true,
+                          'big': size === 'big',
+                          'tall': size === 'tall'
+                      }">
+  <ul class="list clearfix" [ngClass]="{'center': centered === true}">
     <li class="item" *ngFor="#bucket of buckets; #i=index">
       <div class="bar">
         <div class="fill" style="height: {{bucket.percentage}}%"></div>
@@ -20,5 +25,4 @@
     </li>
   </ul>
 </article>
-
 

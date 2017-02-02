@@ -48,6 +48,7 @@ module.exports = function (grunt) {
           'app/game/game.component.css': 'app/game/game.component.scss',
           'app/profile/profile.component.css': 'app/profile/profile.component.scss',
           'app/profile/streak.component.css': 'app/profile/streak.component.scss',
+          'app/profile/urgent_words.component.css': 'app/profile/urgent_words.component.scss',
           'app/lists/verb_list.component.css': 'app/lists/verb_list.component.scss',
           'app/lists/bar.css': 'app/lists/bar.scss',
           'app/lists/general_list.css': 'app/lists/general_list.scss'

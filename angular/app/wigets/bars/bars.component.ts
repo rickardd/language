@@ -13,5 +13,7 @@ export class BarsComponent{
 
   @Input() buckets : Object;
   @Input() size : String;
+  @Input() colored : Boolean;
+  @Input() centered : Boolean;
 
 }

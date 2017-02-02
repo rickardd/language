@@ -10,14 +10,21 @@
 <section class="stat-section clearfix">
   <div class="stat-box">
     <div class="stat-box-header">You Know</div>
-    <div class="stat-box-body">{{userStats.knowing}}</div>
+    <div class="stat-box-body">
+    {{userStats.knowing}}
+    <urgent-words></urgent-words>
+    </div>
   </div>
   <div class="stat-box">
     <div class="stat-box-header">
       Words in play <span>{{userStats.playing}}</span>
     </div>
-    <div class="stat-box-body" style="background: grey;">
-      <bars-wiget [buckets]="buckets" [size]="'big'" ></bars-wiget>
+    <div class="stat-box-body">
+      <bars-wiget [buckets]="buckets"
+                  [size]="'tall'"
+                  [colored]="true"
+                  [centered]="true" >
+      </bars-wiget>
     </div>
   </div>
   <div class="stat-box">
