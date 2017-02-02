@@ -7,7 +7,7 @@ import {Component} from 'angular2/core';
     `,
     styleUrls: [
                   'node_modules/chartist/dist/chartist.min.css',
-                  'app/profile/streak.component.css'
+                  'app/stats/streak.component.css'
                 ],
     directives: [
 

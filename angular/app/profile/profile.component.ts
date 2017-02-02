@@ -4,17 +4,13 @@ import {RouterLink} from 'angular2/router'
 import {BarsComponent} from '../wigets/bars/bars.component'
 import {IBars, Bars} from '../shared/bars'
 import {ProfileService} from './profile.service'
-import {StreakComponent} from './streak.component'
-import {UrgentWordsComponent} from './urgent_words.component'
 
 @Component({
   templateUrl: 'app/profile/profile.component.html',
   styleUrls: ['app/profile/profile.component.css'],
   directives:[
     BarsComponent,
-    RouterLink,
-    StreakComponent,
-    UrgentWordsComponent
+    RouterLink
   ],
   providers: [
     ProfileService
@@ -23,32 +19,21 @@ import {UrgentWordsComponent} from './urgent_words.component'
 
 export class ProfileComponent{
 
-  buckets = '[{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0},{"translations":0,"percentage":0}]'
-
-  userStats : Object = { knowing: -1, playing: -1, waiting: -1, today: { played: "" } }
+  user : any[]
 
   constructor( private _profileSerivice : ProfileService ){
-    this.buckets = JSON.parse(this.buckets)
+
   }
 
   ngOnInit(){
-    this.getBuckets()
-    this.getStats()
+    this.getUser()
   }
 
-  getBuckets(){
-    this._profileSerivice.getBuckets()
-          .subscribe( response => {
-            this.buckets = response
-          })
-  }
-
-  getStats(){
-    this._profileSerivice.getUserStats()
-          .subscribe( response => {
-            this.userStats = response
-            console.log(response);
-          })
+  getUser(){
+    // this._profileSerivice.getUser()
+    //       .subscribe( response => {
+    //         this.user = response
+    //       })
   }
 
 }

@@ -6,6 +6,7 @@ import {LoggedInGuard} from './login/logged-in.guard';
 import {GameComponent} from './game/game.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {ProfileComponent} from './profile/profile.component';
+import {StatsComponent} from './stats/stats.component';
 import {MyListComponent} from './lists/my_list.component';
 import {PlayListComponent} from './lists/play_list.component';
 import {CommonListComponent} from './lists/common_list.component';
@@ -15,6 +16,7 @@ import {VerbListComponent} from './lists/verb_list.component';
                { path: "/game", name: "Game", component: GameComponent},
                // { path: "/profile", name: "Profile", component: ProfileComponent, CanActivate: [LoggedInGuard]},
                { path: "/profile", name: "Profile", component: ProfileComponent },
+               { path: "/statistics", name: "Stats", component: StatsComponent },
                { path: "/lists/mylist", name: "MyList", component: MyListComponent},
                { path: "/lists/playlist", name: "PlayList", component: PlayListComponent},
                { path: "/lists/commonlist", name: "CommonList", component: CommonListComponent},
@@ -33,6 +35,7 @@ import {VerbListComponent} from './lists/verb_list.component';
       ROUTER_DIRECTIVES,
       NavigationComponent,
       ProfileComponent,
+      StatsComponent,
       GameComponent,
       MyListComponent,
       PlayListComponent,

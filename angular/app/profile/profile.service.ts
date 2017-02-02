@@ -13,25 +13,9 @@ export class ProfileService {
 
   }
 
-  getProfile() {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    let authToken = localStorage.getItem('auth_token');
-    headers.append('Authorization', `Bearer ${authToken}`);
-
-    return this._http
-      .get('/profile', { headers })
-      .map(res => res.json());
-  }
-
-  getBuckets(){
+  getUser(){
     return this._http.get('http://localhost:3001/scores/total')
       .map( resulut => resulut.json() )
   }
 
-  getUserStats( userId : number = -1 ){
-    let url = this.rootUrl + "scores/stats/" + userId
-    return this._http.get( url )
-                .map( result => result.json() )
-  }
 }

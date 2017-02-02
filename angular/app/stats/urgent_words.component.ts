@@ -8,7 +8,7 @@ import {Component} from 'angular2/core';
     `,
     styleUrls: [
                   'node_modules/chartist/dist/chartist.min.css',
-                  'app/profile/urgent_words.component.css'
+                  'app/stats/urgent_words.component.css'
                 ],
     directives: [
 
