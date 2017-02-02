@@ -1,0 +1,20 @@
+
+.ct-label.ct-horizontal {
+  font-size: 14px;
+  color: #369194;
+  /*text-anchor: middle !important;
+  /*Uggly fix*/
+  transform: translateX(-13px);
+}
+
+.ct-series-a .ct-line {
+  stroke: #369194;
+  stroke-width: 3px;
+  /*stroke-dasharray: 4px 4px;*/
+}
+
+.ct-series-a .ct-point {
+  stroke: #369194;
+  stroke-width: 12px;
+  /*stroke-linecap: ???;*/
+}
