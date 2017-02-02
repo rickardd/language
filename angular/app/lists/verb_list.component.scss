@@ -1,3 +1,14 @@
+@import 'variables';
+
+
+.verb-header{
+  background-color: $color-grey-bright;
+  margin-bottom: 6px;
+  color: #369194;
+  border-bottom: 1px solid $color-main;
+  font-size: 18px;
+}
+
 ul{
   list-style: none;
   padding: 0;
@@ -7,14 +18,20 @@ ul{
 }
 
 .verb-list__item{
-  padding: 6px 12px;
-  &:nth-child(odd){
-    background-color: #95d7de;
+  // padding: 12px;
+  color: $color-grey-darkest;
+  background-color: $color-grey-bright;
+  padding-bottom: 48px;
+  &:last-child{
+    padding-bottom: 0;
   }
+  // &:nth-child(odd){
+  //   background-color: $color-grey-dark;
+  // }
 }
 
 .vertical-list{
-
+  margin-bottom: 2px;
 }
 
 .vertical-list__item{
@@ -34,19 +51,19 @@ ul{
   }
 }
 .tens-box{
-  width: 540px;
-  padding: 12px;
+  // width: 540px;
+  width: 390px;
   margin-top: 6px;
-  background-color: #b2e5ea;
   float: left;
   margin-right: 12px;
   margin-bottom: 6px;
 }
 
 .tens-headline{
-  font-weight: bold;
-  font-style: 16px;
+  font-size: 14px;
   margin-bottom: 6px;
+  border-bottom: 1px solid $color-grey-dark;
+  padding-bottom: 2px;
 }
 .tens-list{
 

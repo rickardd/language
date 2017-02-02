@@ -1,173 +1,225 @@
-<h1>Verb list</h1>
+<div class="menu-padding"></div>
 
-<div *ngIf="!list || list && !list.collection">
-  Loading...
+
+
+<div class="section section-padding bg-main fg-white text-center clearfix">
+  <span  *ngIf="!isFetchingData" class="fs-medium">
+    Verbs in this list {{ list.collection.length }}
+  </span>
+  <span *ngIf="isFetchingData">
+    <i class="fa fa-spinner fa-spin fa-1x"></i>
+  </span>
+</div>
+
+
+
+
+<div class="section section-padding bg-grey-dark fg-grey-darkest text-center clearfix">
+  <div  *ngIf="!isFetchingData" class="fs-small">
+    <span>FILTER BY:</span>
+    <a (click)="onDisplayAll()" >
+      <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>
+      <span>All</span> <!-- ({{ listCounts.all }}) -->
+    </a>
+    <a (click)="onDisplayInfinitive()" >
+      <span><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+      <span>Infinitive</span>
+    </a>
+    <a (click)="onFilterConjugation( '1ps' )" >
+      <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>
+      <span>Yo</span>
+    </a>
+    <a (click)="onFilterConjugation( '2ps' )" >
+      <span><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+      <span>Tú</span>
+    </a>
+    <a (click)="onFilterConjugation( '3ps' )" >
+      <span><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+      <span>él, ella, lo</span>
+    </a>
+    <a (click)="onFilterConjugation( '1pp' )" >
+      <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>
+      <span>Nosotros</span>
+    </a>
+    <a (click)="onFilterConjugation( '2pp' )" >
+      <span><i class="fa fa-circle-o" aria-hidden="true"></i></span>
+      <span>Vosotros</span>
+    </a>
+    <a (click)="onFilterConjugation( '3pp' )" >
+      <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>
+      <span>Ellos</span>
+    </a>
+  </div>
+  <span *ngIf="isFetchingData">
+    <i class="fa fa-spinner fa-spin fa-1x"></i>
+  </span>
 </div>
 
 <div *ngIf="list && list.collection">
 
-
-<br>
-<span>FILTER BY:</span>
-<a (click)="onDisplayAll()" >
-  <strong>All</strong> <!-- ({{ listCounts.all }}) -->
-</a> |
-<a (click)="onDisplayInfinitive()" >
-  <strong>Infinitive</strong>
-</a> |
-<a (click)="onFilterConjugation( '1ps' )" >
-  <strong>Yo</strong>
-</a> |
-<a (click)="onFilterConjugation( '2ps' )" >
-  <strong>Tú</strong>
-</a> |
-<a (click)="onFilterConjugation( '3ps' )" >
-  <strong>él, ella, lo</strong>
-</a> |
-<a (click)="onFilterConjugation( '1pp' )" >
-  <strong>Nosotros</strong>
-</a> |
-<a (click)="onFilterConjugation( '2pp' )" >
-  <strong>Vosotros</strong>
-</a> |
-<a (click)="onFilterConjugation( '3pp' )" >
-  <strong>Ellos</strong>
-</a>
-
-<br><br>
-
-<ul class="verb-list">
-  <li class="verb-list__item clearfix" *ngFor="#verb of list.collection">
-    <ul class="vertical-list clearfix" *ngIf="verb.infinitive">
-      <li class="vertical-list__item">
-        <button
-          (click)="onAddToPrivate( $event, 'infinitive')"
-          [attr.data-id]="verb.id"
-          id="verb-button-{{verb.id}}"
-          class="button button-small">
-            Add
-        </button>
-      </li>
-      <li class="vertical-list__item type">Infinitive</li>
-      <li class="vertical-list__item spanish">{{verb.infinitive.spanish}}</li>
-      <li class="vertical-list__item english">{{verb.infinitive.english}}</li>
-    </ul>
-    <ul class="vertical-list clearfix" *ngIf="verb.pastParticiple">
-      <li class="vertical-list__item">
-        <button (click)="onAddToPrivate('pastParticiple')" class="button button-small">Add</button>
-      </li>
-      <li class="vertical-list__item type">Past Participle</li>
-      <li class="vertical-list__item spanish">{{verb.pastParticiple.spanish}}</li>
-      <li class="vertical-list__item english">{{verb.pastParticiple.english}}</li>
-    </ul>
-    <ul class="vertical-list clearfix" *ngIf="verb.gerund">
-      <li class="vertical-list__item">
-        <button (click)="onAddToPrivate('gerund')" class="button button-small">Add</button>
-      </li>
-      <li class="vertical-list__item type">Gerund</li>
-      <li class="vertical-list__item spanish">{{verb.gerund.spanish}}</li>
-      <li class="vertical-list__item english">{{verb.gerund.english}}</li>
-    </ul>
-    <div class="tens-box" *ngIf="verb.collection.indicative">
-      <div class="tens-headline">Present</div>
-      <ul class="tens-list">
-        <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.present">
-          <ul class="vertical-list clearfix">
-            <li class="vertical-list__item">
-            <button
-              (click)="onAddToPrivate( $event, 'conjugation')"
-              [attr.data-id]="conjugation.id"
-              id="conjugation-button-{{conjugation.id}}"
-              class="button button-small">
-                Add
-            </button>
-            </li>
-            <li
-              class="vertical-list__item spanish"
-              [class.is-irregular]="!conjugation.is_regular"
-              [class.is-regular]="conjugation.is_regular">
-                {{conjugation.spanish}}
-            </li>
-            <li class="vertical-list__item english">{{conjugation.english}}</li>
-          </ul>
+<section class="section section-padding bg-grey-bright">
+  <ul class="verb-list">
+    <li class="verb-list__item clearfix" *ngFor="#verb of list.collection">
+      <div class="verb-header clearfix">
+        <div class="left">
+          {{verb.infinitive.spanish}}
+        </div>
+        <div class="right fg-main fs-small">
+          <a class="fg-main" href="">
+            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+            Present
+          </a>
+          <a class="fg-main" href="">
+            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+            Future
+          </a>
+          <a class="fg-main" href="">
+            <i class="fa fa-circle-o" aria-hidden="true"></i>
+            Conditional
+          </a>
+          <a class="fg-main" href="">
+            <i class="fa fa-circle-o" aria-hidden="true"></i>
+            Preterit
+          </a>
+        </div>
+      </div>
+      <ul class="vertical-list clearfix" *ngIf="verb.infinitive">
+        <li class="vertical-list__item">
+          <button
+            (click)="onAddToPrivate( $event, 'infinitive')"
+            [attr.data-id]="verb.id"
+            id="verb-button-{{verb.id}}"
+            class="button button-main hover-bright button-main hover-bright button-small">
+              +
+          </button>
         </li>
+        <li class="vertical-list__item type">Infinitive</li>
+        <li class="vertical-list__item spanish">{{verb.infinitive.spanish}}</li>
+        <li class="vertical-list__item english">{{verb.infinitive.english}}</li>
       </ul>
-    </div>
-
-    <div class="tens-box" *ngIf="verb.collection.indicative">
-      <div class="tens-headline">Future</div>
-      <ul class="tens-list">
-        <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.future">
-          <ul class="vertical-list clearfix">
-            <li class="vertical-list__item">
+      <ul class="vertical-list clearfix" *ngIf="verb.pastParticiple">
+        <li class="vertical-list__item">
+          <button (click)="onAddToPrivate('pastParticiple')" class="button button-main hover-bright button-small">+</button>
+        </li>
+        <li class="vertical-list__item type">Past Participle</li>
+        <li class="vertical-list__item spanish">{{verb.pastParticiple.spanish}}</li>
+        <li class="vertical-list__item english">{{verb.pastParticiple.english}}</li>
+      </ul>
+      <ul class="vertical-list clearfix" *ngIf="verb.gerund">
+        <li class="vertical-list__item">
+          <button (click)="onAddToPrivate('gerund')" class="button button-main hover-bright button-small">+</button>
+        </li>
+        <li class="vertical-list__item type">Gerund</li>
+        <li class="vertical-list__item spanish">{{verb.gerund.spanish}}</li>
+        <li class="vertical-list__item english">{{verb.gerund.english}}</li>
+      </ul>
+      <div class="tens-box" *ngIf="verb.collection.indicative">
+        <div class="tens-headline">Present</div>
+        <ul class="tens-list">
+          <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.present">
+            <ul class="vertical-list clearfix">
+              <li class="vertical-list__item">
               <button
-              (click)="onAddToPrivate( $event, 'conjugation')"
-              [attr.data-id]="conjugation.id"
-              id="conjugation-button-{{conjugation.id}}"
-              class="button button-small">
-                Add
-            </button>
-            </li>
-            <li class="vertical-list__item spanish"
-              [class.is-regular]="conjugation.is_regular">
-                {{conjugation.spanish}}
-            </li>
-            <li class="vertical-list__item english">{{conjugation.english}}</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+                (click)="onAddToPrivate( $event, 'conjugation')"
+                [attr.data-id]="conjugation.id"
+                id="conjugation-button-{{conjugation.id}}"
+                class="button button-main hover-bright button-small">
+                  +
+              </button>
+              </li>
+              <li
+                class="vertical-list__item spanish"
+                [class.is-irregular]="!conjugation.is_regular"
+                [class.is-regular]="conjugation.is_regular">
+                  {{conjugation.spanish}}
+              </li>
+              <li class="vertical-list__item english">{{conjugation.english}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-    <div class="tens-box" *ngIf="verb.collection.indicative">
-      <div class="tens-headline">Conditional</div>
-      <ul class="tens-list">
-        <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.conditional">
-          <ul class="vertical-list clearfix">
-            <li class="vertical-list__item">
-              <button
-              (click)="onAddToPrivate( $event, 'conjugation')"
-              [attr.data-id]="conjugation.id"
-              id="conjugation-button-{{conjugation.id}}"
-              class="button button-small">
-                Add
-            </button>
-            </li>
-            <li class="vertical-list__item spanish"
-              [class.is-regular]="conjugation.is_regular">
-                {{conjugation.spanish}}
-            </li>
-            <li class="vertical-list__item english">{{conjugation.english}}</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+      <div class="tens-box" *ngIf="verb.collection.indicative">
+        <div class="tens-headline">Future</div>
+        <ul class="tens-list">
+          <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.future">
+            <ul class="vertical-list clearfix">
+              <li class="vertical-list__item">
+                <button
+                (click)="onAddToPrivate( $event, 'conjugation')"
+                [attr.data-id]="conjugation.id"
+                id="conjugation-button-{{conjugation.id}}"
+                class="button button-main hover-bright button-small">
+                  +
+              </button>
+              </li>
+              <li class="vertical-list__item spanish"
+                [class.is-regular]="conjugation.is_regular">
+                  {{conjugation.spanish}}
+              </li>
+              <li class="vertical-list__item english">{{conjugation.english}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-    <div class="tens-box" *ngIf="verb.collection.indicative">
-      <div class="tens-headline">Preterite</div>
-      <ul class="tens-list">
-        <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.preterite">
-          <ul class="vertical-list clearfix">
-            <li class="vertical-list__item">
-              <button
-              (click)="onAddToPrivate( $event, 'conjugation')"
-              [attr.data-id]="conjugation.id"
-              id="conjugation-button-{{conjugation.id}}"
-              class="button button-small">
-                Add
-            </button>
-            </li>
-            <li class="vertical-list__item spanish"
-              [class.is-regular]="conjugation.is_regular">
-                {{conjugation.spanish}}
-            </li>
-            <li class="vertical-list__item english">{{conjugation.english}}</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+      <div class="tens-box" *ngIf="verb.collection.indicative">
+        <div class="tens-headline">Conditional</div>
+        <ul class="tens-list">
+          <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.conditional">
+            <ul class="vertical-list clearfix">
+              <li class="vertical-list__item">
+                <button
+                (click)="onAddToPrivate( $event, 'conjugation')"
+                [attr.data-id]="conjugation.id"
+                id="conjugation-button-{{conjugation.id}}"
+                class="button button-main hover-bright button-small">
+                  +
+              </button>
+              </li>
+              <li class="vertical-list__item spanish"
+                [class.is-regular]="conjugation.is_regular">
+                  {{conjugation.spanish}}
+              </li>
+              <li class="vertical-list__item english">{{conjugation.english}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-  </li>
-</ul>
+      <div class="tens-box" *ngIf="verb.collection.indicative">
+        <div class="tens-headline">Preterite</div>
+        <ul class="tens-list">
+          <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.preterite">
+            <ul class="vertical-list clearfix">
+              <li class="vertical-list__item">
+                <button
+                (click)="onAddToPrivate( $event, 'conjugation')"
+                [attr.data-id]="conjugation.id"
+                id="conjugation-button-{{conjugation.id}}"
+                class="button button-main hover-bright button-small">
+                  +
+              </button>
+              </li>
+              <li class="vertical-list__item spanish"
+                [class.is-regular]="conjugation.is_regular">
+                  {{conjugation.spanish}}
+              </li>
+              <li class="vertical-list__item english">{{conjugation.english}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    </li>
+  </ul>
+</section>
+
+</div>
 
 
+<div *ngIf="isFetchingData">
+  <div class="loading">
+    <i class="fa fa-spinner fa-spin fa-5x fg-grey-dark loading-spinner"></i>
+  </div>
 </div>

@@ -10,6 +10,15 @@
 .bg-yellow {
   background-color: #ba9500; }
 
+.bg-grey-dark {
+  background-color: #dcdcdc; }
+
+.bg-grey-bright {
+  background-color: #f9f7f7; }
+
+.bg-grey {
+  background-color: #eeeded; }
+
 .fg-main {
   color: #369194; }
 
@@ -106,9 +115,6 @@ input {
 .header {
   background-color: #369194;
   padding: 24px; }
-
-.sub-header {
-  background-color: #dcdcdc; }
 
 .view-placeholder {
   margin-top: 100px;

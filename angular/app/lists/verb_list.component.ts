@@ -18,6 +18,7 @@ export class VerbListComponent{
   quantity : number
   coreList : any[]
   list : VerbListTemp
+  isFetchingData : boolean = true
 
   constructor( private _listService : ListService ){
 
@@ -29,11 +30,13 @@ export class VerbListComponent{
               // this.coreList = new List( response )
               // this.quantity = this.coreList.quantity()
               // console.log(response);
+              this.isFetchingData = false
               this.coreList = response
               this.list = new VerbListTemp( response )
               // response.forEach( function( item ){
               //   console.log( item )
               // })
+              console.log( this.list);
             })
   }
 
