@@ -58,6 +58,11 @@
 <div class="section section-padding bg-grey-dark fg-grey-darkest text-center clearfix">
   <div  *ngIf="!isFetchingData" class="fs-small">
     <span>GLBOAL FILTER:</span>
+    <a (click)="onGlobalToggleVisability( 'base', 'all' )" class="clickable">
+      <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.base.all"></i>
+      <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.base.all"></i>
+      <span>Base</span>
+    </a>
     <a (click)="onGlobalToggleVisability( 'indicative', 'present' )" class="clickable">
       <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.present"></i>
       <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.present"></i>
@@ -95,53 +100,59 @@
         </div>
         <div class="right fg-main fs-small">
           <a class="fg-main" (click)="toggleTense( $event, 'Present')">
-            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+            <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.present"></i>
+            <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.present"></i>
             Present
           </a>
           <a class="fg-main" (click)="toggleTense( $event, 'Future')">
-            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+            <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.future"></i>
+            <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.future"></i>
             Future
           </a>
           <a class="fg-main" (click)="toggleTense( $event, 'Conditional')">
-            <i class="fa fa-circle-o" aria-hidden="true"></i>
+            <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.conditional"></i>
+            <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.conditional"></i>
             Conditional
           </a>
           <a class="fg-main" (click)="toggleTense( $event, 'Preterit')">
-            <i class="fa fa-circle-o" aria-hidden="true"></i>
+            <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.preterit"></i>
+            <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.preterit"></i>
             Preterit
           </a>
         </div>
       </div>
-      <ul class="vertical-list clearfix" *ngIf="verb.infinitive">
-        <li class="vertical-list__item">
-          <button
-            (click)="onAddToPrivate( $event, 'infinitive')"
-            [attr.data-id]="verb.id"
-            id="verb-button-{{verb.id}}"
-            class="button button-main hover-bright button-main hover-bright button-small">
-              +
-          </button>
-        </li>
-        <li class="vertical-list__item type">Infinitive</li>
-        <li class="vertical-list__item spanish">{{verb.infinitive.spanish}}</li>
-        <li class="vertical-list__item english">{{verb.infinitive.english}}</li>
-      </ul>
-      <ul class="vertical-list clearfix" *ngIf="verb.pastParticiple">
-        <li class="vertical-list__item">
-          <button (click)="onAddToPrivate('pastParticiple')" class="button button-main hover-bright button-small">+</button>
-        </li>
-        <li class="vertical-list__item type">Past Participle</li>
-        <li class="vertical-list__item spanish">{{verb.pastParticiple.spanish}}</li>
-        <li class="vertical-list__item english">{{verb.pastParticiple.english}}</li>
-      </ul>
-      <ul class="vertical-list clearfix" *ngIf="verb.gerund">
-        <li class="vertical-list__item">
-          <button (click)="onAddToPrivate('gerund')" class="button button-main hover-bright button-small">+</button>
-        </li>
-        <li class="vertical-list__item type">Gerund</li>
-        <li class="vertical-list__item spanish">{{verb.gerund.spanish}}</li>
-        <li class="vertical-list__item english">{{verb.gerund.english}}</li>
-      </ul>
+      <div class="" [hidden]="!visibilitySettings.base.all">
+        <ul class="vertical-list clearfix" *ngIf="verb.infinitive">
+          <li class="vertical-list__item">
+            <button
+              (click)="onAddToPrivate( $event, 'infinitive')"
+              [attr.data-id]="verb.id"
+              id="verb-button-{{verb.id}}"
+              class="button button-main hover-bright button-main hover-bright button-small">
+                +
+            </button>
+          </li>
+          <li class="vertical-list__item type">Infinitive</li>
+          <li class="vertical-list__item spanish">{{verb.infinitive.spanish}}</li>
+          <li class="vertical-list__item english">{{verb.infinitive.english}}</li>
+        </ul>
+        <ul class="vertical-list clearfix" *ngIf="verb.pastParticiple">
+          <li class="vertical-list__item">
+            <button (click)="onAddToPrivate('pastParticiple')" class="button button-main hover-bright button-small">+</button>
+          </li>
+          <li class="vertical-list__item type">Past Participle</li>
+          <li class="vertical-list__item spanish">{{verb.pastParticiple.spanish}}</li>
+          <li class="vertical-list__item english">{{verb.pastParticiple.english}}</li>
+        </ul>
+        <ul class="vertical-list clearfix" *ngIf="verb.gerund">
+          <li class="vertical-list__item">
+            <button (click)="onAddToPrivate('gerund')" class="button button-main hover-bright button-small">+</button>
+          </li>
+          <li class="vertical-list__item type">Gerund</li>
+          <li class="vertical-list__item spanish">{{verb.gerund.spanish}}</li>
+          <li class="vertical-list__item english">{{verb.gerund.english}}</li>
+        </ul>
+      </div>
       <div class="tens-box" *ngIf="verb.collection.indicative" [hidden]="!visibilitySettings.indicative.present">
         <div class="tens-headline">Present</div>
         <ul class="tens-list">

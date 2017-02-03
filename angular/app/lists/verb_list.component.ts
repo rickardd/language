@@ -22,11 +22,14 @@ export class VerbListComponent{
   tenseVisability : any[] = []
   itemVisability : any[] = []
   visibilitySettings : Object = {
+      base: {
+        all: true
+      },
       indicative: {
-         present : false,
-         future : true,
-         conditional : false,
-         preterit : false
+        present: true,
+        future: true,
+        conditional: true,
+        preterit: false
       }
     }
 
