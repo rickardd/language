@@ -76,12 +76,12 @@
 
 .tall{
   .list{
-    width: calc(168px + ( 5 * 12px ));
+    width: calc(150px + ( 5 * 12px ));
   }
   .item{
-    width: calc(168px / 5);
-    height: 233px;
-    margin-left: 4px;
+    width: calc(110px / 5);
+    height: 183px;
+    margin-left: 12px;
   }
 }
 
@@ -93,8 +93,7 @@
 .colored{
   .bar{
     border: none;
-    background-color: $color-grey;
-    box-shadow: 2px 4px 2px rgba(0,0,0,0.2);
+    background-color: $color-grey-bright;
   }
   .item:nth-child(1),
   .item:nth-child(2){

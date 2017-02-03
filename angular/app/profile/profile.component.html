@@ -5,45 +5,38 @@
 </div>
 
 
-<a [routerLink]="['Game']" class="button button-large center">Play</a>
 
-
-<div class="seperator"></div>
-
-<a href="" class="button right">Add friend</a>
-
-<table class="table">
-  <thead>
-    <tr>
-      <td>avatar</td>
-      <td>Are playing</td>
-      <td>Knows</td>
-      <td>Buckets</td>
-      <td>Strength</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>img</td>
-      <td>57</td>
-      <td>44</td>
-      <td>
-        <bars-wiget [buckets]="buckets" [size]="'small'" ></bars-wiget>
-      </td>
-      <td>57%</td>
-    </tr>
-    <tr>
-      <td>img</td>
-      <td>57</td>
-      <td>63</td>
-      <td>
-        <bars-wiget [buckets]="buckets" [size]="'small'" ></bars-wiget>
-      </td>
-      <td>57%</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
+<section class="section section-padding">
+  <a href="" class="button button-main hover-bright right">Add friend</a>
+  <table class="table">
+    <thead class="thead">
+      <tr>
+        <td>avatar</td>
+        <td>Are playing</td>
+        <td>Knows</td>
+        <td>Buckets</td>
+        <td>Strength</td>
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <tr>
+        <td>img</td>
+        <td>57</td>
+        <td>44</td>
+        <td>
+          <bars-wiget [buckets]="buckets" [size]="'small'" ></bars-wiget>
+        </td>
+        <td>57%</td>
+      </tr>
+      <tr>
+        <td>img</td>
+        <td>57</td>
+        <td>63</td>
+        <td>
+          <bars-wiget [buckets]="buckets" [size]="'small'" ></bars-wiget>
+        </td>
+        <td>57%</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

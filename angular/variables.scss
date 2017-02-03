@@ -88,3 +88,25 @@ $color-yellow: #ba9500;
 .menu-padding{
   padding-top: 56px;
 }
+
+
+// Media queries
+
+//Laptop
+@mixin screen-laptop {
+  @media screen and (max-width: 1200px){
+    @content
+  }
+}
+//iPad
+@mixin screen-tablet {
+  @media screen and (max-width: 786px){
+    @content
+  }
+}
+//iPhone 5
+@mixin screen-phone {
+  @media screen and (max-width: 320px){
+    @content
+  }
+}

@@ -1,54 +1,50 @@
 @import 'variables';
 
-.logo{
-  font-style: 30px;
-  color: $color-main-dark;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  line-height: 94px;
+.inner-body{
+  min-height: 100vh;
 }
-
-.seperator{
-  border-bottom: 1px solid #005a70;
-  margin: 24px 0;
-}
-
 
 .stat-section{
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1020px;
+  margin: 0 auto;
 }
 
 .stat-box{
-  min-width: 240px;
-  min-height: 300px;
-  margin: 12px;
+  background-color: $color-white;
   padding: 0;
-  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
-  background: $color-grey-bright;
+  flex-basis: 240px;
+  margin-bottom: 1px;
+  margin-right: 1px;
 }
 
 .stat-box-header{
   padding: 12px;
-  border-bottom: 1px solid $color-grey-dark;
+  border-bottom: 1px solid $color-main;
   font-size: 18px;
   background: $color-grey-bright;
+  text-align: center;
 }
 .stat-box-body{
   padding: 12px;
-
 }
 
+
+@include screen-tablet{
+  .stat-section{
+    width: 771px;
+  }
+}
+@include screen-phone{
+  .stat-section{
+    width: 300px;
+  }
+  .stat-box{
+    margin-bottom: 12px;
+  }
+}
 
 
 

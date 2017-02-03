@@ -1,36 +1,38 @@
-<div class="menu-padding"></div>
+<section class="inner-body bg-main">
+  <div class="menu-padding"></div>
 
-<section class="stat-section bg-main clearfix">
-  <div class="stat-box">
-    <div class="stat-box-header">You Know</div>
-    <div class="stat-box-body">
-    {{userStats.knowing}}
-    <urgent-words></urgent-words>
+  <section class="section section-padding stat-section clearfix">
+    <div class="stat-box">
+      <div class="stat-box-header">You Know</div>
+      <div class="stat-box-body">
+      {{userStats.knowing}}
+      <urgent-words></urgent-words>
+      </div>
     </div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-box-header">
-      Words in play <span>{{userStats.playing}}</span>
+    <div class="stat-box">
+      <div class="stat-box-header">
+        Words in play <span>{{userStats.playing}}</span>
+      </div>
+      <div class="stat-box-body">
+        <bars-wiget [buckets]="buckets"
+                    [size]="'tall'"
+                    [colored]="true"
+                    [centered]="true" >
+        </bars-wiget>
+      </div>
     </div>
-    <div class="stat-box-body">
-      <bars-wiget [buckets]="buckets"
-                  [size]="'tall'"
-                  [colored]="true"
-                  [centered]="true" >
-      </bars-wiget>
+    <div class="stat-box">
+      <div class="stat-box-header">Words waiting to be played</div>
+      <div class="stat-box-body">{{userStats.waiting}}</div>
     </div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-box-header">Words waiting to be played</div>
-    <div class="stat-box-body">{{userStats.waiting}}</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-box-header">Played last 24h</div>
-    <div class="stat-box-body">{{userStats.today.played}}</div>
-  </div>
-  <div class="stat-box">
-    <div class="stat-box-header">Chartist</div>
-    <streak></streak>
-  </div>
+    <div class="stat-box">
+      <div class="stat-box-header">Played last 24h</div>
+      <div class="stat-box-body">{{userStats.today.played}}</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-box-header">Chartist</div>
+      <streak></streak>
+    </div>
 
+  </section>
 </section>
