@@ -48,7 +48,6 @@ class TranslationsController < ApplicationController
     params_body = JSON.parse(request.raw_post).with_indifferent_access
     translation = Translation.new(params_body)
     translation.user_id = current_user.id
-
       if translation.save
         current_user.lists.find_by( name: :my_list ).translations << translation
         render json: translation.to_json

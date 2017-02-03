@@ -51,7 +51,6 @@ ul{
   }
 }
 .tens-box{
-  // width: 540px;
   width: 390px;
   margin-top: 6px;
   float: left;
@@ -69,13 +68,10 @@ ul{
 
 }
 
-
 .is-regular{
-
+  color: $color-green;
 }
 .is-irregular{
-  text-decoration: underline;
-}
-.spanish{
-  font-weight: bold;
+  // text-decoration: underline;
+  color: $color-red;
 }

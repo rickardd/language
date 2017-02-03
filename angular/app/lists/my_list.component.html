@@ -4,7 +4,7 @@
 
 <!-- ADD TRANSLATION -->
 
-  <form [ngFormModel]="form" (ngSubmit)="onAddTranslation()"  >
+  <form [ngFormModel]="form" (ngSubmit)="onAddTranslation()" >
     <fieldset>
       <legend>Add translation</legend>
       <input type="text" ngControl="spanish" placeholder="Spanish" class="text-input" #inputSpanish >
@@ -238,8 +238,7 @@
         <tr
             *ngFor="#translation of list.collection"
             id="translation-{{translation.id}}"
-            class="list-row"
-            [class.row-highlight]="translation.id === affectedTranslationId">
+            class="list-row">
           <td>
             <i  (click)="onAddToPrivate( $event )"
                 class="fa fa-check fa-1x clickable"
@@ -252,16 +251,28 @@
             <!-- <button (click)="onAddToPrivate( $event )" id="{{translation.id}}" class="button">Add</button> -->
           </td>
           <td class="fs-medium">
-            {{translation.spanish}}
+            <i  class="fa fa-spinner fa-spin fa-1x" aria-hidden="true"
+                *ngIf="isUpdatingId == translation.id">
+            </i>
+            <span *ngIf="isUpdatingId != translation.id">{{translation.spanish}}</span>
           </td>
           <td class="fs-medium">
-            {{translation.english}}
+            <i  class="fa fa-spinner fa-spin fa-1x" aria-hidden="true"
+                *ngIf="isUpdatingId == translation.id">
+            </i>
+            <span *ngIf="isUpdatingId != translation.id">{{translation.english}}</span>
           </td>
-          <td class="fs-smallest">
-            {{translation.context}}
+          <td class="fs-medium">
+            <i  class="fa fa-spinner fa-spin fa-1x" aria-hidden="true"
+                *ngIf="isUpdatingId == translation.id">
+            </i>
+            <span *ngIf="isUpdatingId != translation.id">{{translation.context}}</span>
           </td>
-          <td class="fs-smallest">
-            {{translation.category}}
+          <td class="fs-medium">
+            <i  class="fa fa-spinner fa-spin fa-1x" aria-hidden="true"
+                *ngIf="isUpdatingId == translation.id">
+            </i>
+            <span *ngIf="isUpdatingId != translation.id">{{translation.category}}</span>
           </td>
           <td>
             <div *ngIf="translation.no_of_attempts">

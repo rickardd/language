@@ -30,19 +30,19 @@ export class MyListComponent{
   editForm : ControlGroup
   quantity : number
   closeEditTranslation : boolean = true
-  affectedTranslationId : number
   hasTranslations : boolean
   // bucketsCount : Object = {}
   listCounts = { buckets: {}, category: {}, all: {} }
   isAdded : boolean = false
-
   isFetchingList : boolean = true
+  isUpdatingId : number = -1
 
   constructor( private _listService : ListService, private _fb : FormBuilder ){
 
   }
 
   ngOnInit(){
+    alert("init")
     this.form = this._fb.group({
                                 spanish: [""],
                                 english: [""],
@@ -57,11 +57,11 @@ export class MyListComponent{
                                 category: [""]
                               })
 
-
+    // this.isFetchingList = true
     this.getList()
   }
   getList(){
-    this.isFetchingList = true
+
     this._listService.getCustomList()
               .subscribe( response => {
                 this.updateList( response )
@@ -80,6 +80,7 @@ export class MyListComponent{
             .subscribe( response => {
               // ToDo: Unnessesary request. Try to push the new translation to list instead
               // See onDeleteTranslation()
+              console.log('subscribe');
               this.getList()
               this.form.controls["spanish"].updateValue("")
               this.form.controls["english"].updateValue("")
@@ -91,7 +92,7 @@ export class MyListComponent{
   // to be called after new http request
   updateList( list ){
     this.isFetchingList = false
-    console.info("should only be called after the http request");
+    this.isUpdatingId = -1
     this.list = this.coreList = new List( list )
     this.quantity = this.list.quantity()
     this.hasTranslations = ( !!list && list.length !== 0 ) ? true : false ;
@@ -102,21 +103,14 @@ export class MyListComponent{
   }
 
   onAddToPrivate( $event ){
+
     let elm : any = $event.target
     let id : number = parseInt( elm.id, 10 )
-
-    // elm.className = elm.className += " button-disabled"
-    // elm.innerHTML = "Added"
-
-
-    // elm.className = elm.className += " fg-green"
     this.isAdded = !this.isAdded
-    console.log(this.isAdded);
-
     this._listService.addTranslationToPlayList( id )
-            .subscribe( response => {})
+            .subscribe( response => {
 
-
+            })
   }
 
   onDeleteTranslation( $event ){
@@ -150,7 +144,8 @@ export class MyListComponent{
   onUpdateTranslation( $event ){
     this.closeEditTranslation = true
     let id = this.editFormElement.nativeElement.dataset.id
-    this.affectedTranslationId = parseInt(id, 10)
+    id = parseInt(id, 10)
+    this.isUpdatingId = id
     this._listService
             .updateTranslation({
               id: id,
@@ -180,6 +175,7 @@ export class MyListComponent{
   onFilterBucket( bucket : number ){
     this.list = new List( this.coreList.filterBucket( bucket ) );
   }
+
 }
 
 
