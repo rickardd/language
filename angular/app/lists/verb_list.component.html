@@ -55,6 +55,35 @@
   </span>
 </div>
 
+<div class="section section-padding bg-grey-dark fg-grey-darkest text-center clearfix">
+  <div  *ngIf="!isFetchingData" class="fs-small">
+    <span>GLBOAL FILTER:</span>
+    <a (click)="onGlobalToggleVisability( 'indicative', 'present' )" class="clickable">
+      <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.present"></i>
+      <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.present"></i>
+      <span>Present</span>
+    </a>
+    <a (click)="onGlobalToggleVisability( 'indicative', 'future' )" class="clickable">
+      <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.future"></i>
+      <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.future"></i>
+      <span>Future</span>
+    </a>
+    <a (click)="onGlobalToggleVisability( 'indicative', 'conditional' )" class="clickable">
+      <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.conditional"></i>
+      <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.conditional"></i>
+      <span>Conditional</span>
+    </a>
+    <a (click)="onGlobalToggleVisability( 'indicative', 'preterit' )" class="clickable">
+      <i class="fa fa-dot-circle-o" aria-hidden="true" *ngIf="visibilitySettings.indicative.preterit"></i>
+      <i class="fa fa-circle-o" aria-hidden="true" *ngIf="!visibilitySettings.indicative.preterit"></i>
+      <span>Preterit</span>
+    </a>
+  </div>
+  <span *ngIf="isFetchingData">
+    <i class="fa fa-spinner fa-spin fa-1x"></i>
+  </span>
+</div>
+
 <div *ngIf="list && list.collection">
 
 <section class="section section-padding bg-grey-bright">
@@ -65,19 +94,19 @@
           {{verb.infinitive.spanish}}
         </div>
         <div class="right fg-main fs-small">
-          <a class="fg-main" href="">
+          <a class="fg-main" (click)="toggleTense( $event, 'Present')">
             <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
             Present
           </a>
-          <a class="fg-main" href="">
+          <a class="fg-main" (click)="toggleTense( $event, 'Future')">
             <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
             Future
           </a>
-          <a class="fg-main" href="">
+          <a class="fg-main" (click)="toggleTense( $event, 'Conditional')">
             <i class="fa fa-circle-o" aria-hidden="true"></i>
             Conditional
           </a>
-          <a class="fg-main" href="">
+          <a class="fg-main" (click)="toggleTense( $event, 'Preterit')">
             <i class="fa fa-circle-o" aria-hidden="true"></i>
             Preterit
           </a>
@@ -113,7 +142,7 @@
         <li class="vertical-list__item spanish">{{verb.gerund.spanish}}</li>
         <li class="vertical-list__item english">{{verb.gerund.english}}</li>
       </ul>
-      <div class="tens-box" *ngIf="verb.collection.indicative">
+      <div class="tens-box" *ngIf="verb.collection.indicative" [hidden]="!visibilitySettings.indicative.present">
         <div class="tens-headline">Present</div>
         <ul class="tens-list">
           <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.present">
@@ -139,7 +168,7 @@
         </ul>
       </div>
 
-      <div class="tens-box" *ngIf="verb.collection.indicative">
+      <div class="tens-box" *ngIf="verb.collection.indicative" [hidden]="!visibilitySettings.indicative.future">
         <div class="tens-headline">Future</div>
         <ul class="tens-list">
           <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.future">
@@ -163,7 +192,7 @@
         </ul>
       </div>
 
-      <div class="tens-box" *ngIf="verb.collection.indicative">
+      <div class="tens-box" *ngIf="verb.collection.indicative" [hidden]="!visibilitySettings.indicative.conditional">
         <div class="tens-headline">Conditional</div>
         <ul class="tens-list">
           <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.conditional">
@@ -187,7 +216,7 @@
         </ul>
       </div>
 
-      <div class="tens-box" *ngIf="verb.collection.indicative">
+      <div class="tens-box" *ngIf="verb.collection.indicative" [hidden]="!visibilitySettings.indicative.preterit">
         <div class="tens-headline">Preterite</div>
         <ul class="tens-list">
           <li class="tens-list__item" *ngFor="#conjugation of verb.collection.indicative.preterite">

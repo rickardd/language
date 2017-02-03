@@ -19,6 +19,17 @@ export class VerbListComponent{
   coreList : any[]
   list : VerbListTemp
   isFetchingData : boolean = true
+  tenseVisability : any[] = []
+  itemVisability : any[] = []
+  visibilitySettings : Object = {
+      indicative: {
+         present : false,
+         future : true,
+         conditional : false,
+         preterit : false
+      }
+    }
+
 
   constructor( private _listService : ListService ){
 
@@ -37,6 +48,7 @@ export class VerbListComponent{
               //   console.log( item )
               // })
               console.log( this.list);
+              this.setTenseVisability()
             })
   }
 
@@ -66,6 +78,36 @@ export class VerbListComponent{
 
   onDisplayAll(){
     this.list = new VerbListTemp( this.coreList )
+  }
+
+  toggleTense( $event, tense : string ){
+    console.log($event.target);
+  }
+
+  onGlobalToggleVisability( groupName, tenseName ){
+    this.visibilitySettings[groupName][tenseName] = !this.visibilitySettings[groupName][tenseName]
+  }
+
+  setTenseVisability(){
+
+
+
+    // console.log("visibilitySettings", this.visibilitySettings);
+
+    // for( let item of this.list.collection){
+    //   console.log(item);
+    //   this.tenseVisability.push({
+    //                               id: item.id,
+    //                               visibility: {
+    //                                 indicative: this.visibilitySettings.indicative
+    //                               }
+    //                             });
+
+
+    //   console.info(this.tenseVisability)
+
+    }
+
   }
 }
 
