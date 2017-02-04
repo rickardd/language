@@ -36,7 +36,6 @@ export class GameComponent{
   }
 
   ngOnInit(){
-
     this._gameService.getWord()
           .subscribe( response => {
                       this.translation = response

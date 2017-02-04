@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from 'angular2/core'
+import {Component, Input, Output, EventEmitter, ViewChild, AfterViewInit} from 'angular2/core'
 
 import {CapitalizeFirstPipe} from '../../pipes/capititalize-first.pipe'
 import {SpaceSentencePipe} from '../../pipes/space-sentence.pipe'
@@ -22,6 +22,7 @@ import {Translation} from '../../shared/translation'
 
 export class FeedbackComponent{
 
+  @ViewChild('closeButton') closeButton;
   @Input() translation : Translation;
   @Input() slide : Slide;
   @Output() close = new EventEmitter();
@@ -34,6 +35,10 @@ export class FeedbackComponent{
   }
 
   ngOnInit(){
+
+  }
+
+  ngAfterViewInit() {
 
   }
 
@@ -57,9 +62,17 @@ export class FeedbackComponent{
     this.attemptValidatedArray = this.getWordValidatedArray()
 
     // let button = document.querySelector("feedback").querySelector("button")
-    // let button = document.getElementById("feedback-close-button")
-    // button.focus()
-    // console.log( button);
+     // let button = document.getElementById("feedback-close-button")
+     // setTimeout(function() { document.getElementById('feedback-close-button').focus(); },1000);
+     // button.focus()
+     // console.log( button);
+     if( this.closeButton && this.closeButton.nativeElement ){
+       // alert("button works");
+       // this.closeButton.nativeElement.setAttribute("tabindex", 1);
+       // this.closeButton.nativeElement[0].focus();
+       focus( this.closeButton )
+     }
+     // console.log( this.closeButton );
   }
 
   exitSlide( $event ){
